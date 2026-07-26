@@ -224,10 +224,14 @@ def extract_document_html(page: str) -> str:
     body_start = re.search(r"<body\b[^>]*>", fragment, re.I)
     if body_start:
         fragment = fragment[body_start.end() :]
-    body_end = fragment.rfind("</body>")
+    body_end_match = re.search(r"</body>", fragment, re.I)
+    body_end = body_end_match.start() if body_end_match else -1
     if body_end != -1:
         fragment = fragment[:body_end]
     fragment = re.sub(r"<!--.*?-->", "", fragment, flags=re.S)
+    fragment = re.sub(r"\s+", " ", fragment).strip()
+    fragment = re.sub(r"</(p|table|div)>\s*<", r"</\1>\n<", fragment, flags=re.I)
+    fragment = re.sub(r">\s*<(p|table|div)\b", r">\n<\1", fragment, flags=re.I)
     return fragment
 
 
@@ -262,7 +266,7 @@ def build_page(target: Target) -> tuple[str, SearchResult, Edition, str]:
     found = search(target.date, target.number)
     edition = resolve_edition(found.nd)
     page, raw, doc_url = fetch_document(found.nd, edition.rdk)
-    doc_md = to_markdown(extract_document_html(page))
+    doc_html = extract_document_html(page)
     today = dt.date.today().isoformat()
     sha256 = hashlib.sha256(raw).hexdigest()
     publication_url = (
@@ -331,10 +335,12 @@ review_status: imported
 
 ## Полный текст документа
 
+<div class="pravo-doc" markdown="0">
+
 """
     if pending_note:
         header += "<!-- pending editions:\n" + pending_note + "\n-->\n\n"
-    return header + doc_md, found, edition, doc_url
+    return header + doc_html.strip() + "\n\n</div>\n", found, edition, doc_url
 
 
 def parse_target(raw: str) -> Target:

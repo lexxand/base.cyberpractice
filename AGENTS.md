@@ -37,13 +37,17 @@ the source of the document text when the document is available through
    http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=<ND>&page=1&rdk=<RDK>&link_id=0
    ```
 
-6. Decode the response as `windows-1251`, extract `#text_content`, and convert
-   the document body to Markdown.
+6. Decode the response as `windows-1251` and extract `#text_content`.
 
-7. Preserve complex tables as inline HTML when Markdown tables would lose
+7. Preserve the official document body as inline HTML inside the Markdown page.
+   Do not flatten Word-generated markup into plain text: classes such as `W9`
+   are used for superscript footnote marks, and flattening them turns references
+   like `8¹` into incorrect text such as `81`.
+
+8. Preserve complex tables as inline HTML when Markdown tables would lose
    `rowspan`, `colspan`, or other structure.
 
-8. Add metadata to each generated Markdown file:
+9. Add metadata to each generated Markdown file:
 
    - official source;
    - `nd`;
