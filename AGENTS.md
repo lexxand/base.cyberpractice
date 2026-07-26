@@ -95,8 +95,8 @@ The importer supports two source classes:
 
 Current registry coverage:
 
-- total documents: 58;
-- full IPS imports: 35;
+- total documents: 60;
+- full IPS imports: 37;
 - official external cards requiring a dedicated source parser or manual source
   resolution: 23.
 
@@ -107,7 +107,7 @@ Current category coverage:
 - government resolutions: 9;
 - FSTEC documents: 10;
 - FSB documents: 6;
-- Roskomnadzor documents: 8;
+- Roskomnadzor documents: 10;
 - Bank of Russia documents: 5;
 - national standards: 10.
 
@@ -210,6 +210,10 @@ official discovery catalog available for review.
     state supervision over personal data processing;
   - Order No. 128 of 05.08.2022, `nd=603389824`, list of foreign states
     providing adequate protection of personal data subjects' rights.
+  - Order No. 201 of 15.12.2022, `nd=605539645`, personal data processing in
+    Roskomnadzor itself;
+  - Order No. 1 of 10.01.2023, `nd=605502743`, amendments to the personal-data
+    supervision checklist from Order No. 253.
   The main imported Roskomnadzor scope is the personal-data/incident subset
   relevant to the regulation page. The separate IPS discovery catalog tracks the
   broader official order set.

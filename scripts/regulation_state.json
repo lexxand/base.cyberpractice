@@ -692,6 +692,34 @@
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=603389824&page=1&rdk=0&link_id=0",
       "pending": [],
       "checked_at": "2026-07-27"
+    },
+    "rkn-order-201-2022": {
+      "id": "rkn-order-201-2022",
+      "kind": "ips",
+      "output": "docs/regulation/russia/roskomnadzor/order-201-2022.md",
+      "title": "Приказ Роскомнадзора от 15.12.2022 № 201 «Об обработке персональных данных в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций»",
+      "nd": "605539645",
+      "rdk": "0",
+      "edition": "Исходная редакция",
+      "status": "",
+      "sha256": "10830e9c85dd1e0048b60a2d005d27a62e983044b0781f2df26b1a015174e013",
+      "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=605539645&page=1&rdk=0&link_id=0",
+      "pending": [],
+      "checked_at": "2026-07-27"
+    },
+    "rkn-order-1-2023": {
+      "id": "rkn-order-1-2023",
+      "kind": "ips",
+      "output": "docs/regulation/russia/roskomnadzor/order-1-2023.md",
+      "title": "Приказ Роскомнадзора от 10.01.2023 № 1 «О внесении изменений в форму проверочного листа, применяемого при осуществлении федерального государственного контроля (надзора) за обработкой персональных данных»",
+      "nd": "605502743",
+      "rdk": "0",
+      "edition": "Исходная редакция",
+      "status": "",
+      "sha256": "312c704afd9ccf9c3f4101ebbf9cbc9cc76f4c5c1228903f67a2591d6e0835fd",
+      "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=605502743&page=1&rdk=0&link_id=0",
+      "pending": [],
+      "checked_at": "2026-07-27"
     }
   },
   "updated": "2026-07-27"

@@ -444,6 +444,32 @@
     "output": "docs/regulation/russia/roskomnadzor/order-187-2022.md"
   },
   {
+    "id": "rkn-order-201-2022",
+    "kind": "ips",
+    "category": "roskomnadzor",
+    "authority": "Роскомнадзор",
+    "document_kind": "Приказ",
+    "number": "201",
+    "date": "15.12.2022",
+    "date_iso": "2022-12-15",
+    "title": "Приказ Роскомнадзора от 15.12.2022 № 201 «Об обработке персональных данных в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций»",
+    "nd": "605539645",
+    "output": "docs/regulation/russia/roskomnadzor/order-201-2022.md"
+  },
+  {
+    "id": "rkn-order-1-2023",
+    "kind": "ips",
+    "category": "roskomnadzor",
+    "authority": "Роскомнадзор",
+    "document_kind": "Приказ",
+    "number": "1",
+    "date": "10.01.2023",
+    "date_iso": "2023-01-10",
+    "title": "Приказ Роскомнадзора от 10.01.2023 № 1 «О внесении изменений в форму проверочного листа, применяемого при осуществлении федерального государственного контроля (надзора) за обработкой персональных данных»",
+    "nd": "605502743",
+    "output": "docs/regulation/russia/roskomnadzor/order-1-2023.md"
+  },
+  {
     "id": "rkn-order-140-2025",
     "kind": "ips",
     "category": "roskomnadzor",
