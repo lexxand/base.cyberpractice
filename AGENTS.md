@@ -200,6 +200,21 @@ deterministic: it does not include the current date and normalizes transient
 Python object addresses in network exceptions. This prevents daily noise commits
 when the same official domains remain unreachable.
 
+The external-source audit also records reproducible `pravo.gov.ru/proxy/ips`
+search evidence for unresolved documents. Keep the exact IPS query links in
+`docs/regulation/source-audits/latest.md`:
+
+- for numbered acts, check `list_itself` by exact date and number;
+- for all unresolved acts, check `list_itself` by name, using Windows-1251
+  percent-encoding;
+- for historical acts, include a name search without the original date when
+  that is needed to show replacement acts.
+
+For Roskomnadzor Order No. 996, the exact IPS date/number search still returns
+no document. The name search without date returns replacement/current 2025 acts
+(`nd=607604898`, Government Resolution No. 1154, and `nd=607599406`,
+Roskomnadzor Order No. 140), not the original 2013 order.
+
 ## Roskomnadzor Order Discovery
 
 Use the reproducible IPS discovery script when refreshing the catalog of
