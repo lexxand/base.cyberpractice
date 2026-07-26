@@ -244,6 +244,22 @@ def extract_protect_gost_details(page: str) -> str:
     return fragment
 
 
+def extract_fsb_article(page: str) -> str:
+    start_marker = '<div class="public fsbResearchart">'
+    start = page.find(start_marker)
+    if start == -1:
+        raise RuntimeError("Cannot find FSB article start")
+    end = page.find('<div id="sbar">', start)
+    if end == -1:
+        raise RuntimeError("Cannot find FSB article end")
+    fragment = page[start:end]
+    fragment = re.sub(r"<!--.*?-->", "", fragment, flags=re.S)
+    fragment = re.sub(r"\s+", " ", fragment).strip()
+    fragment = re.sub(r"</(p|h[1-6]|table|div|ul|ol|li|dl|dd|dt|span)>\s*<", r"</\1>\n<", fragment, flags=re.I)
+    fragment = re.sub(r">\s*<(p|h[1-6]|table|div|ul|ol|li|dl|dd|dt|span)\b", r">\n<\1", fragment, flags=re.I)
+    return fragment
+
+
 def extract_official_html(page: str, extractor: str) -> str:
     if extractor == "bdu_content":
         return extract_bdu_content(page)
@@ -251,6 +267,8 @@ def extract_official_html(page: str, extractor: str) -> str:
         return extract_bdu_document_card(page)
     if extractor == "protect_gost_details":
         return extract_protect_gost_details(page)
+    if extractor == "fsb_article":
+        return extract_fsb_article(page)
     raise RuntimeError(f"Unknown official HTML extractor: {extractor}")
 
 

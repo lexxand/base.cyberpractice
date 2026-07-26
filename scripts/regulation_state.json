@@ -505,11 +505,14 @@
     },
     "fsb-order-378-2014": {
       "id": "fsb-order-378-2014",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/fsb/order-378-2014.md",
       "title": "Приказ ФСБ России от 10.07.2014 № 378",
+      "source_url": "http://www.fsb.ru/fsb/science/single.htm!id%3D10437725%40fsbResearchart.html",
+      "sha256": "7068967ea45bd56edf3eb3327f0187da727bb2c35feceb9241a00d945f8358b3",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка/статья ФСБ; полный текст приказа не импортирован"
     },
     "fstec-threat-assessment-methodology-2021": {
       "id": "fstec-threat-assessment-methodology-2021",

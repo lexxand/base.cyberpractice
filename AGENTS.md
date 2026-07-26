@@ -110,10 +110,10 @@ Current registry coverage:
 - total documents: 60;
 - full IPS imports: 37;
 - full official HTML imports: 1;
-- official metadata-card imports: 13;
+- official metadata-card imports: 14;
 - official file imports without text extraction: 5;
 - official external cards requiring a dedicated source parser or manual source
-  resolution: 4.
+  resolution: 3.
 
 Current category coverage:
 
@@ -277,17 +277,22 @@ official discovery catalog available for review.
   the extracted card fragment, and explicitly warn that the page is not a full
   current text. Do not relabel these cards as imported full documents unless the
   actual official FSTEC text page or file has been retrieved and preserved.
-- From the current environment `fstec.ru` and `fsb.ru` time out at TCP/HTTPS
-  connection time for the checked pages. Record the exact official URL when a
-  trusted official card exposes it, but do not synthesize document text from
-  secondary databases.
-- The remaining `external_official` documents after the CBR/GOST pass are:
-  FSB Order No. 378, FSTEC methodical documents dated 25.11.2025 and
-  12.05.2026, and historical Roskomnadzor Order No. 996. Exact official URLs
-  are recorded in their generated cards where available, but the current
-  environment times out against the relevant official domains (`fsb.ru`,
-  `fstec.ru`, `rkn.gov.ru`, `digital.gov.ru`). Keep them as non-full cards until
-  an official source can be fetched repeatably.
+- From the current environment `fstec.ru` times out at TCP connection time for
+  the checked pages. `fsb.ru` times out over HTTPS but is reachable over HTTP;
+  use the HTTP official page when importing FSB official cards. Record the exact
+  official URL when a trusted official card exposes it, but do not synthesize
+  document text from secondary databases.
+- FSB Order No. 378 is imported as `official_card` from the HTTP official FSB
+  article dated 21.06.2016. The article lists the order among the currently
+  active personal-data security normative-methodical documents, but does not
+  publish the full order text.
+- The remaining `external_official` documents after the CBR/GOST/FSB pass are:
+  FSTEC methodical documents dated 25.11.2025 and 12.05.2026, and historical
+  Roskomnadzor Order No. 996. Exact official URLs are recorded in their
+  generated cards where available, but the current environment times out against
+  the relevant official domains (`fstec.ru`, `rkn.gov.ru`, `digital.gov.ru`).
+  Keep them as non-full cards until an official source can be fetched
+  repeatably.
 - Bank of Russia search currently resolves the tracked relevant acts to official
   `cbr.ru` PDF file endpoints. Import those endpoints as `official_file` so the
   exact official file is hashed and monitored daily. Do not silently convert

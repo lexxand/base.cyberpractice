@@ -538,7 +538,7 @@
   },
   {
     "id": "fsb-order-378-2014",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "fsb",
     "authority": "ФСБ России",
     "document_kind": "Приказ",
@@ -549,11 +549,15 @@
     "output": "docs/regulation/russia/fsb/order-378-2014.md",
     "official_links": [
       {
-        "label": "ФСБ России: нормативные и методические документы",
-        "url": "https://www.fsb.ru/fsb/science/single.htm%21id%3D10437725%40fsbResearchart.html"
+        "label": "ФСБ России: статья о действующих нормативно-методических документах",
+        "url": "http://www.fsb.ru/fsb/science/single.htm!id%3D10437725%40fsbResearchart.html"
       }
     ],
-    "note": "В исходной странице была PDF-ссылка на нерелевантный региональный документ. Полный официальный текст требует ручного уточнения. Из текущей среды fsb.ru не отвечает до TCP/HTTPS timeout; вторичные источники не используются."
+    "note": "Официальная статья ФСБ от 21.06.2016 содержит приказ № 378 в перечне действующих нормативно-методических документов. Полный текст приказа в статье не опубликован, поэтому страница не помечается как полный текст приказа.",
+    "source": "official_card",
+    "source_url": "http://www.fsb.ru/fsb/science/single.htm!id%3D10437725%40fsbResearchart.html",
+    "extractor": "fsb_article",
+    "legal_status": "Официальная карточка/статья ФСБ; полный текст приказа не импортирован"
   },
   {
     "id": "fstec-threat-assessment-methodology-2021",

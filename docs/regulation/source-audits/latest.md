@@ -5,20 +5,7 @@
 доказательством отсутствия документа: они фиксируют, что источник не был
 доступен из текущей среды проверки.
 
-Осталось external-документов: **4**.
-
-## Приказ ФСБ России от 10.07.2014 № 378
-
-- Документ: `fsb-order-378-2014`
-- Орган: ФСБ России
-- Вид: Приказ
-- Номер: 378
-- Дата: 10.07.2014
-- Примечание: В исходной странице была PDF-ссылка на нерелевантный региональный документ. Полный официальный текст требует ручного уточнения. Из текущей среды fsb.ru не отвечает до TCP/HTTPS timeout; вторичные источники не используются.
-
-| Ссылка | Результат | Детали |
-|---|---|---|
-| [ФСБ России: нормативные и методические документы](https://www.fsb.ru/fsb/science/single.htm%21id%3D10437725%40fsbResearchart.html) | network-error | ConnectTimeout: HTTPSConnectionPool(host='www.fsb.ru', port=443): Max retries exceeded with url: /fsb/science/single.htm%21id%3D10437725%40fsbResearchart.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x…>, 'Connection to www.fsb.ru timed out. (connect timeout=12)')) |
+Осталось external-документов: **3**.
 
 ## Методика анализа защищенности информационных систем
 
