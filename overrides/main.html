@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% if page and page.meta %}
+    {% if page.meta.id %}<meta name="kb-page-id" content="{{ page.meta.id }}">{% endif %}
+    {% if page.meta.updated %}<meta name="kb-page-updated" content="{{ page.meta.updated }}">{% endif %}
+    {% if page.meta.review_status %}<meta name="kb-review-status" content="{{ page.meta.review_status }}">{% endif %}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% if page and page.meta %}
+    <div
+      id="kb-page-meta"
+      data-page-id="{{ page.meta.id | default('') }}"
+      data-page-updated="{{ page.meta.updated | default('') }}"
+      data-review-status="{{ page.meta.review_status | default('') }}"
+      hidden
+    ></div>
+  {% endif %}
+  {{ super() }}
+{% endblock %}

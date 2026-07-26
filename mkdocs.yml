@@ -1,0 +1,133 @@
+site_name: База знаний по информационной безопасности
+site_description: Теория, практика, открытое ПО и рынок средств ИБ в России
+site_author: lexxand
+site_url: https://lexxand.github.io/base.cyberpractice/
+repo_url: https://github.com/lexxand/base.cyberpractice
+repo_name: lexxand/base.cyberpractice
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+strict: true
+
+theme:
+  name: material
+  language: ru
+  custom_dir: overrides
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Включить тёмную тему
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: light-blue
+      toggle:
+        icon: material/brightness-4
+        name: Включить светлую тему
+
+plugins:
+  - search:
+      lang:
+        - ru
+        - en
+  - tags
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_javascript:
+  - javascripts/read-status.js
+
+extra_css:
+  - stylesheets/read-status.css
+
+extra:
+  generator: false
+  social: []
+
+nav:
+  - Главная: index.md
+  - Знания:
+      - Обзор: knowledge/index.md
+      - Основы ИБ: knowledge/fundamentals/index.md
+      - Угрозы: knowledge/threats/index.md
+      - Уязвимости: knowledge/vulnerabilities/index.md
+      - Атаки и техники: knowledge/attacks/index.md
+      - Threat Intelligence: knowledge/threat-intelligence/index.md
+      - Архитектура безопасности: knowledge/architecture/index.md
+  - Регулирование:
+      - Обзор: regulation/index.md
+      - Россия:
+          - Обзор: regulation/russia/index.md
+          - Федеральные законы: regulation/russia/laws/index.md
+          - ФСТЭК России: regulation/russia/fstec/index.md
+          - ФСБ России: regulation/russia/fsb/index.md
+          - Банк России: regulation/russia/bank-of-russia/index.md
+      - Международные стандарты: regulation/international/index.md
+      - Внутренние документы: regulation/internal-documents/index.md
+  - Практика:
+      - Обзор: practices/index.md
+      - Управление инцидентами: practices/incident-response.md
+      - Управление уязвимостями: practices/vulnerability-management.md
+      - Security Awareness: practices/security-awareness.md
+      - Аудит и контроль: practices/audit.md
+      - Пентест и Red Team: practices/pentest.md
+      - DevSecOps: practices/devsecops.md
+  - Открытое ПО:
+      - Обзор: open-source/index.md
+      - Категории: open-source/categories/index.md
+      - Проекты: open-source/projects/index.md
+      - Готовые стеки: open-source/stacks/index.md
+      - Сравнения: open-source/comparisons/index.md
+  - Рынок РФ:
+      - Обзор: russian-market/index.md
+      - Вендоры: russian-market/vendors/index.md
+      - Продукты: russian-market/products/index.md
+      - Категории решений: russian-market/categories/index.md
+      - Сравнения: russian-market/comparisons/index.md
+      - Цены и лицензирование:
+          - Обзор: russian-market/pricing/index.md
+          - Методика: russian-market/pricing/methodology.md
+  - Глоссарий: glossary/index.md
+  - Обучение: learning/index.md
+  - Ресурсы: resources/index.md
+  - Источники: sources/index.md
+  - Шаблоны:
+      - Обзор: page-templates/index.md
+      - Статья: page-templates/knowledge-article.md
+      - Вендор: page-templates/vendor.md
+      - Продукт: page-templates/product.md
+      - Open source: page-templates/open-source-project.md

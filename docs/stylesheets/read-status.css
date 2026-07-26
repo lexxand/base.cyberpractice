@@ -1,0 +1,73 @@
+.kb-reading-panel {
+  display: grid;
+  grid-template-columns: auto minmax(10rem, 1fr) auto;
+  align-items: center;
+  gap: 0.5rem 0.8rem;
+  margin: 0 0 1.25rem;
+  padding: 0.7rem 0.8rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.35rem;
+  background: var(--md-default-bg-color);
+  box-shadow: var(--md-shadow-z1);
+  font-size: 0.68rem;
+}
+
+.kb-reading-button {
+  min-height: 1.9rem;
+  padding: 0.35rem 0.7rem;
+  border: 0;
+  border-radius: 0.25rem;
+  color: var(--md-primary-bg-color);
+  background: var(--md-primary-fg-color);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.kb-reading-button:hover,
+.kb-reading-button:focus-visible {
+  filter: brightness(1.08);
+  outline: 0.1rem solid var(--md-accent-fg-color);
+  outline-offset: 0.1rem;
+}
+
+.kb-reading-button[aria-pressed="true"] {
+  color: var(--md-accent-bg-color);
+  background: var(--md-accent-fg-color);
+}
+
+.kb-reading-details {
+  color: var(--md-default-fg-color--light);
+}
+
+.kb-reading-details--outdated {
+  color: var(--md-typeset-mark-color);
+  font-weight: 700;
+}
+
+.kb-reading-progress {
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+}
+
+.kb-read-mark {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding-left: 0.35rem;
+  color: var(--md-accent-fg-color);
+  font-weight: 800;
+}
+
+@media screen and (max-width: 44.9844em) {
+  .kb-reading-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .kb-reading-button {
+    width: 100%;
+  }
+
+  .kb-reading-progress {
+    white-space: normal;
+  }
+}
