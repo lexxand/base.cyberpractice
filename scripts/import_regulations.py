@@ -520,6 +520,7 @@ def import_official_card(doc: dict[str, Any]) -> dict[str, Any]:
     today = dt.date.today().isoformat()
     url = doc["source_url"]
     verify = bool(doc.get("tls_verify", True))
+    tls_verify_metadata = str(verify).lower() if url.startswith("https://") else "not_applicable_http"
     raw = get_official_html(url, timeout=60, verify=verify)
     page = raw.decode(doc.get("encoding", "utf-8"), errors="replace")
     card_html = extract_official_html(page, doc["extractor"])
@@ -551,7 +552,7 @@ source: {yaml(doc.get("source", "official_card"))}
 source_url: {yaml(url)}
 source_retrieved: {today}
 source_sha256: {yaml(sha256)}
-source_tls_verify: {str(verify).lower()}
+source_tls_verify: {yaml(tls_verify_metadata)}
 updated: {today}
 review_status: official-card
 ---
@@ -599,7 +600,7 @@ review_status: official-card
         "source_url": url,
         "sha256": sha256,
         "checked_at": today,
-        "tls_verify": verify,
+        "tls_verify": tls_verify_metadata,
         "status": doc.get("legal_status", "Официальная карточка; полный текст не импортирован"),
     }
 
@@ -608,6 +609,7 @@ def import_official_file(doc: dict[str, Any]) -> dict[str, Any]:
     today = dt.date.today().isoformat()
     url = doc["source_url"]
     verify = bool(doc.get("tls_verify", True))
+    tls_verify_metadata = str(verify).lower() if url.startswith("https://") else "not_applicable_http"
     raw = get_official_html(url, timeout=60, verify=verify)
     sha256 = hashlib.sha256(raw).hexdigest()
     output = Path(doc["output"])
@@ -651,7 +653,7 @@ source_content_disposition: {yaml(content_disposition)}
 source_size_bytes: {len(raw)}
 source_retrieved: {today}
 source_sha256: {yaml(sha256)}
-source_tls_verify: {str(verify).lower()}
+source_tls_verify: {yaml(tls_verify_metadata)}
 updated: {today}
 review_status: official-file
 ---
@@ -697,7 +699,7 @@ review_status: official-file
         "size_bytes": len(raw),
         "sha256": sha256,
         "checked_at": today,
-        "tls_verify": verify,
+        "tls_verify": tls_verify_metadata,
         "status": doc.get("legal_status", "Официальный файл; полный текст не импортирован"),
     }
 

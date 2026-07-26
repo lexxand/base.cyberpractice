@@ -286,6 +286,9 @@ official discovery catalog available for review.
   article dated 21.06.2016. The article lists the order among the currently
   active personal-data security normative-methodical documents, but does not
   publish the full order text.
+- For `http://` official sources, record `source_tls_verify:
+  "not_applicable_http"` instead of `true`; TLS verification is not meaningful
+  on plain HTTP.
 - The remaining `external_official` documents after the CBR/GOST/FSB pass are:
   FSTEC methodical documents dated 25.11.2025 and 12.05.2026, and historical
   Roskomnadzor Order No. 996. Exact official URLs are recorded in their
@@ -293,6 +296,15 @@ official discovery catalog available for review.
   the relevant official domains (`fstec.ru`, `rkn.gov.ru`, `digital.gov.ru`).
   Keep them as non-full cards until an official source can be fetched
   repeatably.
+- BDU FSTEC open document catalog was checked for the FSTEC methodical
+  documents dated 25.11.2025 and 12.05.2026. The accessible BDU catalog pages
+  and sections currently expose documents such as `/documents/18` and
+  `/documents/29`-`/documents/32`, but not these two methodical documents. Do
+  not invent BDU cards for them unless they appear in the official BDU catalog.
+- Repeated IPS searches for historical Roskomnadzor Order No. 996 by exact
+  date/number, title, 2013 date range, and registration number did not resolve
+  the original order. The IPS title search resolves the replacement 2025
+  Roskomnadzor Order No. 140 and Government Resolution No. 1154 instead.
 - Bank of Russia search currently resolves the tracked relevant acts to official
   `cbr.ru` PDF file endpoints. Import those endpoints as `official_file` so the
   exact official file is hashed and monitored daily. Do not silently convert
