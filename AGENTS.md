@@ -181,6 +181,10 @@ concrete document, not to a category index page.
     state supervision over personal data processing;
   - Order No. 128 of 05.08.2022, `nd=603389824`, list of foreign states
     providing adequate protection of personal data subjects' rights.
+  The current Roskomnadzor scope is the personal-data/incident subset relevant
+  to the regulation page, not every administrative order ever issued by the
+  agency. A broad text search in the old IPS for "Роскомнадзор" returned HTTP
+  204 and did not provide an authoritative exhaustive list.
 - GOST texts, Bank of Russia acts, BDU/FSTEC methodical documents and some
   regulator documents are not IPS legal texts in this workflow. They require
   dedicated official-source importers and must remain cards until those importers
