@@ -8,8 +8,8 @@ site build when an official domain is unreachable from the current environment.
 
 from __future__ import annotations
 
-import datetime as dt
 import json
+import re
 from pathlib import Path
 from posixpath import relpath
 from typing import Any
@@ -48,10 +48,11 @@ def check_url(url: str) -> dict[str, Any]:
             "content_type": response.headers.get("content-type", ""),
         }
     except requests.RequestException as exc:
+        detail = re.sub(r" at 0x[0-9a-fA-F]+", " at 0x…", str(exc))
         return {
             "url": url,
             "status": "network-error",
-            "detail": f"{exc.__class__.__name__}: {exc}",
+            "detail": f"{exc.__class__.__name__}: {detail}",
         }
 
 
@@ -65,9 +66,8 @@ def report_link(doc: dict[str, Any], url: str) -> str:
 def main() -> int:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     unresolved = [doc for doc in registry if doc.get("kind") == "external_official"]
-    today = dt.date.today().isoformat()
     lines = [
-        f"# Аудит внешних официальных источников за {today}",
+        "# Аудит внешних официальных источников",
         "",
         "Этот отчёт показывает документы, которые пока не импортированы как полный",
         "текст или проверяемый официальный HTML/файл. Ошибки сети здесь не являются",

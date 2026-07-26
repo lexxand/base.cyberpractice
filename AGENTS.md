@@ -194,6 +194,12 @@ current environment; they are not evidence that the document does not exist.
 Do not replace unreachable official sources with Consultant Plus, Garant or
 other secondary databases.
 
+The scheduled workflow `.github/workflows/check-regulation-updates.yml` runs
+this audit after the imported-source check. The audit report is intentionally
+deterministic: it does not include the current date and normalizes transient
+Python object addresses in network exceptions. This prevents daily noise commits
+when the same official domains remain unreachable.
+
 ## Roskomnadzor Order Discovery
 
 Use the reproducible IPS discovery script when refreshing the catalog of

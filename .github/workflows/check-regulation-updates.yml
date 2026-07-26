@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Check official IPS documents
+      - name: Check imported official sources
         id: check
         run: |
           set +e
@@ -39,16 +39,31 @@ jobs:
             exit "$code"
           fi
 
+      - name: Audit unresolved external official sources
+        id: external_audit
+        run: |
+          python scripts/audit_regulation_external_sources.py
+          if git diff --quiet -- docs/regulation/source-audits/latest.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Import changed documents
         if: steps.check.outputs.changed == 'true'
         run: python scripts/import_regulations.py import
 
       - name: Commit update report and imported documents
-        if: steps.check.outputs.changed == 'true'
+        if: steps.check.outputs.changed == 'true' || steps.external_audit.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs scripts/regulation_state.json
+          if [ "${{ steps.check.outputs.changed }}" = "true" ]; then
+            git add docs scripts/regulation_state.json
+          fi
+          if [ "${{ steps.external_audit.outputs.changed }}" = "true" ]; then
+            git add docs/regulation/source-audits/latest.md
+          fi
           if git diff --cached --quiet; then
             echo "No file changes to commit"
           else
