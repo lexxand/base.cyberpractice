@@ -178,6 +178,22 @@ exists, has a direct link from `docs/regulation/index.md`, and is present in
 `mkdocs.yml` navigation. Grouped rows on the landing page must link to every
 concrete document, not to a category index page.
 
+
+## External Official Source Audit
+
+For documents that remain `external_official`, generate a reproducible audit
+report of their official links:
+
+```text
+python scripts/audit_regulation_external_sources.py
+```
+
+The report is written to `docs/regulation/source-audits/latest.md`. Network
+errors in this report mean that the official domain was unreachable from the
+current environment; they are not evidence that the document does not exist.
+Do not replace unreachable official sources with Consultant Plus, Garant or
+other secondary databases.
+
 ## Roskomnadzor Order Discovery
 
 Use the reproducible IPS discovery script when refreshing the catalog of

@@ -176,6 +176,8 @@ nav:
           - Обзор: regulation/change-reports/index.md
           - Последняя проверка: regulation/change-reports/latest.md
           - Пример ФСТЭК №239: regulation/change-reports/sample-fstec-239-history.md
+      - Аудит источников:
+          - Последний аудит внешних источников: regulation/source-audits/latest.md
   - Практика:
       - Обзор: practices/index.md
       - Управление инцидентами: practices/incident-response.md
