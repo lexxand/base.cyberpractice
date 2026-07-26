@@ -865,7 +865,7 @@
   },
   {
     "id": "fstec-bdu-vulnerability-regulation-2018",
-    "kind": "external_official",
+    "kind": "official_html",
     "category": "fstec",
     "authority": "ФСТЭК России",
     "document_kind": "Регламент",
@@ -874,13 +874,12 @@
     "date_iso": "2018-06-26",
     "title": "Регламент включения информации об уязвимостях программного обеспечения и программно-аппаратных средств в БДУ ФСТЭК России",
     "output": "docs/regulation/russia/fstec/bdu-vulnerability-regulation-2018.md",
-    "official_links": [
-      {
-        "label": "БДУ ФСТЭК: регламенты",
-        "url": "https://bdu.fstec.ru/regulations"
-      }
-    ],
-    "note": "Официальный источник указан как БДУ ФСТЭК. Для полного импорта нужен отдельный парсер официальной страницы/файла БДУ."
+    "source": "bdu.fstec.ru",
+    "source_label": "БДУ ФСТЭК: регламент включения уязвимостей",
+    "source_url": "https://bdu.fstec.ru/regulations",
+    "extractor": "bdu_content",
+    "tls_verify": false,
+    "note": "Полный HTML-текст импортируется с официальной страницы БДУ ФСТЭК. Локальная среда не строит доверенную цепочку сертификата bdu.fstec.ru, поэтому TLS-проверка явно отключена и отражается в метаданных страницы."
   },
   {
     "id": "bank-of-russia-regulation-382-p-2012",

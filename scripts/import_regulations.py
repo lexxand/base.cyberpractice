@@ -23,6 +23,7 @@ from typing import Any
 from urllib.parse import urlencode
 
 import requests
+import urllib3
 
 
 BASE = "http://pravo.gov.ru/proxy/ips/"
@@ -39,6 +40,19 @@ class Edition:
 
 def get(url: str, timeout: int = 40) -> bytes:
     response = requests.get(url, timeout=timeout, headers={"User-Agent": "Mozilla/5.0"})
+    response.raise_for_status()
+    return response.content
+
+
+def get_official_html(url: str, timeout: int = 40, verify: bool = True) -> bytes:
+    if not verify:
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    response = requests.get(
+        url,
+        timeout=timeout,
+        headers={"User-Agent": "Mozilla/5.0"},
+        verify=verify,
+    )
     response.raise_for_status()
     return response.content
 
@@ -180,6 +194,28 @@ def extract_document_html(page: str) -> str:
     fragment = re.sub(r"</(p|table|div)>\s*<", r"</\1>\n<", fragment, flags=re.I)
     fragment = re.sub(r">\s*<(p|table|div)\b", r">\n<\1", fragment, flags=re.I)
     return fragment
+
+
+def extract_bdu_content(page: str) -> str:
+    start_marker = '<div class="col-sm-9 col-lg-9"><!-- content -->'
+    start = page.find(start_marker)
+    if start == -1:
+        raise RuntimeError("Cannot find BDU content start")
+    end = page.find('<div class="col-sm-3 col-lg-3"><!-- sidebar -->', start)
+    if end == -1:
+        raise RuntimeError("Cannot find BDU content end")
+    fragment = page[start:end]
+    fragment = re.sub(r"<!--.*?-->", "", fragment, flags=re.S)
+    fragment = re.sub(r"\s+", " ", fragment).strip()
+    fragment = re.sub(r"</(p|h[1-6]|table|div|ul|ol|li)>\s*<", r"</\1>\n<", fragment, flags=re.I)
+    fragment = re.sub(r">\s*<(p|h[1-6]|table|div|ul|ol|li)\b", r">\n<\1", fragment, flags=re.I)
+    return fragment
+
+
+def extract_official_html(page: str, extractor: str) -> str:
+    if extractor == "bdu_content":
+        return extract_bdu_content(page)
+    raise RuntimeError(f"Unknown official HTML extractor: {extractor}")
 
 
 def publication_url(publication_number: str) -> str:
@@ -349,6 +385,83 @@ review_status: external-official-card
     }
 
 
+def import_official_html(doc: dict[str, Any]) -> dict[str, Any]:
+    today = dt.date.today().isoformat()
+    url = doc["source_url"]
+    verify = bool(doc.get("tls_verify", True))
+    raw = get_official_html(url, timeout=60, verify=verify)
+    page = raw.decode(doc.get("encoding", "utf-8"), errors="replace")
+    doc_html = extract_official_html(page, doc["extractor"])
+    sha256 = hashlib.sha256(doc_html.encode("utf-8")).hexdigest()
+    output = Path(doc["output"])
+    output.parent.mkdir(parents=True, exist_ok=True)
+    tls_note = ""
+    if not verify:
+        tls_note = (
+            "\n!!! warning \"TLS-проверка\"\n\n"
+            "    При импорте локальная среда не смогла построить доверенную цепочку\n"
+            "    сертификата источника. HTML получен с официального домена, но запрос\n"
+            "    выполнен с отключенной проверкой TLS-сертификата; это зафиксировано\n"
+            "    в метаданных страницы.\n"
+        )
+    body = f"""---
+id: {doc["id"]}
+title: {yaml(doc["title"])}
+type: normative-document
+category: {yaml(doc.get("category", ""))}
+authority: {yaml(doc.get("authority", ""))}
+document_kind: {yaml(doc.get("document_kind", ""))}
+document_number: {yaml(doc.get("number", ""))}
+document_date: {doc.get("date_iso", "")}
+legal_status: {yaml(doc.get("legal_status", "Официальный HTML-источник"))}
+source: {yaml(doc.get("source", "official_html"))}
+source_url: {yaml(url)}
+source_retrieved: {today}
+source_sha256: {yaml(sha256)}
+source_tls_verify: {str(verify).lower()}
+updated: {today}
+review_status: imported-official-html
+---
+
+# {doc["title"]}
+
+!!! info "Источник"
+
+    Текст импортирован {today} из официального HTML-источника.
+    Источник: [{doc.get("source_label", url)}]({url}).
+    SHA-256 HTML-фрагмента: `{sha256}`.
+{tls_note}
+## Карточка документа
+
+| Поле | Значение |
+|---|---|
+| Орган | {doc.get("authority", "")} |
+| Вид документа | {doc.get("document_kind", "")} |
+| Номер | {doc.get("number", "")} |
+| Дата | {doc.get("date", "")} |
+| Источник | {url} |
+
+## Полный текст документа
+
+<div class="official-doc official-doc-bdu" markdown="0">
+
+{doc_html}
+
+</div>
+"""
+    output.write_text(body, encoding="utf-8")
+    return {
+        "id": doc["id"],
+        "kind": "official_html",
+        "output": str(output),
+        "title": doc["title"],
+        "source_url": url,
+        "sha256": sha256,
+        "checked_at": today,
+        "tls_verify": verify,
+    }
+
+
 def load_registry(path: Path = REGISTRY) -> list[dict[str, Any]]:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -375,6 +488,8 @@ def import_all(ids: set[str] | None = None) -> list[dict[str, Any]]:
             continue
         if doc.get("kind") == "ips":
             results.append(import_ips(doc))
+        elif doc.get("kind") == "official_html":
+            results.append(import_official_html(doc))
         else:
             results.append(import_external(doc))
         print(f"{results[-1]['id']}: {results[-1]['kind']} -> {results[-1]['output']}")
@@ -399,49 +514,86 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
     state = load_state().get("documents", {})
     changes = []
     for doc in load_registry():
-        if doc.get("kind") != "ips":
-            continue
         if ids and doc["id"] not in ids:
             continue
-        old = state.get(doc["id"], {})
-        nd = doc.get("nd") or old.get("nd")
-        if not nd:
-            nd, _, _, _ = search_nd(doc["date"], doc["number"])
-        edition, title, status = resolve_edition(nd)
-        page, raw, source_url = fetch_document(nd, edition.rdk)
-        sha256 = hashlib.sha256(raw).hexdigest()
-        if old.get("sha256") and old.get("sha256") != sha256:
-            old_lines: list[str] = []
-            try:
-                old_lines = document_lines(Path(doc["output"]).read_text(encoding="utf-8"))
-            except FileNotFoundError:
-                pass
-            new_lines = document_lines(extract_document_html(page))
-            diff = list(difflib.unified_diff(old_lines, new_lines, n=0))
-            added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
-            removed = sum(1 for line in diff if line.startswith("-") and not line.startswith("---"))
-            examples = []
-            for line in diff:
-                if line.startswith("+") and not line.startswith("+++"):
-                    examples.append("добавлено: " + line[1:220])
-                if line.startswith("-") and not line.startswith("---"):
-                    examples.append("удалено: " + line[1:220])
-                if len(examples) >= 4:
-                    break
-            changes.append(
-                {
-                    "id": doc["id"],
-                    "title": doc.get("title") or title,
-                    "old_rdk": old.get("rdk"),
-                    "new_rdk": edition.rdk,
-                    "old_sha256": old.get("sha256"),
-                    "new_sha256": sha256,
-                    "summary": f"Изменилась официальная HTML-редакция: добавлено абзацев/строк: {added}, удалено: {removed}.",
-                    "examples": examples,
-                    "source_url": source_url,
-                    "status": status,
-                }
+        if doc.get("kind") == "ips":
+            old = state.get(doc["id"], {})
+            nd = doc.get("nd") or old.get("nd")
+            if not nd:
+                nd, _, _, _ = search_nd(doc["date"], doc["number"])
+            edition, title, status = resolve_edition(nd)
+            page, raw, source_url = fetch_document(nd, edition.rdk)
+            sha256 = hashlib.sha256(raw).hexdigest()
+            if old.get("sha256") and old.get("sha256") != sha256:
+                old_lines: list[str] = []
+                try:
+                    old_lines = document_lines(Path(doc["output"]).read_text(encoding="utf-8"))
+                except FileNotFoundError:
+                    pass
+                new_lines = document_lines(extract_document_html(page))
+                diff = list(difflib.unified_diff(old_lines, new_lines, n=0))
+                added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
+                removed = sum(1 for line in diff if line.startswith("-") and not line.startswith("---"))
+                examples = []
+                for line in diff:
+                    if line.startswith("+") and not line.startswith("+++"):
+                        examples.append("добавлено: " + line[1:220])
+                    if line.startswith("-") and not line.startswith("---"):
+                        examples.append("удалено: " + line[1:220])
+                    if len(examples) >= 4:
+                        break
+                changes.append(
+                    {
+                        "id": doc["id"],
+                        "title": doc.get("title") or title,
+                        "old_rdk": old.get("rdk"),
+                        "new_rdk": edition.rdk,
+                        "old_sha256": old.get("sha256"),
+                        "new_sha256": sha256,
+                        "summary": f"Изменилась официальная HTML-редакция: добавлено абзацев/строк: {added}, удалено: {removed}.",
+                        "examples": examples,
+                        "source_url": source_url,
+                        "status": status,
+                    }
+                )
+        elif doc.get("kind") == "official_html":
+            old = state.get(doc["id"], {})
+            raw = get_official_html(
+                doc["source_url"],
+                timeout=60,
+                verify=bool(doc.get("tls_verify", True)),
             )
+            page = raw.decode(doc.get("encoding", "utf-8"), errors="replace")
+            doc_html = extract_official_html(page, doc["extractor"])
+            sha256 = hashlib.sha256(doc_html.encode("utf-8")).hexdigest()
+            if old.get("sha256") and old.get("sha256") != sha256:
+                old_lines = document_lines(Path(doc["output"]).read_text(encoding="utf-8"))
+                new_lines = document_lines(doc_html)
+                diff = list(difflib.unified_diff(old_lines, new_lines, n=0))
+                added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
+                removed = sum(1 for line in diff if line.startswith("-") and not line.startswith("---"))
+                examples = []
+                for line in diff:
+                    if line.startswith("+") and not line.startswith("+++"):
+                        examples.append("добавлено: " + line[1:220])
+                    if line.startswith("-") and not line.startswith("---"):
+                        examples.append("удалено: " + line[1:220])
+                    if len(examples) >= 4:
+                        break
+                changes.append(
+                    {
+                        "id": doc["id"],
+                        "title": doc["title"],
+                        "old_rdk": "official_html",
+                        "new_rdk": "official_html",
+                        "old_sha256": old.get("sha256"),
+                        "new_sha256": sha256,
+                        "summary": f"Изменился официальный HTML-источник: добавлено строк: {added}, удалено: {removed}.",
+                        "examples": examples,
+                        "source_url": doc["source_url"],
+                        "status": doc.get("legal_status", "Официальный HTML-источник"),
+                    }
+                )
     return changes
 
 

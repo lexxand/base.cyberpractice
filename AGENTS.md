@@ -86,10 +86,14 @@ Use the registry-driven importer for ongoing work:
 python scripts/import_regulations.py import
 ```
 
-The importer supports two source classes:
+The importer supports three source classes:
 
 - `ips`: full official text imported from `pravo.gov.ru/proxy/ips` with `nd`,
   `rdk`, edition label, retrieval date and SHA-256.
+- `official_html`: full official text imported from a regulator's official
+  HTML page with source URL, retrieval date and SHA-256 of the extracted HTML
+  fragment. Preserve the official HTML structure and do not flatten it to plain
+  Markdown.
 - `external_official`: official-source card only. Do not present these pages as
   full current text until an official full-text source has been resolved.
 
@@ -97,8 +101,9 @@ Current registry coverage:
 
 - total documents: 60;
 - full IPS imports: 37;
+- full official HTML imports: 1;
 - official external cards requiring a dedicated source parser or manual source
-  resolution: 23.
+  resolution: 22.
 
 Current category coverage:
 
@@ -221,6 +226,11 @@ official discovery catalog available for review.
   regulator documents are not IPS legal texts in this workflow. They require
   dedicated official-source importers and must remain cards until those importers
   preserve the official text and licensing constraints correctly.
+- The BDU FSTEC vulnerability-regulation page (`https://bdu.fstec.ru/regulations`)
+  contains the full official HTML text and is imported as `official_html`.
+  In the local environment the certificate chain for `bdu.fstec.ru` is not
+  trusted by the system CA bundle, so the importer uses `tls_verify=false` for
+  this source and records that fact in the generated Markdown metadata.
 - The regulation landing page previously had grouped rows that linked
   `Постановления № 79, № 313, № 608` and `ГОСТ Р 59710, 59711, 59712` to
   category index pages instead of direct document pages. This is not acceptable

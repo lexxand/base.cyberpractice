@@ -643,11 +643,13 @@
     },
     "fstec-bdu-vulnerability-regulation-2018": {
       "id": "fstec-bdu-vulnerability-regulation-2018",
-      "kind": "external_official",
+      "kind": "official_html",
       "output": "docs/regulation/russia/fstec/bdu-vulnerability-regulation-2018.md",
       "title": "Регламент включения информации об уязвимостях программного обеспечения и программно-аппаратных средств в БДУ ФСТЭК России",
-      "checked_at": "2026-07-26",
-      "status": "Требует проверки"
+      "source_url": "https://bdu.fstec.ru/regulations",
+      "sha256": "def71756505e8a674ebf823e22941c6514cb3d857868cad608b935ad903355d1",
+      "checked_at": "2026-07-27",
+      "tls_verify": false
     },
     "bank-of-russia-regulation-382-p-2012": {
       "id": "bank-of-russia-regulation-382-p-2012",
