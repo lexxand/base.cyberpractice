@@ -95,8 +95,8 @@ The importer supports two source classes:
 
 Current registry coverage:
 
-- total documents: 56;
-- full IPS imports: 33;
+- total documents: 58;
+- full IPS imports: 35;
 - official external cards requiring a dedicated source parser or manual source
   resolution: 23.
 
@@ -107,7 +107,7 @@ Current category coverage:
 - government resolutions: 9;
 - FSTEC documents: 10;
 - FSB documents: 6;
-- Roskomnadzor documents: 6;
+- Roskomnadzor documents: 8;
 - Bank of Russia documents: 5;
 - national standards: 10.
 
@@ -141,6 +141,25 @@ editions:
 python scripts/import_regulations.py history --id fstec-order-239-2017 --limit 3 --report docs/regulation/change-reports/sample-fstec-239-history.md
 ```
 
+`scripts/import_regulations.py check` uses explicit exit codes:
+
+- `0`: checked successfully, no document changes detected;
+- `1`: checked successfully, document changes detected and the report was
+  written;
+- `2`: technical failure while checking official sources. Treat this as a
+  failed workflow, not as a regulatory update.
+
+Before publishing regulation changes, run the coverage audit:
+
+```text
+python scripts/audit_regulation_coverage.py
+```
+
+The audit verifies that every document in `scripts/regulation_registry.json`
+exists, has a direct link from `docs/regulation/index.md`, and is present in
+`mkdocs.yml` navigation. Grouped rows on the landing page must link to every
+concrete document, not to a category index page.
+
 ## Findings From Import
 
 - The original regulation overview linked Government Resolution No. 1119 to
@@ -156,7 +175,25 @@ python scripts/import_regulations.py history --id fstec-order-239-2017 --limit 3
   996 were not resolved by simple IPS date/number search during this pass. They
   are represented as official-source cards until a verified official full-text
   source is found.
+- Additional Roskomnadzor personal-data orders resolved through IPS and added
+  after the coverage audit:
+  - Order No. 253 of 24.12.2021, `nd=602911772`, control checklist for federal
+    state supervision over personal data processing;
+  - Order No. 128 of 05.08.2022, `nd=603389824`, list of foreign states
+    providing adequate protection of personal data subjects' rights.
 - GOST texts, Bank of Russia acts, BDU/FSTEC methodical documents and some
   regulator documents are not IPS legal texts in this workflow. They require
   dedicated official-source importers and must remain cards until those importers
   preserve the official text and licensing constraints correctly.
+- The regulation landing page previously had grouped rows that linked
+  `Постановления № 79, № 313, № 608` and `ГОСТ Р 59710, 59711, 59712` to
+  category index pages instead of direct document pages. This is not acceptable
+  for coverage accounting; each document row/group must expose direct links to
+  all concrete imported documents.
+- The daily update workflow must not use generic GitHub Actions failure as a
+  signal for document changes. A network/source failure and a detected legal
+  text change are different states; only exit code `1` from the importer means
+  "changed".
+- The old analytical bibliography in `docs/regulation/index.md` is hidden from
+  the rendered page and must not be used as a source for imported document
+  texts. Authoritative source metadata belongs in each generated document card.

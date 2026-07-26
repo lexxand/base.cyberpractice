@@ -664,7 +664,35 @@
       "title": "Положение Банка России № 757-П",
       "checked_at": "2026-07-26",
       "status": "Требует проверки"
+    },
+    "rkn-order-253-2021": {
+      "id": "rkn-order-253-2021",
+      "kind": "ips",
+      "output": "docs/regulation/russia/roskomnadzor/order-253-2021.md",
+      "title": "Приказ Роскомнадзора от 24.12.2021 № 253 «Об утверждении формы проверочного листа, применяемого при осуществлении федерального государственного контроля (надзора) за обработкой персональных данных»",
+      "nd": "602911772",
+      "rdk": "1",
+      "edition": "1 - от 10.01.2023 № 1 (изм.)",
+      "status": "",
+      "sha256": "384a2e0860c526269279ed782cc8f25e2427fa6066eaca6ae98c5c72e9129bad",
+      "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=602911772&page=1&rdk=1&link_id=0",
+      "pending": [],
+      "checked_at": "2026-07-27"
+    },
+    "rkn-order-128-2022": {
+      "id": "rkn-order-128-2022",
+      "kind": "ips",
+      "output": "docs/regulation/russia/roskomnadzor/order-128-2022.md",
+      "title": "Приказ Роскомнадзора от 05.08.2022 № 128 «Об утверждении перечня иностранных государств, обеспечивающих адекватную защиту прав субъектов персональных данных»",
+      "nd": "603389824",
+      "rdk": "0",
+      "edition": "Исходная редакция",
+      "status": "",
+      "sha256": "5052e3aec21cf8f7761120180e7581b951c3f0f7c96c2b715ed03b9ab652bd6e",
+      "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=603389824&page=1&rdk=0&link_id=0",
+      "pending": [],
+      "checked_at": "2026-07-27"
     }
   },
-  "updated": "2026-07-26"
+  "updated": "2026-07-27"
 }

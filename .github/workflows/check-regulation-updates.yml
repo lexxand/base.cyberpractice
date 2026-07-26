@@ -26,18 +26,32 @@ jobs:
 
       - name: Check official IPS documents
         id: check
-        continue-on-error: true
-        run: python scripts/import_regulations.py check --report docs/regulation/change-reports/latest.md
+        run: |
+          set +e
+          python scripts/import_regulations.py check --report docs/regulation/change-reports/latest.md
+          code=$?
+          set -e
+          if [ "$code" -eq 0 ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          elif [ "$code" -eq 1 ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            exit "$code"
+          fi
 
       - name: Import changed documents
-        if: steps.check.outcome == 'failure'
+        if: steps.check.outputs.changed == 'true'
         run: python scripts/import_regulations.py import
 
       - name: Commit update report and imported documents
-        if: steps.check.outcome == 'failure'
+        if: steps.check.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs scripts/regulation_state.json
-          git commit -m "Update regulation documents"
-          git push
+          if git diff --cached --quiet; then
+            echo "No file changes to commit"
+          else
+            git commit -m "Update regulation documents"
+            git push
+          fi

@@ -129,7 +129,7 @@ nav:
               - Приказ № 77 от 2021: regulation/russia/fstec/order-77-2021.md
               - Приказ № 117 от 2025: regulation/russia/fstec/order-117-2025.md
               - Методика анализа защищенности информационных систем: regulation/russia/fstec/security-analysis-methodology-2025.md
-              - Методика выявления уязвимостей и недекларированных возможностей в прог: regulation/russia/fstec/software-vulnerability-methodology-2026.md
+              - Методика выявления уязвимостей и НДВ в ПО: regulation/russia/fstec/software-vulnerability-methodology-2026.md
           - ФСБ России:
               - Обзор: regulation/russia/fsb/index.md
               - Приказ № 378 от 2014: regulation/russia/fsb/order-378-2014.md
@@ -141,6 +141,8 @@ nav:
           - Роскомнадзор:
               - Обзор: regulation/russia/roskomnadzor/index.md
               - Приказ № 996 от 2013: regulation/russia/roskomnadzor/order-996-2013.md
+              - Приказ № 253 от 2021: regulation/russia/roskomnadzor/order-253-2021.md
+              - Приказ № 128 от 2022: regulation/russia/roskomnadzor/order-128-2022.md
               - Приказ № 178 от 2022: regulation/russia/roskomnadzor/order-178-2022.md
               - Приказ № 179 от 2022: regulation/russia/roskomnadzor/order-179-2022.md
               - Приказ № 180 от 2022: regulation/russia/roskomnadzor/order-180-2022.md

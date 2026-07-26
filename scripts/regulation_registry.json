@@ -365,6 +365,33 @@
     "output": "docs/regulation/russia/fsb/order-539-2025.md"
   },
   {
+    "id": "rkn-order-253-2021",
+    "kind": "ips",
+    "category": "roskomnadzor",
+    "authority": "Роскомнадзор",
+    "document_kind": "Приказ",
+    "number": "253",
+    "date": "24.12.2021",
+    "date_iso": "2021-12-24",
+    "title": "Приказ Роскомнадзора от 24.12.2021 № 253 «Об утверждении формы проверочного листа, применяемого при осуществлении федерального государственного контроля (надзора) за обработкой персональных данных»",
+    "nd": "602911772",
+    "output": "docs/regulation/russia/roskomnadzor/order-253-2021.md"
+  },
+  {
+    "id": "rkn-order-128-2022",
+    "kind": "ips",
+    "category": "roskomnadzor",
+    "authority": "Роскомнадзор",
+    "document_kind": "Приказ",
+    "number": "128",
+    "date": "05.08.2022",
+    "date_iso": "2022-08-05",
+    "title": "Приказ Роскомнадзора от 05.08.2022 № 128 «Об утверждении перечня иностранных государств, обеспечивающих адекватную защиту прав субъектов персональных данных»",
+    "nd": "603389824",
+    "publication_number": "0001202209200008",
+    "output": "docs/regulation/russia/roskomnadzor/order-128-2022.md"
+  },
+  {
     "id": "rkn-order-178-2022",
     "kind": "ips",
     "category": "roskomnadzor",

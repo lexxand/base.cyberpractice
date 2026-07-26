@@ -556,7 +556,11 @@ def main() -> int:
         history_report(args.id, args.limit, Path(args.report))
         return 0
     ids = set(args.ids or []) or None
-    changes = check_updates(ids)
+    try:
+        changes = check_updates(ids)
+    except Exception as exc:
+        print(f"Regulation update check failed: {exc}", file=sys.stderr)
+        return 2
     if args.report:
         write_report(changes, Path(args.report))
     else:
