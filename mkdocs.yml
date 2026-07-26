@@ -93,8 +93,12 @@ nav:
       - Россия:
           - Обзор: regulation/russia/index.md
           - Федеральные законы: regulation/russia/laws/index.md
-          - ФСТЭК России: regulation/russia/fstec/index.md
-          - ФСБ России: regulation/russia/fsb/index.md
+          - ФСТЭК России:
+              - Обзор: regulation/russia/fstec/index.md
+              - Приказ № 117 от 11.04.2025: regulation/russia/fstec/order-117-2025.md
+          - ФСБ России:
+              - Обзор: regulation/russia/fsb/index.md
+              - Приказ № 546 от 25.12.2025: regulation/russia/fsb/order-546-2025.md
           - Банк России: regulation/russia/bank-of-russia/index.md
       - Международные стандарты: regulation/international/index.md
       - Внутренние документы: regulation/internal-documents/index.md
