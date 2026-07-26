@@ -160,6 +160,35 @@ exists, has a direct link from `docs/regulation/index.md`, and is present in
 `mkdocs.yml` navigation. Grouped rows on the landing page must link to every
 concrete document, not to a category index page.
 
+## Roskomnadzor Order Discovery
+
+Use the reproducible IPS discovery script when refreshing the catalog of
+Roskomnadzor orders:
+
+```text
+python scripts/discover_rkn_orders.py
+```
+
+The old IPS search requires Windows-1251 percent-encoding for Cyrillic query
+values. The working official query is `list_itself` by field `Наименование`
+(`a1`) with the value `Федеральная служба по надзору в сфере связи`; use
+`start` and `lstsize` for pagination.
+
+Current discovery output:
+
+- official IPS query results: 360;
+- Roskomnadzor orders / joint orders starting with the agency name: 195;
+- generated human page:
+  `docs/regulation/russia/roskomnadzor/ips-order-discovery.md`;
+- generated machine-readable state: `scripts/rkn_order_discovery.json`.
+
+Do not automatically import all discovered Roskomnadzor orders into the main
+regulation registry. The discovered set includes кадровые, закупочные, связные,
+рекламные and other administrative acts that are outside the practical
+cybersecurity / personal-data scope. Import full IPS text into the registry only
+for documents relevant to the regulation knowledge base, while keeping the full
+official discovery catalog available for review.
+
 ## Findings From Import
 
 - The original regulation overview linked Government Resolution No. 1119 to
@@ -181,10 +210,9 @@ concrete document, not to a category index page.
     state supervision over personal data processing;
   - Order No. 128 of 05.08.2022, `nd=603389824`, list of foreign states
     providing adequate protection of personal data subjects' rights.
-  The current Roskomnadzor scope is the personal-data/incident subset relevant
-  to the regulation page, not every administrative order ever issued by the
-  agency. A broad text search in the old IPS for "Роскомнадзор" returned HTTP
-  204 and did not provide an authoritative exhaustive list.
+  The main imported Roskomnadzor scope is the personal-data/incident subset
+  relevant to the regulation page. The separate IPS discovery catalog tracks the
+  broader official order set.
 - GOST texts, Bank of Russia acts, BDU/FSTEC methodical documents and some
   regulator documents are not IPS legal texts in this workflow. They require
   dedicated official-source importers and must remain cards until those importers
