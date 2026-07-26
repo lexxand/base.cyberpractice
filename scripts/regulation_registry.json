@@ -484,7 +484,7 @@
   },
   {
     "id": "fstec-order-21-2013",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "fstec",
     "authority": "ФСТЭК России",
     "document_kind": "Приказ",
@@ -493,17 +493,25 @@
     "date_iso": "2013-02-18",
     "title": "Приказ ФСТЭК России от 18.02.2013 № 21 «Об утверждении состава и содержания организационных и технических мер по обеспечению безопасности персональных данных»",
     "output": "docs/regulation/russia/fstec/order-21-2013.md",
+    "source_url": "https://bdu.fstec.ru/documents/20",
+    "source": "official_card",
+    "extractor": "bdu_document_card",
+    "tls_verify": false,
     "official_links": [
       {
-        "label": "ФСТЭК России: документы",
-        "url": "https://fstec.ru/dokumenty"
+        "label": "БДУ ФСТЭК: карточка документа 20",
+        "url": "https://bdu.fstec.ru/documents/20"
+      },
+      {
+        "label": "ФСТЭК России: страница документа",
+        "url": "https://www.fstec.ru/dokumenty/vse-dokumenty/prikazy/prikaz-fstek-rossii-ot-18-fevralya-2013-g-n-21"
       }
     ],
-    "note": "Простой поиск IPS по дате и номеру не нашел документ. Требуется ручное уточнение официального `nd` либо официального HTML-источника."
+    "note": "IPS по дате/номеру не возвращает базовый приказ. БДУ ФСТЭК содержит официальную карточку и ссылку на страницу ФСТЭК, но не полный текст; из текущей среды fstec.ru не отвечает до таймаута."
   },
   {
     "id": "fstec-order-31-2014",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "fstec",
     "authority": "ФСТЭК России",
     "document_kind": "Приказ",
@@ -512,13 +520,21 @@
     "date_iso": "2014-03-14",
     "title": "Приказ ФСТЭК России от 14.03.2014 № 31 «Об утверждении Требований к обеспечению защиты информации в АСУ ТП»",
     "output": "docs/regulation/russia/fstec/order-31-2014.md",
+    "source_url": "https://bdu.fstec.ru/documents/25",
+    "source": "official_card",
+    "extractor": "bdu_document_card",
+    "tls_verify": false,
     "official_links": [
       {
-        "label": "ФСТЭК России: документы",
-        "url": "https://fstec.ru/dokumenty"
+        "label": "БДУ ФСТЭК: карточка документа 25",
+        "url": "https://bdu.fstec.ru/documents/25"
+      },
+      {
+        "label": "ФСТЭК России: страница документа",
+        "url": "https://www.fstec.ru/dokumenty/vse-dokumenty/prikazy/prikaz-fstek-rossii-ot-14-marta-2014-g-n-31"
       }
     ],
-    "note": "Простой поиск IPS по дате и номеру не нашел документ. Требуется ручное уточнение официального `nd` либо официального HTML-источника."
+    "note": "IPS по дате/номеру не возвращает базовый приказ. БДУ ФСТЭК содержит официальную карточку и ссылку на страницу ФСТЭК, но не полный текст; из текущей среды fstec.ru не отвечает до таймаута."
   },
   {
     "id": "fsb-order-378-2014",
@@ -541,7 +557,7 @@
   },
   {
     "id": "fstec-threat-assessment-methodology-2021",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "fstec",
     "authority": "ФСТЭК России",
     "document_kind": "Методический документ",
@@ -550,13 +566,21 @@
     "date_iso": "2021-02-05",
     "title": "Методика оценки угроз безопасности информации",
     "output": "docs/regulation/russia/fstec/threat-assessment-methodology-2021.md",
+    "source_url": "https://bdu.fstec.ru/documents/18",
+    "source": "official_card",
+    "extractor": "bdu_document_card",
+    "tls_verify": false,
     "official_links": [
       {
         "label": "БДУ ФСТЭК: документ 18",
         "url": "https://bdu.fstec.ru/documents/18"
+      },
+      {
+        "label": "ФСТЭК России: страница документа",
+        "url": "https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-5-fevralya-2021-g"
       }
     ],
-    "note": "Официальный источник указан как БДУ ФСТЭК. Для полного импорта нужен отдельный парсер официальной страницы/файла БДУ."
+    "note": "БДУ ФСТЭК содержит официальную карточку и ссылку на страницу ФСТЭК, но не полный текст; из текущей среды fstec.ru не отвечает до таймаута."
   },
   {
     "id": "fstec-security-analysis-methodology-2025",
@@ -629,11 +653,15 @@
     "output": "docs/regulation/russia/bank-of-russia/recommendations-2-mr-2025.md",
     "official_links": [
       {
+        "label": "Банк России: официальный файл 20250122_2-mr.pdf",
+        "url": "https://www.cbr.ru/crosscut/lawacts/file/9945"
+      },
+      {
         "label": "Банк России: информационная безопасность",
         "url": "https://www.cbr.ru/information_security/acts/"
       }
     ],
-    "note": "Документ относится к официальным актам Банка России, не к IPS. Нужен отдельный официальный парсер cbr.ru."
+    "note": "Документ относится к официальным актам Банка России, не к IPS. Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается."
   },
   {
     "id": "bank-of-russia-regulation-683-p-2019",
@@ -648,11 +676,11 @@
     "output": "docs/regulation/russia/bank-of-russia/regulation-683-p-2019.md",
     "official_links": [
       {
-        "label": "Банк России",
-        "url": "https://cbr.ru/"
+        "label": "Банк России: официальный файл 683_P_21052019.pdf",
+        "url": "https://www.cbr.ru/ref/analytics/na_vr/file/812"
       }
     ],
-    "note": "В исходном обзоре документ указан группой с 382-П и 851-П. Требуется отдельное уточнение актуальной редакции на cbr.ru."
+    "note": "Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается."
   },
   {
     "id": "bank-of-russia-regulation-851-p-2025",
@@ -662,16 +690,16 @@
     "document_kind": "Положение",
     "number": "851-П",
     "date": "2025",
-    "date_iso": "2025-01-01",
+    "date_iso": "2025-01-30",
     "title": "Положение Банка России № 851-П",
     "output": "docs/regulation/russia/bank-of-russia/regulation-851-p-2025.md",
     "official_links": [
       {
-        "label": "Банк России",
-        "url": "https://cbr.ru/"
+        "label": "Банк России: официальный файл 851_П.PDF",
+        "url": "https://www.cbr.ru/ref/analytics/na_vr/file/6262"
       }
     ],
-    "note": "Требуется отдельное уточнение актуальной редакции на cbr.ru."
+    "note": "Поиск Банка России возвращает № 851-П от 30.01.2025. Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается."
   },
   {
     "id": "gost-r-56939-2024",
@@ -894,11 +922,11 @@
     "output": "docs/regulation/russia/bank-of-russia/regulation-382-p-2012.md",
     "official_links": [
       {
-        "label": "Банк России",
-        "url": "https://cbr.ru/"
+        "label": "Банк России: карточка 382-П",
+        "url": "https://www.cbr.ru/PSystem/acts/382-p/"
       }
     ],
-    "note": "Смежный документ, явно упомянутый в строке про 683-П. Требуется уточнение актуальной редакции на cbr.ru."
+    "note": "На cbr.ru есть HTML-страница 382-П, но ссылка полного документа внутри страницы ведет на PDF; без отдельного разрешения текст из PDF не извлекается."
   },
   {
     "id": "bank-of-russia-regulation-757-p-2021",
@@ -913,10 +941,10 @@
     "output": "docs/regulation/russia/bank-of-russia/regulation-757-p-2021.md",
     "official_links": [
       {
-        "label": "Банк России",
-        "url": "https://cbr.ru/"
+        "label": "Банк России: официальный файл 757_P_22062021.pdf",
+        "url": "https://www.cbr.ru/ref/analytics/na_vr/file/2334"
       }
     ],
-    "note": "Документ был в локальных заготовках предыдущего импорта. Требуется уточнение актуальной редакции на cbr.ru."
+    "note": "Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается."
   }
 ]

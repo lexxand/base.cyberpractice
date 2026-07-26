@@ -212,9 +212,27 @@ def extract_bdu_content(page: str) -> str:
     return fragment
 
 
+def extract_bdu_document_card(page: str) -> str:
+    content_marker = '<div class="col-sm-12 col-lg-12">'
+    start = page.find(content_marker)
+    if start == -1:
+        raise RuntimeError("Cannot find BDU document card start")
+    end = page.find("<!-- content -->", start)
+    if end == -1:
+        raise RuntimeError("Cannot find BDU document card end")
+    fragment = page[start:end]
+    fragment = re.sub(r"<!--.*?-->", "", fragment, flags=re.S)
+    fragment = re.sub(r"\s+", " ", fragment).strip()
+    fragment = re.sub(r"</(p|h[1-6]|table|div|ul|ol|li|dl|dd|dt)>\s*<", r"</\1>\n<", fragment, flags=re.I)
+    fragment = re.sub(r">\s*<(p|h[1-6]|table|div|ul|ol|li|dl|dd|dt)\b", r">\n<\1", fragment, flags=re.I)
+    return fragment
+
+
 def extract_official_html(page: str, extractor: str) -> str:
     if extractor == "bdu_content":
         return extract_bdu_content(page)
+    if extractor == "bdu_document_card":
+        return extract_bdu_document_card(page)
     raise RuntimeError(f"Unknown official HTML extractor: {extractor}")
 
 
@@ -352,9 +370,9 @@ review_status: external-official-card
 
 !!! warning "Полный текст не импортирован"
 
-    Для этого документа пока не найден подтвержденный `nd` в `pravo.gov.ru/proxy/ips`.
-    Страница является карточкой официального источника и не помечается как полный
-    актуальный текст.
+    Для этого документа пока не импортирован полный подтвержденный текст из
+    официального источника. Страница является карточкой официального источника
+    и не помечается как полный актуальный текст.
 
 ## Карточка документа
 
@@ -462,6 +480,94 @@ review_status: imported-official-html
     }
 
 
+def import_official_card(doc: dict[str, Any]) -> dict[str, Any]:
+    today = dt.date.today().isoformat()
+    url = doc["source_url"]
+    verify = bool(doc.get("tls_verify", True))
+    raw = get_official_html(url, timeout=60, verify=verify)
+    page = raw.decode(doc.get("encoding", "utf-8"), errors="replace")
+    card_html = extract_official_html(page, doc["extractor"])
+    sha256 = hashlib.sha256(card_html.encode("utf-8")).hexdigest()
+    output = Path(doc["output"])
+    output.parent.mkdir(parents=True, exist_ok=True)
+    official_links = doc.get("official_links", [])
+    links = "\n".join(f"- [{item['label']}]({item['url']})" for item in official_links)
+    tls_note = ""
+    if not verify:
+        tls_note = (
+            "\n!!! warning \"TLS-проверка\"\n\n"
+            "    При импорте локальная среда не смогла построить доверенную цепочку\n"
+            "    сертификата источника. HTML получен с официального домена, но запрос\n"
+            "    выполнен с отключенной проверкой TLS-сертификата; это зафиксировано\n"
+            "    в метаданных страницы.\n"
+        )
+    body = f"""---
+id: {doc["id"]}
+title: {yaml(doc["title"])}
+type: normative-document
+category: {yaml(doc.get("category", ""))}
+authority: {yaml(doc.get("authority", ""))}
+document_kind: {yaml(doc.get("document_kind", ""))}
+document_number: {yaml(doc.get("number", ""))}
+document_date: {doc.get("date_iso", "")}
+legal_status: {yaml(doc.get("legal_status", "Официальная карточка; полный текст не импортирован"))}
+source: {yaml(doc.get("source", "official_card"))}
+source_url: {yaml(url)}
+source_retrieved: {today}
+source_sha256: {yaml(sha256)}
+source_tls_verify: {str(verify).lower()}
+updated: {today}
+review_status: official-card
+---
+
+# {doc["title"]}
+
+!!! warning "Это официальная карточка, не полный текст"
+
+    Импортирована карточка официального источника, а не полный текущий текст
+    документа. Страница не помечается как полный актуальный документ.
+    SHA-256 HTML-фрагмента карточки: `{sha256}`.
+{tls_note}
+## Карточка документа
+
+| Поле | Значение |
+|---|---|
+| Орган | {doc.get("authority", "")} |
+| Вид документа | {doc.get("document_kind", "")} |
+| Номер | {doc.get("number", "")} |
+| Дата | {doc.get("date", "")} |
+| Источник карточки | {url} |
+
+## Официальные ссылки
+
+{links or f"- [Официальная карточка]({url})"}
+
+## Карточка официального источника
+
+<div class="official-card official-card-source" markdown="0">
+
+{card_html}
+
+</div>
+
+## Примечание
+
+{doc.get("note", "Полный официальный текущий текст требует отдельного подтвержденного источника.")}
+"""
+    output.write_text(body, encoding="utf-8")
+    return {
+        "id": doc["id"],
+        "kind": "official_card",
+        "output": str(output),
+        "title": doc["title"],
+        "source_url": url,
+        "sha256": sha256,
+        "checked_at": today,
+        "tls_verify": verify,
+        "status": doc.get("legal_status", "Официальная карточка; полный текст не импортирован"),
+    }
+
+
 def load_registry(path: Path = REGISTRY) -> list[dict[str, Any]]:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -490,6 +596,8 @@ def import_all(ids: set[str] | None = None) -> list[dict[str, Any]]:
             results.append(import_ips(doc))
         elif doc.get("kind") == "official_html":
             results.append(import_official_html(doc))
+        elif doc.get("kind") == "official_card":
+            results.append(import_official_card(doc))
         else:
             results.append(import_external(doc))
         print(f"{results[-1]['id']}: {results[-1]['kind']} -> {results[-1]['output']}")
@@ -592,6 +700,44 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
                         "examples": examples,
                         "source_url": doc["source_url"],
                         "status": doc.get("legal_status", "Официальный HTML-источник"),
+                    }
+                )
+        elif doc.get("kind") == "official_card":
+            old = state.get(doc["id"], {})
+            raw = get_official_html(
+                doc["source_url"],
+                timeout=60,
+                verify=bool(doc.get("tls_verify", True)),
+            )
+            page = raw.decode(doc.get("encoding", "utf-8"), errors="replace")
+            card_html = extract_official_html(page, doc["extractor"])
+            sha256 = hashlib.sha256(card_html.encode("utf-8")).hexdigest()
+            if old.get("sha256") and old.get("sha256") != sha256:
+                old_lines = document_lines(Path(doc["output"]).read_text(encoding="utf-8"))
+                new_lines = document_lines(card_html)
+                diff = list(difflib.unified_diff(old_lines, new_lines, n=0))
+                added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
+                removed = sum(1 for line in diff if line.startswith("-") and not line.startswith("---"))
+                examples = []
+                for line in diff:
+                    if line.startswith("+") and not line.startswith("+++"):
+                        examples.append("добавлено: " + line[1:220])
+                    if line.startswith("-") and not line.startswith("---"):
+                        examples.append("удалено: " + line[1:220])
+                    if len(examples) >= 4:
+                        break
+                changes.append(
+                    {
+                        "id": doc["id"],
+                        "title": doc["title"],
+                        "old_rdk": "official_card",
+                        "new_rdk": "official_card",
+                        "old_sha256": old.get("sha256"),
+                        "new_sha256": sha256,
+                        "summary": f"Изменилась официальная карточка: добавлено строк: {added}, удалено: {removed}.",
+                        "examples": examples,
+                        "source_url": doc["source_url"],
+                        "status": doc.get("legal_status", "Официальная карточка"),
                     }
                 )
     return changes

@@ -483,42 +483,51 @@
     },
     "fstec-order-21-2013": {
       "id": "fstec-order-21-2013",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/fstec/order-21-2013.md",
       "title": "Приказ ФСТЭК России от 18.02.2013 № 21 «Об утверждении состава и содержания организационных и технических мер по обеспечению безопасности персональных данных»",
-      "checked_at": "2026-07-26",
-      "status": "Требует проверки"
+      "source_url": "https://bdu.fstec.ru/documents/20",
+      "sha256": "f2c23305524846b1c8c054cd6985fbaff0f54a555542a569019ec31441c80859",
+      "checked_at": "2026-07-27",
+      "tls_verify": false,
+      "status": "Официальная карточка; полный текст не импортирован"
     },
     "fstec-order-31-2014": {
       "id": "fstec-order-31-2014",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/fstec/order-31-2014.md",
       "title": "Приказ ФСТЭК России от 14.03.2014 № 31 «Об утверждении Требований к обеспечению защиты информации в АСУ ТП»",
-      "checked_at": "2026-07-26",
-      "status": "Требует проверки"
+      "source_url": "https://bdu.fstec.ru/documents/25",
+      "sha256": "bde7a02e6a9b5151785ae05dbd035d5f210283bb8f64c2ccbf1acc86d1763c97",
+      "checked_at": "2026-07-27",
+      "tls_verify": false,
+      "status": "Официальная карточка; полный текст не импортирован"
     },
     "fsb-order-378-2014": {
       "id": "fsb-order-378-2014",
       "kind": "external_official",
       "output": "docs/regulation/russia/fsb/order-378-2014.md",
       "title": "Приказ ФСБ России от 10.07.2014 № 378",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "fstec-threat-assessment-methodology-2021": {
       "id": "fstec-threat-assessment-methodology-2021",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/fstec/threat-assessment-methodology-2021.md",
       "title": "Методика оценки угроз безопасности информации",
-      "checked_at": "2026-07-26",
-      "status": "Требует проверки"
+      "source_url": "https://bdu.fstec.ru/documents/18",
+      "sha256": "612878f7868ab38429458fafb7932e9a74ccde5c9c2b0273f675f99b56e6cdd4",
+      "checked_at": "2026-07-27",
+      "tls_verify": false,
+      "status": "Официальная карточка; полный текст не импортирован"
     },
     "fstec-security-analysis-methodology-2025": {
       "id": "fstec-security-analysis-methodology-2025",
       "kind": "external_official",
       "output": "docs/regulation/russia/fstec/security-analysis-methodology-2025.md",
       "title": "Методика анализа защищенности информационных систем",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "fstec-software-vulnerability-methodology-2026": {
@@ -526,7 +535,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/fstec/software-vulnerability-methodology-2026.md",
       "title": "Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "rkn-order-996-2013": {
@@ -534,7 +543,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/roskomnadzor/order-996-2013.md",
       "title": "Приказ Роскомнадзора от 05.09.2013 № 996 «Об утверждении требований и методов по обезличиванию персональных данных»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Исторический документ; требуется проверка замещения приказом № 140"
     },
     "bank-of-russia-recommendations-2-mr-2025": {
@@ -542,7 +551,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/bank-of-russia/recommendations-2-mr-2025.md",
       "title": "Методические рекомендации Банка России № 2-МР по проведению тестирования на проникновение и анализа уязвимостей",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "bank-of-russia-regulation-683-p-2019": {
@@ -550,7 +559,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/bank-of-russia/regulation-683-p-2019.md",
       "title": "Положение Банка России № 683-П",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "bank-of-russia-regulation-851-p-2025": {
@@ -558,7 +567,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/bank-of-russia/regulation-851-p-2025.md",
       "title": "Положение Банка России № 851-П",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "gost-r-56939-2024": {
@@ -566,7 +575,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/national-standards/gost-r-56939-2024.md",
       "title": "ГОСТ Р 56939-2024 «Защита информации. Разработка безопасного программного обеспечения. Общие требования»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "gost-r-59547-2021": {
@@ -574,7 +583,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/national-standards/gost-r-59547-2021.md",
       "title": "ГОСТ Р 59547-2021 «Защита информации. Мониторинг информационной безопасности»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "gost-r-59548-2022": {
@@ -582,7 +591,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/national-standards/gost-r-59548-2022.md",
       "title": "ГОСТ Р 59548-2022 «Защита информации. Регистрация событий безопасности»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "gost-r-59710-2022": {
@@ -590,7 +599,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/national-standards/gost-r-59710-2022.md",
       "title": "ГОСТ Р 59710-2022 «Защита информации. Управление компьютерными инцидентами»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "gost-r-59711-2022": {
@@ -598,7 +607,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/national-standards/gost-r-59711-2022.md",
       "title": "ГОСТ Р 59711-2022 «Защита информации. Управление компьютерными инцидентами»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "gost-r-59712-2022": {
@@ -606,7 +615,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/national-standards/gost-r-59712-2022.md",
       "title": "ГОСТ Р 59712-2022 «Защита информации. Управление компьютерными инцидентами»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "gost-r-71753-2024": {
@@ -614,7 +623,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/national-standards/gost-r-71753-2024.md",
       "title": "ГОСТ Р 71753-2024 «Защита информации. Система автоматизированного управления учетными записями и правами доступа»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "gost-r-51583-2014": {
@@ -622,7 +631,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/national-standards/gost-r-51583-2014.md",
       "title": "ГОСТ Р 51583-2014 «Защита информации. Порядок создания автоматизированных систем в защищенном исполнении»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "gost-r-58223-2018": {
@@ -630,7 +639,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/national-standards/gost-r-58223-2018.md",
       "title": "ГОСТ Р 58223-2018 «Интеллектуальная собственность. Антимонопольное регулирование и защита от недобросовестной конкуренции»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "gost-r-58143-2018": {
@@ -638,7 +647,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/national-standards/gost-r-58143-2018.md",
       "title": "ГОСТ Р 58143-2018 «Защита информации. Тестирование на проникновение»",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "fstec-bdu-vulnerability-regulation-2018": {
@@ -656,7 +665,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/bank-of-russia/regulation-382-p-2012.md",
       "title": "Положение Банка России № 382-П",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "bank-of-russia-regulation-757-p-2021": {
@@ -664,7 +673,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/bank-of-russia/regulation-757-p-2021.md",
       "title": "Положение Банка России № 757-П",
-      "checked_at": "2026-07-26",
+      "checked_at": "2026-07-27",
       "status": "Требует проверки"
     },
     "rkn-order-253-2021": {

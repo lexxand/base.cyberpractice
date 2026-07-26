@@ -231,6 +231,21 @@ official discovery catalog available for review.
   In the local environment the certificate chain for `bdu.fstec.ru` is not
   trusted by the system CA bundle, so the importer uses `tls_verify=false` for
   this source and records that fact in the generated Markdown metadata.
+- BDU FSTEC document pages such as `https://bdu.fstec.ru/documents/20`,
+  `/documents/25` and `/documents/18` are official metadata cards, not full
+  document texts. Import them as `official_card`, preserve the card HTML, hash
+  the extracted card fragment, and explicitly warn that the page is not a full
+  current text. Do not relabel these cards as imported full documents unless the
+  actual official FSTEC text page or file has been retrieved and preserved.
+- From the current environment `fstec.ru` and `fsb.ru` time out at TCP/HTTPS
+  connection time for the checked pages. Record the exact official URL when a
+  trusted official card exposes it, but do not synthesize document text from
+  secondary databases.
+- Bank of Russia search currently resolves several relevant acts to official
+  `cbr.ru` PDF file endpoints. Keep those pages as official-source cards unless
+  there is explicit permission and a repeatable extractor for official CBR
+  files; do not silently convert PDFs into Markdown during the regulation import
+  workflow.
 - The regulation landing page previously had grouped rows that linked
   `Постановления № 79, № 313, № 608` and `ГОСТ Р 59710, 59711, 59712` to
   category index pages instead of direct document pages. This is not acceptable
