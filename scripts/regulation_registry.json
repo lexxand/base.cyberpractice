@@ -1,0 +1,870 @@
+[
+  {
+    "id": "law-149-fz-2006",
+    "kind": "ips",
+    "category": "laws",
+    "authority": "Российская Федерация",
+    "document_kind": "Федеральный закон",
+    "number": "149-ФЗ",
+    "date": "27.07.2006",
+    "date_iso": "2006-07-27",
+    "title": "Федеральный закон от 27.07.2006 № 149-ФЗ «Об информации, информационных технологиях и о защите информации»",
+    "nd": "102108264",
+    "output": "docs/regulation/russia/laws/law-149-fz-2006.md"
+  },
+  {
+    "id": "law-152-fz-2006",
+    "kind": "ips",
+    "category": "laws",
+    "authority": "Российская Федерация",
+    "document_kind": "Федеральный закон",
+    "number": "152-ФЗ",
+    "date": "27.07.2006",
+    "date_iso": "2006-07-27",
+    "title": "Федеральный закон от 27.07.2006 № 152-ФЗ «О персональных данных»",
+    "nd": "102108261",
+    "output": "docs/regulation/russia/laws/law-152-fz-2006.md"
+  },
+  {
+    "id": "law-187-fz-2017",
+    "kind": "ips",
+    "category": "laws",
+    "authority": "Российская Федерация",
+    "document_kind": "Федеральный закон",
+    "number": "187-ФЗ",
+    "date": "26.07.2017",
+    "date_iso": "2017-07-26",
+    "title": "Федеральный закон от 26.07.2017 № 187-ФЗ «О безопасности критической информационной инфраструктуры Российской Федерации»",
+    "nd": "102439340",
+    "publication_number": "0001201707260023",
+    "output": "docs/regulation/russia/laws/law-187-fz-2017.md"
+  },
+  {
+    "id": "law-98-fz-2004",
+    "kind": "ips",
+    "category": "laws",
+    "authority": "Российская Федерация",
+    "document_kind": "Федеральный закон",
+    "number": "98-ФЗ",
+    "date": "29.07.2004",
+    "date_iso": "2004-07-29",
+    "title": "Федеральный закон от 29.07.2004 № 98-ФЗ «О коммерческой тайне»",
+    "nd": "102088094",
+    "output": "docs/regulation/russia/laws/law-98-fz-2004.md"
+  },
+  {
+    "id": "law-63-fz-2011",
+    "kind": "ips",
+    "category": "laws",
+    "authority": "Российская Федерация",
+    "document_kind": "Федеральный закон",
+    "number": "63-ФЗ",
+    "date": "06.04.2011",
+    "date_iso": "2011-04-06",
+    "title": "Федеральный закон от 06.04.2011 № 63-ФЗ «Об электронной подписи»",
+    "nd": "102146610",
+    "output": "docs/regulation/russia/laws/law-63-fz-2011.md"
+  },
+  {
+    "id": "law-436-fz-2010",
+    "kind": "ips",
+    "category": "laws",
+    "authority": "Российская Федерация",
+    "document_kind": "Федеральный закон",
+    "number": "436-ФЗ",
+    "date": "29.12.2010",
+    "date_iso": "2010-12-29",
+    "title": "Федеральный закон от 29.12.2010 № 436-ФЗ «О защите детей от информации, причиняющей вред их здоровью и развитию»",
+    "nd": "102144583",
+    "output": "docs/regulation/russia/laws/law-436-fz-2010.md"
+  },
+  {
+    "id": "law-99-fz-2011",
+    "kind": "ips",
+    "category": "laws",
+    "authority": "Российская Федерация",
+    "document_kind": "Федеральный закон",
+    "number": "99-ФЗ",
+    "date": "04.05.2011",
+    "date_iso": "2011-05-04",
+    "title": "Федеральный закон от 04.05.2011 № 99-ФЗ «О лицензировании отдельных видов деятельности»",
+    "nd": "102147413",
+    "output": "docs/regulation/russia/laws/law-99-fz-2011.md"
+  },
+  {
+    "id": "presidential-decree-250-2022",
+    "kind": "ips",
+    "category": "presidential-decrees",
+    "authority": "Президент Российской Федерации",
+    "document_kind": "Указ",
+    "number": "250",
+    "date": "01.05.2022",
+    "date_iso": "2022-05-01",
+    "title": "Указ Президента Российской Федерации от 01.05.2022 № 250 «О дополнительных мерах по обеспечению информационной безопасности Российской Федерации»",
+    "nd": "603015160",
+    "output": "docs/regulation/russia/presidential-decrees/decree-250-2022.md"
+  },
+  {
+    "id": "presidential-decree-166-2022",
+    "kind": "ips",
+    "category": "presidential-decrees",
+    "authority": "Президент Российской Федерации",
+    "document_kind": "Указ",
+    "number": "166",
+    "date": "30.03.2022",
+    "date_iso": "2022-03-30",
+    "title": "Указ Президента Российской Федерации от 30.03.2022 № 166 «О мерах по обеспечению технологической независимости и безопасности критической информационной инфраструктуры Российской Федерации»",
+    "nd": "602954165",
+    "output": "docs/regulation/russia/presidential-decrees/decree-166-2022.md"
+  },
+  {
+    "id": "presidential-decree-646-2016",
+    "kind": "ips",
+    "category": "presidential-decrees",
+    "authority": "Президент Российской Федерации",
+    "document_kind": "Указ",
+    "number": "646",
+    "date": "05.12.2016",
+    "date_iso": "2016-12-05",
+    "title": "Указ Президента Российской Федерации от 05.12.2016 № 646 «Об утверждении Доктрины информационной безопасности Российской Федерации»",
+    "nd": "102417017",
+    "output": "docs/regulation/russia/presidential-decrees/decree-646-2016.md"
+  },
+  {
+    "id": "government-resolution-1119-2012",
+    "kind": "ips",
+    "category": "government",
+    "authority": "Правительство Российской Федерации",
+    "document_kind": "Постановление",
+    "number": "1119",
+    "date": "01.11.2012",
+    "date_iso": "2012-11-01",
+    "title": "Постановление Правительства Российской Федерации от 01.11.2012 № 1119 «Об утверждении требований к защите персональных данных при их обработке в информационных системах персональных данных»",
+    "nd": "102160483",
+    "output": "docs/regulation/russia/government/resolution-1119-2012.md"
+  },
+  {
+    "id": "government-resolution-127-2018",
+    "kind": "ips",
+    "category": "government",
+    "authority": "Правительство Российской Федерации",
+    "document_kind": "Постановление",
+    "number": "127",
+    "date": "08.02.2018",
+    "date_iso": "2018-02-08",
+    "title": "Постановление Правительства Российской Федерации от 08.02.2018 № 127 «Об утверждении Правил категорирования объектов критической информационной инфраструктуры Российской Федерации»",
+    "nd": "102460750",
+    "output": "docs/regulation/russia/government/resolution-127-2018.md"
+  },
+  {
+    "id": "government-resolution-676-2015",
+    "kind": "ips",
+    "category": "government",
+    "authority": "Правительство Российской Федерации",
+    "document_kind": "Постановление",
+    "number": "676",
+    "date": "06.07.2015",
+    "date_iso": "2015-07-06",
+    "title": "Постановление Правительства Российской Федерации от 06.07.2015 № 676 «О требованиях к порядку создания, развития, ввода в эксплуатацию, эксплуатации и вывода из эксплуатации государственных информационных систем»",
+    "nd": "102375086",
+    "output": "docs/regulation/russia/government/resolution-676-2015.md"
+  },
+  {
+    "id": "government-resolution-1912-2023",
+    "kind": "ips",
+    "category": "government",
+    "authority": "Правительство Российской Федерации",
+    "document_kind": "Постановление",
+    "number": "1912",
+    "date": "14.11.2023",
+    "date_iso": "2023-11-14",
+    "title": "Постановление Правительства Российской Федерации от 14.11.2023 № 1912 «О порядке перехода субъектов критической информационной инфраструктуры Российской Федерации на преимущественное применение доверенных программно-аппаратных комплексов»",
+    "nd": "606101867",
+    "output": "docs/regulation/russia/government/resolution-1912-2023.md"
+  },
+  {
+    "id": "government-resolution-211-2012",
+    "kind": "ips",
+    "category": "government",
+    "authority": "Правительство Российской Федерации",
+    "document_kind": "Постановление",
+    "number": "211",
+    "date": "21.03.2012",
+    "date_iso": "2012-03-21",
+    "title": "Постановление Правительства Российской Федерации от 21.03.2012 № 211 «Об утверждении перечня мер, направленных на обеспечение выполнения обязанностей операторов, являющихся государственными или муниципальными органами»",
+    "nd": "102154754",
+    "output": "docs/regulation/russia/government/resolution-211-2012.md"
+  },
+  {
+    "id": "government-resolution-687-2008",
+    "kind": "ips",
+    "category": "government",
+    "authority": "Правительство Российской Федерации",
+    "document_kind": "Постановление",
+    "number": "687",
+    "date": "15.09.2008",
+    "date_iso": "2008-09-15",
+    "title": "Постановление Правительства Российской Федерации от 15.09.2008 № 687 «Об утверждении Положения об особенностях обработки персональных данных, осуществляемой без использования средств автоматизации»",
+    "nd": "102124251",
+    "output": "docs/regulation/russia/government/resolution-687-2008.md"
+  },
+  {
+    "id": "government-resolution-79-2012",
+    "kind": "ips",
+    "category": "government",
+    "authority": "Правительство Российской Федерации",
+    "document_kind": "Постановление",
+    "number": "79",
+    "date": "03.02.2012",
+    "date_iso": "2012-02-03",
+    "title": "Постановление Правительства Российской Федерации от 03.02.2012 № 79 «О лицензировании деятельности по технической защите конфиденциальной информации»",
+    "nd": "102153815",
+    "output": "docs/regulation/russia/government/resolution-79-2012.md"
+  },
+  {
+    "id": "government-resolution-313-2012",
+    "kind": "ips",
+    "category": "government",
+    "authority": "Правительство Российской Федерации",
+    "document_kind": "Постановление",
+    "number": "313",
+    "date": "16.04.2012",
+    "date_iso": "2012-04-16",
+    "title": "Постановление Правительства Российской Федерации от 16.04.2012 № 313 «Об утверждении Положения о лицензировании деятельности по разработке, производству, распространению шифровальных средств»",
+    "nd": "102155729",
+    "output": "docs/regulation/russia/government/resolution-313-2012.md"
+  },
+  {
+    "id": "government-resolution-608-1995",
+    "kind": "ips",
+    "category": "government",
+    "authority": "Правительство Российской Федерации",
+    "document_kind": "Постановление",
+    "number": "608",
+    "date": "26.06.1995",
+    "date_iso": "1995-06-26",
+    "title": "Постановление Правительства Российской Федерации от 26.06.1995 № 608 «О сертификации средств защиты информации»",
+    "nd": "102036208",
+    "output": "docs/regulation/russia/government/resolution-608-1995.md"
+  },
+  {
+    "id": "fstec-order-117-2025",
+    "kind": "ips",
+    "category": "fstec",
+    "authority": "ФСТЭК России",
+    "document_kind": "Приказ",
+    "number": "117",
+    "date": "11.04.2025",
+    "date_iso": "2025-04-11",
+    "title": "Приказ ФСТЭК России от 11.04.2025 № 117 «Об утверждении Требований о защите информации, содержащейся в государственных информационных системах»",
+    "nd": "605977860",
+    "output": "docs/regulation/russia/fstec/order-117-2025.md"
+  },
+  {
+    "id": "fstec-order-239-2017",
+    "kind": "ips",
+    "category": "fstec",
+    "authority": "ФСТЭК России",
+    "document_kind": "Приказ",
+    "number": "239",
+    "date": "25.12.2017",
+    "date_iso": "2017-12-25",
+    "title": "Приказ ФСТЭК России от 25.12.2017 № 239 «Об утверждении Требований по обеспечению безопасности значимых объектов критической информационной инфраструктуры Российской Федерации»",
+    "nd": "102468384",
+    "output": "docs/regulation/russia/fstec/order-239-2017.md"
+  },
+  {
+    "id": "fstec-order-235-2017",
+    "kind": "ips",
+    "category": "fstec",
+    "authority": "ФСТЭК России",
+    "document_kind": "Приказ",
+    "number": "235",
+    "date": "21.12.2017",
+    "date_iso": "2017-12-21",
+    "title": "Приказ ФСТЭК России от 21.12.2017 № 235 «Об утверждении Требований к созданию систем безопасности значимых объектов критической информационной инфраструктуры Российской Федерации»",
+    "nd": "102464438",
+    "output": "docs/regulation/russia/fstec/order-235-2017.md"
+  },
+  {
+    "id": "fstec-order-77-2021",
+    "kind": "ips",
+    "category": "fstec",
+    "authority": "ФСТЭК России",
+    "document_kind": "Приказ",
+    "number": "77",
+    "date": "29.04.2021",
+    "date_iso": "2021-04-29",
+    "title": "Приказ ФСТЭК России от 29.04.2021 № 77 «Об утверждении Порядка организации и проведения работ по аттестации объектов информатизации»",
+    "nd": "602370609",
+    "output": "docs/regulation/russia/fstec/order-77-2021.md"
+  },
+  {
+    "id": "fsb-order-546-2025",
+    "kind": "ips",
+    "category": "fsb",
+    "authority": "ФСБ России",
+    "document_kind": "Приказ",
+    "number": "546",
+    "date": "25.12.2025",
+    "date_iso": "2025-12-25",
+    "title": "Приказ ФСБ России от 25.12.2025 № 546 «Об утверждении Порядка обмена информацией о компьютерных атаках и компьютерных инцидентах»",
+    "nd": "609507795",
+    "output": "docs/regulation/russia/fsb/order-546-2025.md"
+  },
+  {
+    "id": "fsb-order-547-2025",
+    "kind": "ips",
+    "category": "fsb",
+    "authority": "ФСБ России",
+    "document_kind": "Приказ",
+    "number": "547",
+    "date": "25.12.2025",
+    "date_iso": "2025-12-25",
+    "title": "Приказ ФСБ России от 25.12.2025 № 547 «Об утверждении Порядка информирования ФСБ России о компьютерных атаках и компьютерных инцидентах»",
+    "nd": "609507794",
+    "output": "docs/regulation/russia/fsb/order-547-2025.md"
+  },
+  {
+    "id": "fsb-order-548-2025",
+    "kind": "ips",
+    "category": "fsb",
+    "authority": "ФСБ России",
+    "document_kind": "Приказ",
+    "number": "548",
+    "date": "25.12.2025",
+    "date_iso": "2025-12-25",
+    "title": "Приказ ФСБ России от 25.12.2025 № 548 «Об утверждении Порядка осуществления непрерывного взаимодействия субъектов критической информационной инфраструктуры Российской Федерации»",
+    "nd": "609507793",
+    "output": "docs/regulation/russia/fsb/order-548-2025.md"
+  },
+  {
+    "id": "fsb-order-554-2025",
+    "kind": "ips",
+    "category": "fsb",
+    "authority": "ФСБ России",
+    "document_kind": "Приказ",
+    "number": "554",
+    "date": "26.12.2025",
+    "date_iso": "2025-12-26",
+    "title": "Приказ ФСБ России от 26.12.2025 № 554 «Об установлении Требований к средствам, предназначенным для обнаружения, предупреждения и ликвидации последствий компьютерных атак»",
+    "nd": "609507656",
+    "output": "docs/regulation/russia/fsb/order-554-2025.md"
+  },
+  {
+    "id": "fsb-order-539-2025",
+    "kind": "ips",
+    "category": "fsb",
+    "authority": "ФСБ России",
+    "document_kind": "Приказ",
+    "number": "539",
+    "date": "23.12.2025",
+    "date_iso": "2025-12-23",
+    "title": "Приказ ФСБ России от 23.12.2025 № 539 «Об утверждении Порядка получения субъектами критической информационной инфраструктуры информации о средствах и способах проведения компьютерных атак»",
+    "nd": "609383318",
+    "output": "docs/regulation/russia/fsb/order-539-2025.md"
+  },
+  {
+    "id": "rkn-order-178-2022",
+    "kind": "ips",
+    "category": "roskomnadzor",
+    "authority": "Роскомнадзор",
+    "document_kind": "Приказ",
+    "number": "178",
+    "date": "27.10.2022",
+    "date_iso": "2022-10-27",
+    "title": "Приказ Роскомнадзора от 27.10.2022 № 178 «Об утверждении Требований к оценке вреда субъектам персональных данных»",
+    "nd": "603552315",
+    "output": "docs/regulation/russia/roskomnadzor/order-178-2022.md"
+  },
+  {
+    "id": "rkn-order-179-2022",
+    "kind": "ips",
+    "category": "roskomnadzor",
+    "authority": "Роскомнадзор",
+    "document_kind": "Приказ",
+    "number": "179",
+    "date": "28.10.2022",
+    "date_iso": "2022-10-28",
+    "title": "Приказ Роскомнадзора от 28.10.2022 № 179 «Об утверждении Требований к подтверждению уничтожения персональных данных»",
+    "nd": "603552320",
+    "output": "docs/regulation/russia/roskomnadzor/order-179-2022.md"
+  },
+  {
+    "id": "rkn-order-180-2022",
+    "kind": "ips",
+    "category": "roskomnadzor",
+    "authority": "Роскомнадзор",
+    "document_kind": "Приказ",
+    "number": "180",
+    "date": "28.10.2022",
+    "date_iso": "2022-10-28",
+    "title": "Приказ Роскомнадзора от 28.10.2022 № 180 «Об утверждении форм уведомлений о намерении осуществлять обработку персональных данных»",
+    "nd": "603603348",
+    "output": "docs/regulation/russia/roskomnadzor/order-180-2022.md"
+  },
+  {
+    "id": "rkn-order-187-2022",
+    "kind": "ips",
+    "category": "roskomnadzor",
+    "authority": "Роскомнадзор",
+    "document_kind": "Приказ",
+    "number": "187",
+    "date": "14.11.2022",
+    "date_iso": "2022-11-14",
+    "title": "Приказ Роскомнадзора от 14.11.2022 № 187 «Об утверждении Порядка и условий взаимодействия Роскомнадзора с операторами в рамках ведения реестра учета инцидентов в области персональных данных»",
+    "nd": "603749414",
+    "output": "docs/regulation/russia/roskomnadzor/order-187-2022.md"
+  },
+  {
+    "id": "rkn-order-140-2025",
+    "kind": "ips",
+    "category": "roskomnadzor",
+    "authority": "Роскомнадзор",
+    "document_kind": "Приказ",
+    "number": "140",
+    "date": "19.06.2025",
+    "date_iso": "2025-06-19",
+    "title": "Приказ Роскомнадзора от 19.06.2025 № 140 «Об утверждении требований к обезличиванию персональных данных и методов обезличивания персональных данных»",
+    "nd": "607599406",
+    "output": "docs/regulation/russia/roskomnadzor/order-140-2025.md"
+  },
+  {
+    "id": "fstec-order-21-2013",
+    "kind": "external_official",
+    "category": "fstec",
+    "authority": "ФСТЭК России",
+    "document_kind": "Приказ",
+    "number": "21",
+    "date": "18.02.2013",
+    "date_iso": "2013-02-18",
+    "title": "Приказ ФСТЭК России от 18.02.2013 № 21 «Об утверждении состава и содержания организационных и технических мер по обеспечению безопасности персональных данных»",
+    "output": "docs/regulation/russia/fstec/order-21-2013.md",
+    "official_links": [
+      {
+        "label": "ФСТЭК России: документы",
+        "url": "https://fstec.ru/dokumenty"
+      }
+    ],
+    "note": "Простой поиск IPS по дате и номеру не нашел документ. Требуется ручное уточнение официального `nd` либо официального HTML-источника."
+  },
+  {
+    "id": "fstec-order-31-2014",
+    "kind": "external_official",
+    "category": "fstec",
+    "authority": "ФСТЭК России",
+    "document_kind": "Приказ",
+    "number": "31",
+    "date": "14.03.2014",
+    "date_iso": "2014-03-14",
+    "title": "Приказ ФСТЭК России от 14.03.2014 № 31 «Об утверждении Требований к обеспечению защиты информации в АСУ ТП»",
+    "output": "docs/regulation/russia/fstec/order-31-2014.md",
+    "official_links": [
+      {
+        "label": "ФСТЭК России: документы",
+        "url": "https://fstec.ru/dokumenty"
+      }
+    ],
+    "note": "Простой поиск IPS по дате и номеру не нашел документ. Требуется ручное уточнение официального `nd` либо официального HTML-источника."
+  },
+  {
+    "id": "fsb-order-378-2014",
+    "kind": "external_official",
+    "category": "fsb",
+    "authority": "ФСБ России",
+    "document_kind": "Приказ",
+    "number": "378",
+    "date": "10.07.2014",
+    "date_iso": "2014-07-10",
+    "title": "Приказ ФСБ России от 10.07.2014 № 378",
+    "output": "docs/regulation/russia/fsb/order-378-2014.md",
+    "official_links": [
+      {
+        "label": "Официальный портал правовой информации: требуется уточнение карточки",
+        "url": "http://publication.pravo.gov.ru/"
+      }
+    ],
+    "note": "В исходной странице была PDF-ссылка на нерелевантный региональный документ. Полный официальный текст требует ручного уточнения."
+  },
+  {
+    "id": "fstec-threat-assessment-methodology-2021",
+    "kind": "external_official",
+    "category": "fstec",
+    "authority": "ФСТЭК России",
+    "document_kind": "Методический документ",
+    "number": "",
+    "date": "05.02.2021",
+    "date_iso": "2021-02-05",
+    "title": "Методика оценки угроз безопасности информации",
+    "output": "docs/regulation/russia/fstec/threat-assessment-methodology-2021.md",
+    "official_links": [
+      {
+        "label": "БДУ ФСТЭК: документ 18",
+        "url": "https://bdu.fstec.ru/documents/18"
+      }
+    ],
+    "note": "Официальный источник указан как БДУ ФСТЭК. Для полного импорта нужен отдельный парсер официальной страницы/файла БДУ."
+  },
+  {
+    "id": "fstec-security-analysis-methodology-2025",
+    "kind": "external_official",
+    "category": "fstec",
+    "authority": "ФСТЭК России",
+    "document_kind": "Методический документ",
+    "number": "",
+    "date": "25.11.2025",
+    "date_iso": "2025-11-25",
+    "title": "Методика анализа защищенности информационных систем",
+    "output": "docs/regulation/russia/fstec/security-analysis-methodology-2025.md",
+    "official_links": [
+      {
+        "label": "ФСТЭК России: документы",
+        "url": "https://fstec.ru/dokumenty"
+      }
+    ],
+    "note": "В исходном обзоре ссылка указывала на Гарант. Нужна официальная страница/файл ФСТЭК для полного импорта."
+  },
+  {
+    "id": "fstec-software-vulnerability-methodology-2026",
+    "kind": "external_official",
+    "category": "fstec",
+    "authority": "ФСТЭК России",
+    "document_kind": "Методический документ",
+    "number": "",
+    "date": "12.05.2026",
+    "date_iso": "2026-05-12",
+    "title": "Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении",
+    "output": "docs/regulation/russia/fstec/software-vulnerability-methodology-2026.md",
+    "official_links": [
+      {
+        "label": "ФСТЭК России: документы",
+        "url": "https://fstec.ru/dokumenty"
+      }
+    ],
+    "note": "Нужна официальная страница/файл ФСТЭК для полного импорта."
+  },
+  {
+    "id": "rkn-order-996-2013",
+    "kind": "external_official",
+    "category": "roskomnadzor",
+    "authority": "Роскомнадзор",
+    "document_kind": "Приказ",
+    "number": "996",
+    "date": "05.09.2013",
+    "date_iso": "2013-09-05",
+    "title": "Приказ Роскомнадзора от 05.09.2013 № 996 «Об утверждении требований и методов по обезличиванию персональных данных»",
+    "output": "docs/regulation/russia/roskomnadzor/order-996-2013.md",
+    "official_links": [
+      {
+        "label": "Роскомнадзор",
+        "url": "https://rkn.gov.ru/"
+      }
+    ],
+    "legal_status": "Исторический документ; требуется проверка замещения приказом № 140",
+    "note": "Простой поиск IPS по дате и номеру не нашел документ. В реестр добавлен как найденный релевантный приказ Роскомнадзора, требующий ручной проверки."
+  },
+  {
+    "id": "bank-of-russia-recommendations-2-mr-2025",
+    "kind": "external_official",
+    "category": "bank-of-russia",
+    "authority": "Банк России",
+    "document_kind": "Методические рекомендации",
+    "number": "2-МР",
+    "date": "22.01.2025",
+    "date_iso": "2025-01-22",
+    "title": "Методические рекомендации Банка России № 2-МР по проведению тестирования на проникновение и анализа уязвимостей",
+    "output": "docs/regulation/russia/bank-of-russia/recommendations-2-mr-2025.md",
+    "official_links": [
+      {
+        "label": "Банк России: информационная безопасность",
+        "url": "https://www.cbr.ru/information_security/acts/"
+      }
+    ],
+    "note": "Документ относится к официальным актам Банка России, не к IPS. Нужен отдельный официальный парсер cbr.ru."
+  },
+  {
+    "id": "bank-of-russia-regulation-683-p-2019",
+    "kind": "external_official",
+    "category": "bank-of-russia",
+    "authority": "Банк России",
+    "document_kind": "Положение",
+    "number": "683-П",
+    "date": "17.04.2019",
+    "date_iso": "2019-04-17",
+    "title": "Положение Банка России № 683-П",
+    "output": "docs/regulation/russia/bank-of-russia/regulation-683-p-2019.md",
+    "official_links": [
+      {
+        "label": "Банк России",
+        "url": "https://cbr.ru/"
+      }
+    ],
+    "note": "В исходном обзоре документ указан группой с 382-П и 851-П. Требуется отдельное уточнение актуальной редакции на cbr.ru."
+  },
+  {
+    "id": "bank-of-russia-regulation-851-p-2025",
+    "kind": "external_official",
+    "category": "bank-of-russia",
+    "authority": "Банк России",
+    "document_kind": "Положение",
+    "number": "851-П",
+    "date": "2025",
+    "date_iso": "2025-01-01",
+    "title": "Положение Банка России № 851-П",
+    "output": "docs/regulation/russia/bank-of-russia/regulation-851-p-2025.md",
+    "official_links": [
+      {
+        "label": "Банк России",
+        "url": "https://cbr.ru/"
+      }
+    ],
+    "note": "Требуется отдельное уточнение актуальной редакции на cbr.ru."
+  },
+  {
+    "id": "gost-r-56939-2024",
+    "kind": "external_official",
+    "category": "national-standards",
+    "authority": "Росстандарт",
+    "document_kind": "ГОСТ Р",
+    "number": "56939-2024",
+    "date": "24.10.2024",
+    "date_iso": "2024-10-24",
+    "title": "ГОСТ Р 56939-2024 «Защита информации. Разработка безопасного программного обеспечения. Общие требования»",
+    "output": "docs/regulation/russia/national-standards/gost-r-56939-2024.md",
+    "official_links": [
+      {
+        "label": "protect.gost.ru",
+        "url": "https://protect.gost.ru/gost/details/f3818925-a96f-4f55-96e9-46b44720ee64"
+      }
+    ],
+    "note": "Национальные стандарты не импортируются как полный текст без проверки условий распространения. Зафиксирована официальная карточка."
+  },
+  {
+    "id": "gost-r-59547-2021",
+    "kind": "external_official",
+    "category": "national-standards",
+    "authority": "Росстандарт",
+    "document_kind": "ГОСТ Р",
+    "number": "59547-2021",
+    "date": "2021",
+    "date_iso": "2021-01-01",
+    "title": "ГОСТ Р 59547-2021 «Защита информации. Мониторинг информационной безопасности»",
+    "output": "docs/regulation/russia/national-standards/gost-r-59547-2021.md",
+    "official_links": [
+      {
+        "label": "protect.gost.ru",
+        "url": "https://protect.gost.ru/"
+      }
+    ],
+    "note": "Требуется уточнить официальную карточку стандарта на protect.gost.ru."
+  },
+  {
+    "id": "gost-r-59548-2022",
+    "kind": "external_official",
+    "category": "national-standards",
+    "authority": "Росстандарт",
+    "document_kind": "ГОСТ Р",
+    "number": "59548-2022",
+    "date": "2022",
+    "date_iso": "2022-01-01",
+    "title": "ГОСТ Р 59548-2022 «Защита информации. Регистрация событий безопасности»",
+    "output": "docs/regulation/russia/national-standards/gost-r-59548-2022.md",
+    "official_links": [
+      {
+        "label": "protect.gost.ru",
+        "url": "https://protect.gost.ru/"
+      }
+    ],
+    "note": "Требуется уточнить официальную карточку стандарта на protect.gost.ru."
+  },
+  {
+    "id": "gost-r-59710-2022",
+    "kind": "external_official",
+    "category": "national-standards",
+    "authority": "Росстандарт",
+    "document_kind": "ГОСТ Р",
+    "number": "59710-2022",
+    "date": "2022",
+    "date_iso": "2022-01-01",
+    "title": "ГОСТ Р 59710-2022 «Защита информации. Управление компьютерными инцидентами»",
+    "output": "docs/regulation/russia/national-standards/gost-r-59710-2022.md",
+    "official_links": [
+      {
+        "label": "protect.gost.ru",
+        "url": "https://protect.gost.ru/"
+      }
+    ],
+    "note": "Один из стандартов группы ГОСТ Р 59710/59711/59712. Требуется уточнить официальную карточку."
+  },
+  {
+    "id": "gost-r-59711-2022",
+    "kind": "external_official",
+    "category": "national-standards",
+    "authority": "Росстандарт",
+    "document_kind": "ГОСТ Р",
+    "number": "59711-2022",
+    "date": "2022",
+    "date_iso": "2022-01-01",
+    "title": "ГОСТ Р 59711-2022 «Защита информации. Управление компьютерными инцидентами»",
+    "output": "docs/regulation/russia/national-standards/gost-r-59711-2022.md",
+    "official_links": [
+      {
+        "label": "protect.gost.ru",
+        "url": "https://protect.gost.ru/"
+      }
+    ],
+    "note": "Один из стандартов группы ГОСТ Р 59710/59711/59712. Требуется уточнить официальную карточку."
+  },
+  {
+    "id": "gost-r-59712-2022",
+    "kind": "external_official",
+    "category": "national-standards",
+    "authority": "Росстандарт",
+    "document_kind": "ГОСТ Р",
+    "number": "59712-2022",
+    "date": "2022",
+    "date_iso": "2022-01-01",
+    "title": "ГОСТ Р 59712-2022 «Защита информации. Управление компьютерными инцидентами»",
+    "output": "docs/regulation/russia/national-standards/gost-r-59712-2022.md",
+    "official_links": [
+      {
+        "label": "protect.gost.ru",
+        "url": "https://protect.gost.ru/"
+      }
+    ],
+    "note": "Один из стандартов группы ГОСТ Р 59710/59711/59712. Требуется уточнить официальную карточку."
+  },
+  {
+    "id": "gost-r-71753-2024",
+    "kind": "external_official",
+    "category": "national-standards",
+    "authority": "Росстандарт",
+    "document_kind": "ГОСТ Р",
+    "number": "71753-2024",
+    "date": "2024",
+    "date_iso": "2024-01-01",
+    "title": "ГОСТ Р 71753-2024 «Защита информации. Система автоматизированного управления учетными записями и правами доступа»",
+    "output": "docs/regulation/russia/national-standards/gost-r-71753-2024.md",
+    "official_links": [
+      {
+        "label": "protect.gost.ru",
+        "url": "https://protect.gost.ru/"
+      }
+    ],
+    "note": "Требуется уточнить официальную карточку стандарта на protect.gost.ru."
+  },
+  {
+    "id": "gost-r-51583-2014",
+    "kind": "external_official",
+    "category": "national-standards",
+    "authority": "Росстандарт",
+    "document_kind": "ГОСТ Р",
+    "number": "51583-2014",
+    "date": "28.01.2014",
+    "date_iso": "2014-01-28",
+    "title": "ГОСТ Р 51583-2014 «Защита информации. Порядок создания автоматизированных систем в защищенном исполнении»",
+    "output": "docs/regulation/russia/national-standards/gost-r-51583-2014.md",
+    "official_links": [
+      {
+        "label": "protect.gost.ru",
+        "url": "https://protect.gost.ru/"
+      }
+    ],
+    "note": "Требуется уточнить официальную карточку стандарта на protect.gost.ru."
+  },
+  {
+    "id": "gost-r-58223-2018",
+    "kind": "external_official",
+    "category": "national-standards",
+    "authority": "Росстандарт",
+    "document_kind": "ГОСТ Р",
+    "number": "58223-2018",
+    "date": "2018",
+    "date_iso": "2018-01-01",
+    "title": "ГОСТ Р 58223-2018 «Интеллектуальная собственность. Антимонопольное регулирование и защита от недобросовестной конкуренции»",
+    "output": "docs/regulation/russia/national-standards/gost-r-58223-2018.md",
+    "official_links": [
+      {
+        "label": "protect.gost.ru",
+        "url": "https://protect.gost.ru/gost/details/ea5c3ff4-2577-47d8-ac52-ae14139e8ec5"
+      }
+    ],
+    "note": "Зафиксирована официальная карточка; полный текст стандарта не импортирован."
+  },
+  {
+    "id": "gost-r-58143-2018",
+    "kind": "external_official",
+    "category": "national-standards",
+    "authority": "Росстандарт",
+    "document_kind": "ГОСТ Р",
+    "number": "58143-2018",
+    "date": "2018",
+    "date_iso": "2018-01-01",
+    "title": "ГОСТ Р 58143-2018 «Защита информации. Тестирование на проникновение»",
+    "output": "docs/regulation/russia/national-standards/gost-r-58143-2018.md",
+    "official_links": [
+      {
+        "label": "protect.gost.ru",
+        "url": "https://protect.gost.ru/"
+      }
+    ],
+    "note": "Требуется уточнить официальную карточку стандарта на protect.gost.ru."
+  },
+  {
+    "id": "fstec-bdu-vulnerability-regulation-2018",
+    "kind": "external_official",
+    "category": "fstec",
+    "authority": "ФСТЭК России",
+    "document_kind": "Регламент",
+    "number": "",
+    "date": "26.06.2018",
+    "date_iso": "2018-06-26",
+    "title": "Регламент включения информации об уязвимостях программного обеспечения и программно-аппаратных средств в БДУ ФСТЭК России",
+    "output": "docs/regulation/russia/fstec/bdu-vulnerability-regulation-2018.md",
+    "official_links": [
+      {
+        "label": "БДУ ФСТЭК: регламенты",
+        "url": "https://bdu.fstec.ru/regulations"
+      }
+    ],
+    "note": "Официальный источник указан как БДУ ФСТЭК. Для полного импорта нужен отдельный парсер официальной страницы/файла БДУ."
+  },
+  {
+    "id": "bank-of-russia-regulation-382-p-2012",
+    "kind": "external_official",
+    "category": "bank-of-russia",
+    "authority": "Банк России",
+    "document_kind": "Положение",
+    "number": "382-П",
+    "date": "09.06.2012",
+    "date_iso": "2012-06-09",
+    "title": "Положение Банка России № 382-П",
+    "output": "docs/regulation/russia/bank-of-russia/regulation-382-p-2012.md",
+    "official_links": [
+      {
+        "label": "Банк России",
+        "url": "https://cbr.ru/"
+      }
+    ],
+    "note": "Смежный документ, явно упомянутый в строке про 683-П. Требуется уточнение актуальной редакции на cbr.ru."
+  },
+  {
+    "id": "bank-of-russia-regulation-757-p-2021",
+    "kind": "external_official",
+    "category": "bank-of-russia",
+    "authority": "Банк России",
+    "document_kind": "Положение",
+    "number": "757-П",
+    "date": "20.04.2021",
+    "date_iso": "2021-04-20",
+    "title": "Положение Банка России № 757-П",
+    "output": "docs/regulation/russia/bank-of-russia/regulation-757-p-2021.md",
+    "official_links": [
+      {
+        "label": "Банк России",
+        "url": "https://cbr.ru/"
+      }
+    ],
+    "note": "Документ был в локальных заготовках предыдущего импорта. Требуется уточнение актуальной редакции на cbr.ru."
+  }
+]

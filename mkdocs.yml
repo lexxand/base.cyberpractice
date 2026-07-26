@@ -93,16 +93,84 @@ nav:
       - Обзор: regulation/index.md
       - Россия:
           - Обзор: regulation/russia/index.md
-          - Федеральные законы: regulation/russia/laws/index.md
+          - Федеральные законы:
+              - Обзор: regulation/russia/laws/index.md
+              - 98-ФЗ от 2004: regulation/russia/laws/law-98-fz-2004.md
+              - 149-ФЗ от 2006: regulation/russia/laws/law-149-fz-2006.md
+              - 152-ФЗ от 2006: regulation/russia/laws/law-152-fz-2006.md
+              - 436-ФЗ от 2010: regulation/russia/laws/law-436-fz-2010.md
+              - 63-ФЗ от 2011: regulation/russia/laws/law-63-fz-2011.md
+              - 99-ФЗ от 2011: regulation/russia/laws/law-99-fz-2011.md
+              - 187-ФЗ от 2017: regulation/russia/laws/law-187-fz-2017.md
+          - Указы Президента:
+              - Обзор: regulation/russia/presidential-decrees/index.md
+              - Указ № 646 от 2016: regulation/russia/presidential-decrees/decree-646-2016.md
+              - Указ № 166 от 2022: regulation/russia/presidential-decrees/decree-166-2022.md
+              - Указ № 250 от 2022: regulation/russia/presidential-decrees/decree-250-2022.md
+          - Постановления Правительства:
+              - Обзор: regulation/russia/government/index.md
+              - Постановление № 608 от 1995: regulation/russia/government/resolution-608-1995.md
+              - Постановление № 687 от 2008: regulation/russia/government/resolution-687-2008.md
+              - Постановление № 79 от 2012: regulation/russia/government/resolution-79-2012.md
+              - Постановление № 211 от 2012: regulation/russia/government/resolution-211-2012.md
+              - Постановление № 313 от 2012: regulation/russia/government/resolution-313-2012.md
+              - Постановление № 1119 от 2012: regulation/russia/government/resolution-1119-2012.md
+              - Постановление № 676 от 2015: regulation/russia/government/resolution-676-2015.md
+              - Постановление № 127 от 2018: regulation/russia/government/resolution-127-2018.md
+              - Постановление № 1912 от 2023: regulation/russia/government/resolution-1912-2023.md
           - ФСТЭК России:
               - Обзор: regulation/russia/fstec/index.md
-              - Приказ № 117 от 11.04.2025: regulation/russia/fstec/order-117-2025.md
+              - Приказ № 21 от 2013: regulation/russia/fstec/order-21-2013.md
+              - Приказ № 31 от 2014: regulation/russia/fstec/order-31-2014.md
+              - Приказ № 235 от 2017: regulation/russia/fstec/order-235-2017.md
+              - Приказ № 239 от 2017: regulation/russia/fstec/order-239-2017.md
+              - Регламент включения информации об уязвимостях программного обеспечения: regulation/russia/fstec/bdu-vulnerability-regulation-2018.md
+              - Методика оценки угроз безопасности информации: regulation/russia/fstec/threat-assessment-methodology-2021.md
+              - Приказ № 77 от 2021: regulation/russia/fstec/order-77-2021.md
+              - Приказ № 117 от 2025: regulation/russia/fstec/order-117-2025.md
+              - Методика анализа защищенности информационных систем: regulation/russia/fstec/security-analysis-methodology-2025.md
+              - Методика выявления уязвимостей и недекларированных возможностей в прог: regulation/russia/fstec/software-vulnerability-methodology-2026.md
           - ФСБ России:
               - Обзор: regulation/russia/fsb/index.md
-              - Приказ № 546 от 25.12.2025: regulation/russia/fsb/order-546-2025.md
-          - Банк России: regulation/russia/bank-of-russia/index.md
+              - Приказ № 378 от 2014: regulation/russia/fsb/order-378-2014.md
+              - Приказ № 539 от 2025: regulation/russia/fsb/order-539-2025.md
+              - Приказ № 546 от 2025: regulation/russia/fsb/order-546-2025.md
+              - Приказ № 547 от 2025: regulation/russia/fsb/order-547-2025.md
+              - Приказ № 548 от 2025: regulation/russia/fsb/order-548-2025.md
+              - Приказ № 554 от 2025: regulation/russia/fsb/order-554-2025.md
+          - Роскомнадзор:
+              - Обзор: regulation/russia/roskomnadzor/index.md
+              - Приказ № 996 от 2013: regulation/russia/roskomnadzor/order-996-2013.md
+              - Приказ № 178 от 2022: regulation/russia/roskomnadzor/order-178-2022.md
+              - Приказ № 179 от 2022: regulation/russia/roskomnadzor/order-179-2022.md
+              - Приказ № 180 от 2022: regulation/russia/roskomnadzor/order-180-2022.md
+              - Приказ № 187 от 2022: regulation/russia/roskomnadzor/order-187-2022.md
+              - Приказ № 140 от 2025: regulation/russia/roskomnadzor/order-140-2025.md
+          - Банк России:
+              - Обзор: regulation/russia/bank-of-russia/index.md
+              - Положение № 382-П от 2012: regulation/russia/bank-of-russia/regulation-382-p-2012.md
+              - Положение № 683-П от 2019: regulation/russia/bank-of-russia/regulation-683-p-2019.md
+              - Положение № 757-П от 2021: regulation/russia/bank-of-russia/regulation-757-p-2021.md
+              - Положение № 851-П от 2025: regulation/russia/bank-of-russia/regulation-851-p-2025.md
+              - Методические рекомендации № 2-МР: regulation/russia/bank-of-russia/recommendations-2-mr-2025.md
+          - Национальные стандарты:
+              - Обзор: regulation/russia/national-standards/index.md
+              - ГОСТ Р 51583-2014: regulation/russia/national-standards/gost-r-51583-2014.md
+              - ГОСТ Р 58143-2018: regulation/russia/national-standards/gost-r-58143-2018.md
+              - ГОСТ Р 58223-2018: regulation/russia/national-standards/gost-r-58223-2018.md
+              - ГОСТ Р 59547-2021: regulation/russia/national-standards/gost-r-59547-2021.md
+              - ГОСТ Р 59548-2022: regulation/russia/national-standards/gost-r-59548-2022.md
+              - ГОСТ Р 59710-2022: regulation/russia/national-standards/gost-r-59710-2022.md
+              - ГОСТ Р 59711-2022: regulation/russia/national-standards/gost-r-59711-2022.md
+              - ГОСТ Р 59712-2022: regulation/russia/national-standards/gost-r-59712-2022.md
+              - ГОСТ Р 71753-2024: regulation/russia/national-standards/gost-r-71753-2024.md
+              - ГОСТ Р 56939-2024: regulation/russia/national-standards/gost-r-56939-2024.md
       - Международные стандарты: regulation/international/index.md
       - Внутренние документы: regulation/internal-documents/index.md
+      - Проверки изменений:
+          - Обзор: regulation/change-reports/index.md
+          - Последняя проверка: regulation/change-reports/latest.md
+          - Пример ФСТЭК №239: regulation/change-reports/sample-fstec-239-history.md
   - Практика:
       - Обзор: practices/index.md
       - Управление инцидентами: practices/incident-response.md

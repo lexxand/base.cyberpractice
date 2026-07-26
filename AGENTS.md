@@ -74,3 +74,89 @@ the source of the document text when the document is available through
 
 Use `scripts/import_pravo_ips.py` for repeatable imports from
 `pravo.gov.ru/proxy/ips`.
+
+## Current Regulation Import Process
+
+The authoritative registry for the regulation section is
+`scripts/regulation_registry.json`.
+
+Use the registry-driven importer for ongoing work:
+
+```text
+python scripts/import_regulations.py import
+```
+
+The importer supports two source classes:
+
+- `ips`: full official text imported from `pravo.gov.ru/proxy/ips` with `nd`,
+  `rdk`, edition label, retrieval date and SHA-256.
+- `external_official`: official-source card only. Do not present these pages as
+  full current text until an official full-text source has been resolved.
+
+Current registry coverage:
+
+- total documents: 56;
+- full IPS imports: 33;
+- official external cards requiring a dedicated source parser or manual source
+  resolution: 23.
+
+Current category coverage:
+
+- federal laws: 7;
+- presidential decrees: 3;
+- government resolutions: 9;
+- FSTEC documents: 10;
+- FSB documents: 6;
+- Roskomnadzor documents: 6;
+- Bank of Russia documents: 5;
+- national standards: 10.
+
+## Daily Change Checking
+
+Use the stored state in `scripts/regulation_state.json` to detect changes in
+published IPS documents:
+
+```text
+python scripts/import_regulations.py check --report docs/regulation/change-reports/latest.md
+```
+
+The check compares current official `rdk` and source HTML SHA-256 against the
+last imported state. If the official HTML changed, it writes a short Markdown
+report with:
+
+- document id and title;
+- old and new `rdk`;
+- source URL;
+- short human-readable summary;
+- examples of added and removed text fragments.
+
+The scheduled workflow is `.github/workflows/check-regulation-updates.yml`. It
+runs daily and, when a change is detected, re-imports the registry and commits
+the changed documents, updated state and report.
+
+For testing historical change handling on a document with multiple prepared
+editions:
+
+```text
+python scripts/import_regulations.py history --id fstec-order-239-2017 --limit 3 --report docs/regulation/change-reports/sample-fstec-239-history.md
+```
+
+## Findings From Import
+
+- The original regulation overview linked Government Resolution No. 1119 to
+  `nd=102160655`, which is a different document. The correct IPS document found
+  by official search is `nd=102160483`.
+- FSTEC Order No. 239 has a prepared current edition `rdk=4`, but the IPS card
+  also lists a newer unprepared edition: `5 - от 28.08.2024 № 159 (изм.)(не
+  готова)`. Do not describe the imported text as fully current without this
+  warning.
+- Several IPS cards for federal laws also contain unprepared newer editions.
+  Import the selected prepared edition and preserve the warning.
+- FSTEC Orders No. 21 and No. 31, FSB Order No. 378 and Roskomnadzor Order No.
+  996 were not resolved by simple IPS date/number search during this pass. They
+  are represented as official-source cards until a verified official full-text
+  source is found.
+- GOST texts, Bank of Russia acts, BDU/FSTEC methodical documents and some
+  regulator documents are not IPS legal texts in this workflow. They require
+  dedicated official-source importers and must remain cards until those importers
+  preserve the official text and licensing constraints correctly.
