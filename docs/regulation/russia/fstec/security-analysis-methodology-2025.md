@@ -34,8 +34,8 @@ review_status: external-official-card
 
 ## Официальные ссылки
 
-- [ФСТЭК России: документы](https://fstec.ru/dokumenty)
+- [ФСТЭК России: страница методического документа](https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-noyabrya-2025-g)
 
 ## Примечание
 
-В исходном обзоре ссылка указывала на Гарант. Нужна официальная страница/файл ФСТЭК для полного импорта.
+Нужна официальная страница/файл ФСТЭК для полного импорта. Из текущей среды fstec.ru не отвечает до TCP/HTTPS timeout; вторичные источники не используются.

@@ -228,11 +228,29 @@ def extract_bdu_document_card(page: str) -> str:
     return fragment
 
 
+def extract_protect_gost_details(page: str) -> str:
+    start = re.search(r"<main\b[^>]*>", page, re.I)
+    if not start:
+        raise RuntimeError("Cannot find protect.gost.ru main content start")
+    end = re.search(r"</main>", page[start.end() :], re.I)
+    if not end:
+        raise RuntimeError("Cannot find protect.gost.ru main content end")
+    fragment = page[start.start() : start.end() + end.end()]
+    fragment = re.sub(r"<!--.*?-->", "", fragment, flags=re.S)
+    fragment = re.sub(r"<script\b.*?</script>", "", fragment, flags=re.I | re.S)
+    fragment = re.sub(r"\s+", " ", fragment).strip()
+    fragment = re.sub(r"</(p|h[1-6]|table|div|ul|ol|li|dl|dd|dt|nav|section|button)>\s*<", r"</\1>\n<", fragment, flags=re.I)
+    fragment = re.sub(r">\s*<(p|h[1-6]|table|div|ul|ol|li|dl|dd|dt|nav|section|button)\b", r">\n<\1", fragment, flags=re.I)
+    return fragment
+
+
 def extract_official_html(page: str, extractor: str) -> str:
     if extractor == "bdu_content":
         return extract_bdu_content(page)
     if extractor == "bdu_document_card":
         return extract_bdu_document_card(page)
+    if extractor == "protect_gost_details":
+        return extract_protect_gost_details(page)
     raise RuntimeError(f"Unknown official HTML extractor: {extractor}")
 
 
@@ -568,6 +586,104 @@ review_status: official-card
     }
 
 
+def import_official_file(doc: dict[str, Any]) -> dict[str, Any]:
+    today = dt.date.today().isoformat()
+    url = doc["source_url"]
+    verify = bool(doc.get("tls_verify", True))
+    raw = get_official_html(url, timeout=60, verify=verify)
+    sha256 = hashlib.sha256(raw).hexdigest()
+    output = Path(doc["output"])
+    output.parent.mkdir(parents=True, exist_ok=True)
+    official_links = doc.get("official_links", [])
+    links = "\n".join(f"- [{item['label']}]({item['url']})" for item in official_links)
+    response = requests.head(
+        url,
+        timeout=30,
+        headers={"User-Agent": "Mozilla/5.0"},
+        allow_redirects=True,
+        verify=verify,
+    )
+    content_type = response.headers.get("content-type", "")
+    content_disposition = response.headers.get("content-disposition", "")
+    final_url = response.url
+    tls_note = ""
+    if not verify:
+        tls_note = (
+            "\n!!! warning \"TLS-проверка\"\n\n"
+            "    При импорте локальная среда не смогла построить доверенную цепочку\n"
+            "    сертификата источника. Файл получен с официального домена, но запрос\n"
+            "    выполнен с отключенной проверкой TLS-сертификата; это зафиксировано\n"
+            "    в метаданных страницы.\n"
+        )
+    body = f"""---
+id: {doc["id"]}
+title: {yaml(doc["title"])}
+type: normative-document
+category: {yaml(doc.get("category", ""))}
+authority: {yaml(doc.get("authority", ""))}
+document_kind: {yaml(doc.get("document_kind", ""))}
+document_number: {yaml(doc.get("number", ""))}
+document_date: {doc.get("date_iso", "")}
+legal_status: {yaml(doc.get("legal_status", "Официальный файл; полный текст не импортирован"))}
+source: {yaml(doc.get("source", "official_file"))}
+source_url: {yaml(url)}
+source_final_url: {yaml(final_url)}
+source_content_type: {yaml(content_type)}
+source_content_disposition: {yaml(content_disposition)}
+source_size_bytes: {len(raw)}
+source_retrieved: {today}
+source_sha256: {yaml(sha256)}
+source_tls_verify: {str(verify).lower()}
+updated: {today}
+review_status: official-file
+---
+
+# {doc["title"]}
+
+!!! warning "Официальный файл без извлечения текста"
+
+    Зафиксирован официальный файл источника, но полный текст в Markdown не
+    извлечен. Страница не помечается как полный актуальный текст документа.
+    Ежедневная проверка отслеживает SHA-256 файла: `{sha256}`.
+{tls_note}
+## Карточка документа
+
+| Поле | Значение |
+|---|---|
+| Орган | {doc.get("authority", "")} |
+| Вид документа | {doc.get("document_kind", "")} |
+| Номер | {doc.get("number", "")} |
+| Дата | {doc.get("date", "")} |
+| Тип источника | {content_type or "не определен"} |
+| Размер файла | {len(raw)} байт |
+| SHA-256 файла | `{sha256}` |
+
+## Официальные ссылки
+
+{links or f"- [Официальный файл]({url})"}
+
+## Примечание
+
+{doc.get("note", "Полный официальный текст требует отдельного подтвержденного импортера файла.")}
+"""
+    output.write_text(body, encoding="utf-8")
+    return {
+        "id": doc["id"],
+        "kind": "official_file",
+        "output": str(output),
+        "title": doc["title"],
+        "source_url": url,
+        "final_url": final_url,
+        "content_type": content_type,
+        "content_disposition": content_disposition,
+        "size_bytes": len(raw),
+        "sha256": sha256,
+        "checked_at": today,
+        "tls_verify": verify,
+        "status": doc.get("legal_status", "Официальный файл; полный текст не импортирован"),
+    }
+
+
 def load_registry(path: Path = REGISTRY) -> list[dict[str, Any]]:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -598,6 +714,8 @@ def import_all(ids: set[str] | None = None) -> list[dict[str, Any]]:
             results.append(import_official_html(doc))
         elif doc.get("kind") == "official_card":
             results.append(import_official_card(doc))
+        elif doc.get("kind") == "official_file":
+            results.append(import_official_file(doc))
         else:
             results.append(import_external(doc))
         print(f"{results[-1]['id']}: {results[-1]['kind']} -> {results[-1]['output']}")
@@ -618,6 +736,22 @@ def document_lines(document_html: str) -> list[str]:
     return [line for line in lines if line]
 
 
+def extracted_generated_html(markdown: str, wrapper_class: str) -> str:
+    marker = f'<div class="{wrapper_class}'
+    start = markdown.find(marker)
+    if start == -1:
+        return markdown
+    content_start = markdown.find("\n\n", start)
+    if content_start == -1:
+        return markdown[start:]
+    next_heading = markdown.find("\n## ", content_start + 2)
+    search_end = len(markdown) if next_heading == -1 else next_heading
+    content_end = markdown.rfind("\n</div>", content_start, search_end)
+    if content_end == -1:
+        content_end = search_end
+    return markdown[content_start + 2 : content_end].strip()
+
+
 def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
     state = load_state().get("documents", {})
     changes = []
@@ -635,7 +769,12 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
             if old.get("sha256") and old.get("sha256") != sha256:
                 old_lines: list[str] = []
                 try:
-                    old_lines = document_lines(Path(doc["output"]).read_text(encoding="utf-8"))
+                    old_lines = document_lines(
+                        extracted_generated_html(
+                            Path(doc["output"]).read_text(encoding="utf-8"),
+                            "pravo-doc",
+                        )
+                    )
                 except FileNotFoundError:
                     pass
                 new_lines = document_lines(extract_document_html(page))
@@ -675,7 +814,12 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
             doc_html = extract_official_html(page, doc["extractor"])
             sha256 = hashlib.sha256(doc_html.encode("utf-8")).hexdigest()
             if old.get("sha256") and old.get("sha256") != sha256:
-                old_lines = document_lines(Path(doc["output"]).read_text(encoding="utf-8"))
+                old_lines = document_lines(
+                    extracted_generated_html(
+                        Path(doc["output"]).read_text(encoding="utf-8"),
+                        "official-doc",
+                    )
+                )
                 new_lines = document_lines(doc_html)
                 diff = list(difflib.unified_diff(old_lines, new_lines, n=0))
                 added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
@@ -713,7 +857,12 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
             card_html = extract_official_html(page, doc["extractor"])
             sha256 = hashlib.sha256(card_html.encode("utf-8")).hexdigest()
             if old.get("sha256") and old.get("sha256") != sha256:
-                old_lines = document_lines(Path(doc["output"]).read_text(encoding="utf-8"))
+                old_lines = document_lines(
+                    extracted_generated_html(
+                        Path(doc["output"]).read_text(encoding="utf-8"),
+                        "official-card",
+                    )
+                )
                 new_lines = document_lines(card_html)
                 diff = list(difflib.unified_diff(old_lines, new_lines, n=0))
                 added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
@@ -738,6 +887,33 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
                         "examples": examples,
                         "source_url": doc["source_url"],
                         "status": doc.get("legal_status", "Официальная карточка"),
+                    }
+                )
+        elif doc.get("kind") == "official_file":
+            old = state.get(doc["id"], {})
+            raw = get_official_html(
+                doc["source_url"],
+                timeout=60,
+                verify=bool(doc.get("tls_verify", True)),
+            )
+            sha256 = hashlib.sha256(raw).hexdigest()
+            if old.get("sha256") and old.get("sha256") != sha256:
+                changes.append(
+                    {
+                        "id": doc["id"],
+                        "title": doc["title"],
+                        "old_rdk": "official_file",
+                        "new_rdk": "official_file",
+                        "old_sha256": old.get("sha256"),
+                        "new_sha256": sha256,
+                        "summary": (
+                            "Изменился официальный файл источника. "
+                            "Автоматическая текстовая сводка не сформирована, "
+                            "потому что полный текст файла не извлекается в этом workflow."
+                        ),
+                        "examples": [],
+                        "source_url": doc["source_url"],
+                        "status": doc.get("legal_status", "Официальный файл"),
                     }
                 )
     return changes
@@ -809,7 +985,7 @@ def write_report(changes: list[dict[str, Any]], output: Path) -> None:
     today = dt.date.today().isoformat()
     output.parent.mkdir(parents=True, exist_ok=True)
     if not changes:
-        body = f"# Проверка изменений НПА за {today}\n\nИзменений в импортированных IPS-документах не обнаружено.\n"
+        body = f"# Проверка изменений НПА за {today}\n\nИзменений в импортированных официальных источниках не обнаружено.\n"
     else:
         lines = [f"# Проверка изменений НПА за {today}", ""]
         for item in changes:

@@ -7,20 +7,27 @@ authority: "Банк России"
 document_kind: "Положение"
 document_number: "683-П"
 document_date: 2019-04-17
-legal_status: "Требует проверки"
-source: "external_official"
+legal_status: "Официальный файл; полный текст не импортирован"
+source: "official_file"
+source_url: "https://www.cbr.ru/ref/analytics/na_vr/file/812"
+source_final_url: "https://www.cbr.ru/Queries/UniDbQuery/File/90134/812"
+source_content_type: "application/pdf"
+source_content_disposition: "inline; filename=683_P_21052019.pdf; filename*=utf-8''683_P_21052019.pdf"
+source_size_bytes: 1581960
 source_retrieved: 2026-07-27
+source_sha256: "1f719f7da5b64a8d4848b08b5d3212e9a472658d8d437484bf80d4ccecdb987e"
+source_tls_verify: true
 updated: 2026-07-27
-review_status: external-official-card
+review_status: official-file
 ---
 
 # Положение Банка России № 683-П
 
-!!! warning "Полный текст не импортирован"
+!!! warning "Официальный файл без извлечения текста"
 
-    Для этого документа пока не импортирован полный подтвержденный текст из
-    официального источника. Страница является карточкой официального источника
-    и не помечается как полный актуальный текст.
+    Зафиксирован официальный файл источника, но полный текст в Markdown не
+    извлечен. Страница не помечается как полный актуальный текст документа.
+    Ежедневная проверка отслеживает SHA-256 файла: `1f719f7da5b64a8d4848b08b5d3212e9a472658d8d437484bf80d4ccecdb987e`.
 
 ## Карточка документа
 
@@ -30,7 +37,9 @@ review_status: external-official-card
 | Вид документа | Положение |
 | Номер | 683-П |
 | Дата | 17.04.2019 |
-| Статус | Требует проверки |
+| Тип источника | application/pdf |
+| Размер файла | 1581960 байт |
+| SHA-256 файла | `1f719f7da5b64a8d4848b08b5d3212e9a472658d8d437484bf80d4ccecdb987e` |
 
 ## Официальные ссылки
 
@@ -38,4 +47,4 @@ review_status: external-official-card
 
 ## Примечание
 
-Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается.
+Официальный источник cbr.ru отдает документ как PDF. Файл фиксируется по SHA-256 и проверяется ежедневно; текст PDF в Markdown не извлекается.

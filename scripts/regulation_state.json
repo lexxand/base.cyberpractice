@@ -548,107 +548,158 @@
     },
     "bank-of-russia-recommendations-2-mr-2025": {
       "id": "bank-of-russia-recommendations-2-mr-2025",
-      "kind": "external_official",
+      "kind": "official_file",
       "output": "docs/regulation/russia/bank-of-russia/recommendations-2-mr-2025.md",
       "title": "Методические рекомендации Банка России № 2-МР по проведению тестирования на проникновение и анализа уязвимостей",
+      "source_url": "https://www.cbr.ru/crosscut/lawacts/file/9945",
+      "final_url": "https://www.cbr.ru/crosscut/lawacts/file/9945",
+      "content_type": "application/pdf",
+      "content_disposition": "inline; filename=20250122_2-mr.pdf; filename*=utf-8''20250122_2-mr.pdf",
+      "size_bytes": 357791,
+      "sha256": "ba8dfe621ce781ac447d2aa3f2aae6dd25ca117901c6191a11365983d8e23e02",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальный файл; полный текст не импортирован"
     },
     "bank-of-russia-regulation-683-p-2019": {
       "id": "bank-of-russia-regulation-683-p-2019",
-      "kind": "external_official",
+      "kind": "official_file",
       "output": "docs/regulation/russia/bank-of-russia/regulation-683-p-2019.md",
       "title": "Положение Банка России № 683-П",
+      "source_url": "https://www.cbr.ru/ref/analytics/na_vr/file/812",
+      "final_url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/812",
+      "content_type": "application/pdf",
+      "content_disposition": "inline; filename=683_P_21052019.pdf; filename*=utf-8''683_P_21052019.pdf",
+      "size_bytes": 1581960,
+      "sha256": "1f719f7da5b64a8d4848b08b5d3212e9a472658d8d437484bf80d4ccecdb987e",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальный файл; полный текст не импортирован"
     },
     "bank-of-russia-regulation-851-p-2025": {
       "id": "bank-of-russia-regulation-851-p-2025",
-      "kind": "external_official",
+      "kind": "official_file",
       "output": "docs/regulation/russia/bank-of-russia/regulation-851-p-2025.md",
       "title": "Положение Банка России № 851-П",
+      "source_url": "https://www.cbr.ru/ref/analytics/na_vr/file/6262",
+      "final_url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/6262",
+      "content_type": "application/pdf",
+      "content_disposition": "inline; filename=851__.PDF; filename*=utf-8''851_%D0%9F.PDF",
+      "size_bytes": 1988654,
+      "sha256": "e1f634070c57c71dd85f550466d35fed608f48886c5710b8566811c4425b0cbd",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальный файл; полный текст не импортирован"
     },
     "gost-r-56939-2024": {
       "id": "gost-r-56939-2024",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/national-standards/gost-r-56939-2024.md",
       "title": "ГОСТ Р 56939-2024 «Защита информации. Разработка безопасного программного обеспечения. Общие требования»",
+      "source_url": "https://protect.gost.ru/gost/details/f3818925-a96f-4f55-96e9-46b44720ee64",
+      "sha256": "840872e804c1e9ad1e963dff5cb05b7210a419bb9f4177edfc6fb975b5b9ee02",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-59547-2021": {
       "id": "gost-r-59547-2021",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/national-standards/gost-r-59547-2021.md",
       "title": "ГОСТ Р 59547-2021 «Защита информации. Мониторинг информационной безопасности»",
+      "source_url": "https://protect.gost.ru/gost/details/c584277d-3b7d-4459-96bb-f6441a0ecc98",
+      "sha256": "cc2ca816e54097b952e1cc4b86a9f1675af7e1bb64b4eb9817c10fc6468231a1",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-59548-2022": {
       "id": "gost-r-59548-2022",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/national-standards/gost-r-59548-2022.md",
       "title": "ГОСТ Р 59548-2022 «Защита информации. Регистрация событий безопасности»",
+      "source_url": "https://protect.gost.ru/gost/details/d5008460-671b-4563-9388-d1d0f9ecdbbf",
+      "sha256": "72fd2926b33965cd673271492e9c1b2318466b8eb76d8cec41939c28fed5e73e",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-59710-2022": {
       "id": "gost-r-59710-2022",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/national-standards/gost-r-59710-2022.md",
       "title": "ГОСТ Р 59710-2022 «Защита информации. Управление компьютерными инцидентами»",
+      "source_url": "https://protect.gost.ru/gost/details/3dcc47c2-d28d-4a0d-a7cc-6f4ad8609b7c",
+      "sha256": "4af1459b3c21c8f6038c87b88c4730ca364359198f27f41fe23a66157b4da5bf",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-59711-2022": {
       "id": "gost-r-59711-2022",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/national-standards/gost-r-59711-2022.md",
       "title": "ГОСТ Р 59711-2022 «Защита информации. Управление компьютерными инцидентами»",
+      "source_url": "https://protect.gost.ru/gost/details/45281d05-ebb9-4819-ae17-f8efa45b69fa",
+      "sha256": "b12d33693a55f971990884d5b4e4d7a0bebbf690e23bfcc7e7f2df4d515ddaee",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-59712-2022": {
       "id": "gost-r-59712-2022",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/national-standards/gost-r-59712-2022.md",
       "title": "ГОСТ Р 59712-2022 «Защита информации. Управление компьютерными инцидентами»",
+      "source_url": "https://protect.gost.ru/gost/details/5eb2da92-c6e0-46ef-b260-051a7b6daf09",
+      "sha256": "39290405e945f0693cedfa4c679093470021663af33da8bbad4d62ebeb21db85",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-71753-2024": {
       "id": "gost-r-71753-2024",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/national-standards/gost-r-71753-2024.md",
       "title": "ГОСТ Р 71753-2024 «Защита информации. Система автоматизированного управления учетными записями и правами доступа»",
+      "source_url": "https://protect.gost.ru/gost/details/01dbad89-c066-4afe-887d-19e66b116949",
+      "sha256": "bce1ad2cfd506c58f92b92ac9c9b728680e299d899b9f5c8a54813c1a3f9f1e2",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-51583-2014": {
       "id": "gost-r-51583-2014",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/national-standards/gost-r-51583-2014.md",
       "title": "ГОСТ Р 51583-2014 «Защита информации. Порядок создания автоматизированных систем в защищенном исполнении»",
+      "source_url": "https://protect.gost.ru/gost/details/833cf1bb-c3db-4a87-a37e-3b513c006ed6",
+      "sha256": "b33c0fae254f23702bf89420ae39869a624648380c847d1ff751aa7188f041f2",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-58223-2018": {
       "id": "gost-r-58223-2018",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/national-standards/gost-r-58223-2018.md",
       "title": "ГОСТ Р 58223-2018 «Интеллектуальная собственность. Антимонопольное регулирование и защита от недобросовестной конкуренции»",
+      "source_url": "https://protect.gost.ru/gost/details/ea5c3ff4-2577-47d8-ac52-ae14139e8ec5",
+      "sha256": "132a3f9d9771bc7609c5368bc21f90d30a7c6e519f4e67aa68d7851752c266a5",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-58143-2018": {
       "id": "gost-r-58143-2018",
-      "kind": "external_official",
+      "kind": "official_card",
       "output": "docs/regulation/russia/national-standards/gost-r-58143-2018.md",
       "title": "ГОСТ Р 58143-2018 «Защита информации. Тестирование на проникновение»",
+      "source_url": "https://protect.gost.ru/gost/details/52ca9e86-3363-496b-a822-992c5e2623d3",
+      "sha256": "1425ac0b15818c249d4dcf0aa13cb74bad6efdde76eac42d6757216eee84497b",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "fstec-bdu-vulnerability-regulation-2018": {
       "id": "fstec-bdu-vulnerability-regulation-2018",
@@ -662,19 +713,33 @@
     },
     "bank-of-russia-regulation-382-p-2012": {
       "id": "bank-of-russia-regulation-382-p-2012",
-      "kind": "external_official",
+      "kind": "official_file",
       "output": "docs/regulation/russia/bank-of-russia/regulation-382-p-2012.md",
       "title": "Положение Банка России № 382-П",
+      "source_url": "https://www.cbr.ru/Queries/UniDbQuery/File/85920?fileId=-1&scope=1350",
+      "final_url": "https://www.cbr.ru/Queries/UniDbQuery/File/85920?fileId=-1&scope=1350",
+      "content_type": "application/pdf",
+      "content_disposition": "inline; filename=ves120622032.pdf; filename*=utf-8''ves120622032.pdf",
+      "size_bytes": 281014,
+      "sha256": "5f301e0d732549321d10eba4e9cf50208002731f8d2afba280b7587621b3a7b9",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальный файл; полный текст не импортирован"
     },
     "bank-of-russia-regulation-757-p-2021": {
       "id": "bank-of-russia-regulation-757-p-2021",
-      "kind": "external_official",
+      "kind": "official_file",
       "output": "docs/regulation/russia/bank-of-russia/regulation-757-p-2021.md",
       "title": "Положение Банка России № 757-П",
+      "source_url": "https://www.cbr.ru/ref/analytics/na_vr/file/2334",
+      "final_url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/2334",
+      "content_type": "application/pdf",
+      "content_disposition": "inline; filename=757_P_22062021.pdf; filename*=utf-8''757_P_22062021.pdf",
+      "size_bytes": 2980739,
+      "sha256": "20a6eb9af75885c1821d30ba147950761c1e92c67107bb09614a6fa9f1269e6c",
       "checked_at": "2026-07-27",
-      "status": "Требует проверки"
+      "tls_verify": true,
+      "status": "Официальный файл; полный текст не импортирован"
     },
     "rkn-order-253-2021": {
       "id": "rkn-order-253-2021",

@@ -7,20 +7,27 @@ authority: "Банк России"
 document_kind: "Положение"
 document_number: "851-П"
 document_date: 2025-01-30
-legal_status: "Требует проверки"
-source: "external_official"
+legal_status: "Официальный файл; полный текст не импортирован"
+source: "official_file"
+source_url: "https://www.cbr.ru/ref/analytics/na_vr/file/6262"
+source_final_url: "https://www.cbr.ru/Queries/UniDbQuery/File/90134/6262"
+source_content_type: "application/pdf"
+source_content_disposition: "inline; filename=851__.PDF; filename*=utf-8''851_%D0%9F.PDF"
+source_size_bytes: 1988654
 source_retrieved: 2026-07-27
+source_sha256: "e1f634070c57c71dd85f550466d35fed608f48886c5710b8566811c4425b0cbd"
+source_tls_verify: true
 updated: 2026-07-27
-review_status: external-official-card
+review_status: official-file
 ---
 
 # Положение Банка России № 851-П
 
-!!! warning "Полный текст не импортирован"
+!!! warning "Официальный файл без извлечения текста"
 
-    Для этого документа пока не импортирован полный подтвержденный текст из
-    официального источника. Страница является карточкой официального источника
-    и не помечается как полный актуальный текст.
+    Зафиксирован официальный файл источника, но полный текст в Markdown не
+    извлечен. Страница не помечается как полный актуальный текст документа.
+    Ежедневная проверка отслеживает SHA-256 файла: `e1f634070c57c71dd85f550466d35fed608f48886c5710b8566811c4425b0cbd`.
 
 ## Карточка документа
 
@@ -29,8 +36,10 @@ review_status: external-official-card
 | Орган | Банк России |
 | Вид документа | Положение |
 | Номер | 851-П |
-| Дата | 2025 |
-| Статус | Требует проверки |
+| Дата | 30.01.2025 |
+| Тип источника | application/pdf |
+| Размер файла | 1988654 байт |
+| SHA-256 файла | `e1f634070c57c71dd85f550466d35fed608f48886c5710b8566811c4425b0cbd` |
 
 ## Официальные ссылки
 
@@ -38,4 +47,4 @@ review_status: external-official-card
 
 ## Примечание
 
-Поиск Банка России возвращает № 851-П от 30.01.2025. Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается.
+Поиск Банка России возвращает № 851-П от 30.01.2025. Официальный источник cbr.ru отдает документ как PDF. Файл фиксируется по SHA-256 и проверяется ежедневно; текст PDF в Markdown не извлекается.

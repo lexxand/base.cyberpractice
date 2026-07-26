@@ -549,11 +549,11 @@
     "output": "docs/regulation/russia/fsb/order-378-2014.md",
     "official_links": [
       {
-        "label": "Официальный портал правовой информации: требуется уточнение карточки",
-        "url": "http://publication.pravo.gov.ru/"
+        "label": "ФСБ России: нормативные и методические документы",
+        "url": "https://www.fsb.ru/fsb/science/single.htm%21id%3D10437725%40fsbResearchart.html"
       }
     ],
-    "note": "В исходной странице была PDF-ссылка на нерелевантный региональный документ. Полный официальный текст требует ручного уточнения."
+    "note": "В исходной странице была PDF-ссылка на нерелевантный региональный документ. Полный официальный текст требует ручного уточнения. Из текущей среды fsb.ru не отвечает до TCP/HTTPS timeout; вторичные источники не используются."
   },
   {
     "id": "fstec-threat-assessment-methodology-2021",
@@ -595,11 +595,11 @@
     "output": "docs/regulation/russia/fstec/security-analysis-methodology-2025.md",
     "official_links": [
       {
-        "label": "ФСТЭК России: документы",
-        "url": "https://fstec.ru/dokumenty"
+        "label": "ФСТЭК России: страница методического документа",
+        "url": "https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-noyabrya-2025-g"
       }
     ],
-    "note": "В исходном обзоре ссылка указывала на Гарант. Нужна официальная страница/файл ФСТЭК для полного импорта."
+    "note": "Нужна официальная страница/файл ФСТЭК для полного импорта. Из текущей среды fstec.ru не отвечает до TCP/HTTPS timeout; вторичные источники не используются."
   },
   {
     "id": "fstec-software-vulnerability-methodology-2026",
@@ -614,11 +614,11 @@
     "output": "docs/regulation/russia/fstec/software-vulnerability-methodology-2026.md",
     "official_links": [
       {
-        "label": "ФСТЭК России: документы",
-        "url": "https://fstec.ru/dokumenty"
+        "label": "ФСТЭК России: страница методического документа",
+        "url": "https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-maya-2026-g"
       }
     ],
-    "note": "Нужна официальная страница/файл ФСТЭК для полного импорта."
+    "note": "Нужна официальная страница/файл ФСТЭК для полного импорта. Из текущей среды fstec.ru не отвечает до TCP/HTTPS timeout; вторичные источники не используются."
   },
   {
     "id": "rkn-order-996-2013",
@@ -633,16 +633,24 @@
     "output": "docs/regulation/russia/roskomnadzor/order-996-2013.md",
     "official_links": [
       {
-        "label": "Роскомнадзор",
-        "url": "https://rkn.gov.ru/"
+        "label": "Роскомнадзор: региональная официальная страница приказа № 996",
+        "url": "https://72.rkn.gov.ru/p21978/p25026/p25052/"
+      },
+      {
+        "label": "Минцифры России: карточка приказа № 996",
+        "url": "https://digital.gov.ru/documents/prikaz-federalnoj-sluzhby-po-nadzoru-v-sfere-svyazi-informaczionnyh-tehnologij-i-massovyh-kommunikaczij-%E2%84%96-996"
+      },
+      {
+        "label": "Актуальный заменяющий приказ Роскомнадзора № 140 в базе знаний",
+        "url": "order-140-2025.md"
       }
     ],
     "legal_status": "Исторический документ; требуется проверка замещения приказом № 140",
-    "note": "Простой поиск IPS по дате и номеру не нашел документ. В реестр добавлен как найденный релевантный приказ Роскомнадзора, требующий ручной проверки."
+    "note": "IPS по дате/номеру не возвращает приказ № 996. Документ исторический: требования обезличивания заменены приказом Роскомнадзора № 140 от 19.06.2025. Из текущей среды rkn.gov.ru и digital.gov.ru не отвечают до TCP/HTTPS timeout; вторичные источники не используются."
   },
   {
     "id": "bank-of-russia-recommendations-2-mr-2025",
-    "kind": "external_official",
+    "kind": "official_file",
     "category": "bank-of-russia",
     "authority": "Банк России",
     "document_kind": "Методические рекомендации",
@@ -661,11 +669,13 @@
         "url": "https://www.cbr.ru/information_security/acts/"
       }
     ],
-    "note": "Документ относится к официальным актам Банка России, не к IPS. Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается."
+    "note": "Официальный источник cbr.ru отдает документ как PDF. Файл фиксируется по SHA-256 и проверяется ежедневно; текст PDF в Markdown не извлекается.",
+    "source_url": "https://www.cbr.ru/crosscut/lawacts/file/9945",
+    "source": "official_file"
   },
   {
     "id": "bank-of-russia-regulation-683-p-2019",
-    "kind": "external_official",
+    "kind": "official_file",
     "category": "bank-of-russia",
     "authority": "Банк России",
     "document_kind": "Положение",
@@ -680,16 +690,18 @@
         "url": "https://www.cbr.ru/ref/analytics/na_vr/file/812"
       }
     ],
-    "note": "Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается."
+    "note": "Официальный источник cbr.ru отдает документ как PDF. Файл фиксируется по SHA-256 и проверяется ежедневно; текст PDF в Markdown не извлекается.",
+    "source_url": "https://www.cbr.ru/ref/analytics/na_vr/file/812",
+    "source": "official_file"
   },
   {
     "id": "bank-of-russia-regulation-851-p-2025",
-    "kind": "external_official",
+    "kind": "official_file",
     "category": "bank-of-russia",
     "authority": "Банк России",
     "document_kind": "Положение",
     "number": "851-П",
-    "date": "2025",
+    "date": "30.01.2025",
     "date_iso": "2025-01-30",
     "title": "Положение Банка России № 851-П",
     "output": "docs/regulation/russia/bank-of-russia/regulation-851-p-2025.md",
@@ -699,11 +711,13 @@
         "url": "https://www.cbr.ru/ref/analytics/na_vr/file/6262"
       }
     ],
-    "note": "Поиск Банка России возвращает № 851-П от 30.01.2025. Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается."
+    "note": "Поиск Банка России возвращает № 851-П от 30.01.2025. Официальный источник cbr.ru отдает документ как PDF. Файл фиксируется по SHA-256 и проверяется ежедневно; текст PDF в Markdown не извлекается.",
+    "source_url": "https://www.cbr.ru/ref/analytics/na_vr/file/6262",
+    "source": "official_file"
   },
   {
     "id": "gost-r-56939-2024",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "national-standards",
     "authority": "Росстандарт",
     "document_kind": "ГОСТ Р",
@@ -714,15 +728,19 @@
     "output": "docs/regulation/russia/national-standards/gost-r-56939-2024.md",
     "official_links": [
       {
-        "label": "protect.gost.ru",
+        "label": "Росстандарт: карточка стандарта",
         "url": "https://protect.gost.ru/gost/details/f3818925-a96f-4f55-96e9-46b44720ee64"
       }
     ],
-    "note": "Национальные стандарты не импортируются как полный текст без проверки условий распространения. Зафиксирована официальная карточка."
+    "note": "Карточка стандарта импортирована с protect.gost.ru и ежедневно проверяется по SHA-256 HTML-фрагмента. Полный текст ГОСТ не импортируется в Markdown до отдельного решения по официальному файлу и лицензионным ограничениям.",
+    "source": "official_card",
+    "source_url": "https://protect.gost.ru/gost/details/f3818925-a96f-4f55-96e9-46b44720ee64",
+    "extractor": "protect_gost_details",
+    "legal_status": "Официальная карточка стандарта; полный текст не импортирован"
   },
   {
     "id": "gost-r-59547-2021",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "national-standards",
     "authority": "Росстандарт",
     "document_kind": "ГОСТ Р",
@@ -733,15 +751,19 @@
     "output": "docs/regulation/russia/national-standards/gost-r-59547-2021.md",
     "official_links": [
       {
-        "label": "protect.gost.ru",
-        "url": "https://protect.gost.ru/"
+        "label": "Росстандарт: карточка стандарта",
+        "url": "https://protect.gost.ru/gost/details/c584277d-3b7d-4459-96bb-f6441a0ecc98"
       }
     ],
-    "note": "Требуется уточнить официальную карточку стандарта на protect.gost.ru."
+    "note": "Карточка стандарта импортирована с protect.gost.ru и ежедневно проверяется по SHA-256 HTML-фрагмента. Полный текст ГОСТ не импортируется в Markdown до отдельного решения по официальному файлу и лицензионным ограничениям.",
+    "source": "official_card",
+    "source_url": "https://protect.gost.ru/gost/details/c584277d-3b7d-4459-96bb-f6441a0ecc98",
+    "extractor": "protect_gost_details",
+    "legal_status": "Официальная карточка стандарта; полный текст не импортирован"
   },
   {
     "id": "gost-r-59548-2022",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "national-standards",
     "authority": "Росстандарт",
     "document_kind": "ГОСТ Р",
@@ -752,15 +774,19 @@
     "output": "docs/regulation/russia/national-standards/gost-r-59548-2022.md",
     "official_links": [
       {
-        "label": "protect.gost.ru",
-        "url": "https://protect.gost.ru/"
+        "label": "Росстандарт: карточка стандарта",
+        "url": "https://protect.gost.ru/gost/details/d5008460-671b-4563-9388-d1d0f9ecdbbf"
       }
     ],
-    "note": "Требуется уточнить официальную карточку стандарта на protect.gost.ru."
+    "note": "Карточка стандарта импортирована с protect.gost.ru и ежедневно проверяется по SHA-256 HTML-фрагмента. Полный текст ГОСТ не импортируется в Markdown до отдельного решения по официальному файлу и лицензионным ограничениям.",
+    "source": "official_card",
+    "source_url": "https://protect.gost.ru/gost/details/d5008460-671b-4563-9388-d1d0f9ecdbbf",
+    "extractor": "protect_gost_details",
+    "legal_status": "Официальная карточка стандарта; полный текст не импортирован"
   },
   {
     "id": "gost-r-59710-2022",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "national-standards",
     "authority": "Росстандарт",
     "document_kind": "ГОСТ Р",
@@ -771,15 +797,19 @@
     "output": "docs/regulation/russia/national-standards/gost-r-59710-2022.md",
     "official_links": [
       {
-        "label": "protect.gost.ru",
-        "url": "https://protect.gost.ru/"
+        "label": "Росстандарт: карточка стандарта",
+        "url": "https://protect.gost.ru/gost/details/3dcc47c2-d28d-4a0d-a7cc-6f4ad8609b7c"
       }
     ],
-    "note": "Один из стандартов группы ГОСТ Р 59710/59711/59712. Требуется уточнить официальную карточку."
+    "note": "Карточка стандарта импортирована с protect.gost.ru и ежедневно проверяется по SHA-256 HTML-фрагмента. Полный текст ГОСТ не импортируется в Markdown до отдельного решения по официальному файлу и лицензионным ограничениям.",
+    "source": "official_card",
+    "source_url": "https://protect.gost.ru/gost/details/3dcc47c2-d28d-4a0d-a7cc-6f4ad8609b7c",
+    "extractor": "protect_gost_details",
+    "legal_status": "Официальная карточка стандарта; полный текст не импортирован"
   },
   {
     "id": "gost-r-59711-2022",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "national-standards",
     "authority": "Росстандарт",
     "document_kind": "ГОСТ Р",
@@ -790,15 +820,19 @@
     "output": "docs/regulation/russia/national-standards/gost-r-59711-2022.md",
     "official_links": [
       {
-        "label": "protect.gost.ru",
-        "url": "https://protect.gost.ru/"
+        "label": "Росстандарт: карточка стандарта",
+        "url": "https://protect.gost.ru/gost/details/45281d05-ebb9-4819-ae17-f8efa45b69fa"
       }
     ],
-    "note": "Один из стандартов группы ГОСТ Р 59710/59711/59712. Требуется уточнить официальную карточку."
+    "note": "Карточка стандарта импортирована с protect.gost.ru и ежедневно проверяется по SHA-256 HTML-фрагмента. Полный текст ГОСТ не импортируется в Markdown до отдельного решения по официальному файлу и лицензионным ограничениям.",
+    "source": "official_card",
+    "source_url": "https://protect.gost.ru/gost/details/45281d05-ebb9-4819-ae17-f8efa45b69fa",
+    "extractor": "protect_gost_details",
+    "legal_status": "Официальная карточка стандарта; полный текст не импортирован"
   },
   {
     "id": "gost-r-59712-2022",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "national-standards",
     "authority": "Росстандарт",
     "document_kind": "ГОСТ Р",
@@ -809,15 +843,19 @@
     "output": "docs/regulation/russia/national-standards/gost-r-59712-2022.md",
     "official_links": [
       {
-        "label": "protect.gost.ru",
-        "url": "https://protect.gost.ru/"
+        "label": "Росстандарт: карточка стандарта",
+        "url": "https://protect.gost.ru/gost/details/5eb2da92-c6e0-46ef-b260-051a7b6daf09"
       }
     ],
-    "note": "Один из стандартов группы ГОСТ Р 59710/59711/59712. Требуется уточнить официальную карточку."
+    "note": "Карточка стандарта импортирована с protect.gost.ru и ежедневно проверяется по SHA-256 HTML-фрагмента. Полный текст ГОСТ не импортируется в Markdown до отдельного решения по официальному файлу и лицензионным ограничениям.",
+    "source": "official_card",
+    "source_url": "https://protect.gost.ru/gost/details/5eb2da92-c6e0-46ef-b260-051a7b6daf09",
+    "extractor": "protect_gost_details",
+    "legal_status": "Официальная карточка стандарта; полный текст не импортирован"
   },
   {
     "id": "gost-r-71753-2024",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "national-standards",
     "authority": "Росстандарт",
     "document_kind": "ГОСТ Р",
@@ -828,15 +866,19 @@
     "output": "docs/regulation/russia/national-standards/gost-r-71753-2024.md",
     "official_links": [
       {
-        "label": "protect.gost.ru",
-        "url": "https://protect.gost.ru/"
+        "label": "Росстандарт: карточка стандарта",
+        "url": "https://protect.gost.ru/gost/details/01dbad89-c066-4afe-887d-19e66b116949"
       }
     ],
-    "note": "Требуется уточнить официальную карточку стандарта на protect.gost.ru."
+    "note": "Карточка стандарта импортирована с protect.gost.ru и ежедневно проверяется по SHA-256 HTML-фрагмента. Полный текст ГОСТ не импортируется в Markdown до отдельного решения по официальному файлу и лицензионным ограничениям.",
+    "source": "official_card",
+    "source_url": "https://protect.gost.ru/gost/details/01dbad89-c066-4afe-887d-19e66b116949",
+    "extractor": "protect_gost_details",
+    "legal_status": "Официальная карточка стандарта; полный текст не импортирован"
   },
   {
     "id": "gost-r-51583-2014",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "national-standards",
     "authority": "Росстандарт",
     "document_kind": "ГОСТ Р",
@@ -847,15 +889,19 @@
     "output": "docs/regulation/russia/national-standards/gost-r-51583-2014.md",
     "official_links": [
       {
-        "label": "protect.gost.ru",
-        "url": "https://protect.gost.ru/"
+        "label": "Росстандарт: карточка стандарта",
+        "url": "https://protect.gost.ru/gost/details/833cf1bb-c3db-4a87-a37e-3b513c006ed6"
       }
     ],
-    "note": "Требуется уточнить официальную карточку стандарта на protect.gost.ru."
+    "note": "Карточка стандарта импортирована с protect.gost.ru и ежедневно проверяется по SHA-256 HTML-фрагмента. Полный текст ГОСТ не импортируется в Markdown до отдельного решения по официальному файлу и лицензионным ограничениям.",
+    "source": "official_card",
+    "source_url": "https://protect.gost.ru/gost/details/833cf1bb-c3db-4a87-a37e-3b513c006ed6",
+    "extractor": "protect_gost_details",
+    "legal_status": "Официальная карточка стандарта; полный текст не импортирован"
   },
   {
     "id": "gost-r-58223-2018",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "national-standards",
     "authority": "Росстандарт",
     "document_kind": "ГОСТ Р",
@@ -866,15 +912,19 @@
     "output": "docs/regulation/russia/national-standards/gost-r-58223-2018.md",
     "official_links": [
       {
-        "label": "protect.gost.ru",
+        "label": "Росстандарт: карточка стандарта",
         "url": "https://protect.gost.ru/gost/details/ea5c3ff4-2577-47d8-ac52-ae14139e8ec5"
       }
     ],
-    "note": "Зафиксирована официальная карточка; полный текст стандарта не импортирован."
+    "note": "Карточка стандарта импортирована с protect.gost.ru и ежедневно проверяется по SHA-256 HTML-фрагмента. Полный текст ГОСТ не импортируется в Markdown до отдельного решения по официальному файлу и лицензионным ограничениям.",
+    "source": "official_card",
+    "source_url": "https://protect.gost.ru/gost/details/ea5c3ff4-2577-47d8-ac52-ae14139e8ec5",
+    "extractor": "protect_gost_details",
+    "legal_status": "Официальная карточка стандарта; полный текст не импортирован"
   },
   {
     "id": "gost-r-58143-2018",
-    "kind": "external_official",
+    "kind": "official_card",
     "category": "national-standards",
     "authority": "Росстандарт",
     "document_kind": "ГОСТ Р",
@@ -885,11 +935,15 @@
     "output": "docs/regulation/russia/national-standards/gost-r-58143-2018.md",
     "official_links": [
       {
-        "label": "protect.gost.ru",
-        "url": "https://protect.gost.ru/"
+        "label": "Росстандарт: карточка стандарта",
+        "url": "https://protect.gost.ru/gost/details/52ca9e86-3363-496b-a822-992c5e2623d3"
       }
     ],
-    "note": "Требуется уточнить официальную карточку стандарта на protect.gost.ru."
+    "note": "Карточка стандарта импортирована с protect.gost.ru и ежедневно проверяется по SHA-256 HTML-фрагмента. Полный текст ГОСТ не импортируется в Markdown до отдельного решения по официальному файлу и лицензионным ограничениям.",
+    "source": "official_card",
+    "source_url": "https://protect.gost.ru/gost/details/52ca9e86-3363-496b-a822-992c5e2623d3",
+    "extractor": "protect_gost_details",
+    "legal_status": "Официальная карточка стандарта; полный текст не импортирован"
   },
   {
     "id": "fstec-bdu-vulnerability-regulation-2018",
@@ -911,7 +965,7 @@
   },
   {
     "id": "bank-of-russia-regulation-382-p-2012",
-    "kind": "external_official",
+    "kind": "official_file",
     "category": "bank-of-russia",
     "authority": "Банк России",
     "document_kind": "Положение",
@@ -924,13 +978,19 @@
       {
         "label": "Банк России: карточка 382-П",
         "url": "https://www.cbr.ru/PSystem/acts/382-p/"
+      },
+      {
+        "label": "Банк России: официальный файл ves120622032.pdf",
+        "url": "https://www.cbr.ru/Queries/UniDbQuery/File/85920?fileId=-1&scope=1350"
       }
     ],
-    "note": "На cbr.ru есть HTML-страница 382-П, но ссылка полного документа внутри страницы ведет на PDF; без отдельного разрешения текст из PDF не извлекается."
+    "note": "На cbr.ru есть HTML-страница 382-П, но ссылка полного документа внутри страницы ведет на PDF. Файл фиксируется по SHA-256 и проверяется ежедневно; текст PDF в Markdown не извлекается.",
+    "source_url": "https://www.cbr.ru/Queries/UniDbQuery/File/85920?fileId=-1&scope=1350",
+    "source": "official_file"
   },
   {
     "id": "bank-of-russia-regulation-757-p-2021",
-    "kind": "external_official",
+    "kind": "official_file",
     "category": "bank-of-russia",
     "authority": "Банк России",
     "document_kind": "Положение",
@@ -945,6 +1005,8 @@
         "url": "https://www.cbr.ru/ref/analytics/na_vr/file/2334"
       }
     ],
-    "note": "Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается."
+    "note": "Официальный источник cbr.ru отдает документ как PDF. Файл фиксируется по SHA-256 и проверяется ежедневно; текст PDF в Markdown не извлекается.",
+    "source_url": "https://www.cbr.ru/ref/analytics/na_vr/file/2334",
+    "source": "official_file"
   }
 ]

@@ -7,20 +7,27 @@ authority: "Банк России"
 document_kind: "Методические рекомендации"
 document_number: "2-МР"
 document_date: 2025-01-22
-legal_status: "Требует проверки"
-source: "external_official"
+legal_status: "Официальный файл; полный текст не импортирован"
+source: "official_file"
+source_url: "https://www.cbr.ru/crosscut/lawacts/file/9945"
+source_final_url: "https://www.cbr.ru/crosscut/lawacts/file/9945"
+source_content_type: "application/pdf"
+source_content_disposition: "inline; filename=20250122_2-mr.pdf; filename*=utf-8''20250122_2-mr.pdf"
+source_size_bytes: 357791
 source_retrieved: 2026-07-27
+source_sha256: "ba8dfe621ce781ac447d2aa3f2aae6dd25ca117901c6191a11365983d8e23e02"
+source_tls_verify: true
 updated: 2026-07-27
-review_status: external-official-card
+review_status: official-file
 ---
 
 # Методические рекомендации Банка России № 2-МР по проведению тестирования на проникновение и анализа уязвимостей
 
-!!! warning "Полный текст не импортирован"
+!!! warning "Официальный файл без извлечения текста"
 
-    Для этого документа пока не импортирован полный подтвержденный текст из
-    официального источника. Страница является карточкой официального источника
-    и не помечается как полный актуальный текст.
+    Зафиксирован официальный файл источника, но полный текст в Markdown не
+    извлечен. Страница не помечается как полный актуальный текст документа.
+    Ежедневная проверка отслеживает SHA-256 файла: `ba8dfe621ce781ac447d2aa3f2aae6dd25ca117901c6191a11365983d8e23e02`.
 
 ## Карточка документа
 
@@ -30,7 +37,9 @@ review_status: external-official-card
 | Вид документа | Методические рекомендации |
 | Номер | 2-МР |
 | Дата | 22.01.2025 |
-| Статус | Требует проверки |
+| Тип источника | application/pdf |
+| Размер файла | 357791 байт |
+| SHA-256 файла | `ba8dfe621ce781ac447d2aa3f2aae6dd25ca117901c6191a11365983d8e23e02` |
 
 ## Официальные ссылки
 
@@ -39,4 +48,4 @@ review_status: external-official-card
 
 ## Примечание
 
-Документ относится к официальным актам Банка России, не к IPS. Официальный источник cbr.ru отдает документ как PDF; без отдельного разрешения текст из PDF не извлекается.
+Официальный источник cbr.ru отдает документ как PDF. Файл фиксируется по SHA-256 и проверяется ежедневно; текст PDF в Markdown не извлекается.

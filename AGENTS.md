@@ -86,7 +86,7 @@ Use the registry-driven importer for ongoing work:
 python scripts/import_regulations.py import
 ```
 
-The importer supports three source classes:
+The importer supports five source classes:
 
 - `ips`: full official text imported from `pravo.gov.ru/proxy/ips` with `nd`,
   `rdk`, edition label, retrieval date and SHA-256.
@@ -94,6 +94,14 @@ The importer supports three source classes:
   HTML page with source URL, retrieval date and SHA-256 of the extracted HTML
   fragment. Preserve the official HTML structure and do not flatten it to plain
   Markdown.
+- `official_card`: official metadata/card HTML imported from an official source
+  when the page does not contain the full document text. Hash and monitor the
+  extracted official card fragment, but warn that the page is not a full current
+  text.
+- `official_file`: official file endpoint imported without extracting text.
+  Hash and monitor the exact downloaded file bytes, record content type, final
+  URL, file size and content disposition, but warn that the page is not a full
+  Markdown text.
 - `external_official`: official-source card only. Do not present these pages as
   full current text until an official full-text source has been resolved.
 
@@ -102,8 +110,10 @@ Current registry coverage:
 - total documents: 60;
 - full IPS imports: 37;
 - full official HTML imports: 1;
+- official metadata-card imports: 13;
+- official file imports without text extraction: 5;
 - official external cards requiring a dedicated source parser or manual source
-  resolution: 22.
+  resolution: 4.
 
 Current category coverage:
 
@@ -119,15 +129,18 @@ Current category coverage:
 ## Daily Change Checking
 
 Use the stored state in `scripts/regulation_state.json` to detect changes in
-published IPS documents:
+published official sources:
 
 ```text
 python scripts/import_regulations.py check --report docs/regulation/change-reports/latest.md
 ```
 
-The check compares current official `rdk` and source HTML SHA-256 against the
-last imported state. If the official HTML changed, it writes a short Markdown
-report with:
+The check compares current official `rdk` and source SHA-256 against the last
+imported state. For `ips` and `official_html` it can produce text-line
+examples. For `official_card` it reports official card changes. For
+`official_file` it reports byte-level file changes and requires manual review
+unless a text extractor for that file type has been explicitly added. If the
+official source changed, it writes a short Markdown report with:
 
 - document id and title;
 - old and new `rdk`;
@@ -222,10 +235,15 @@ official discovery catalog available for review.
   The main imported Roskomnadzor scope is the personal-data/incident subset
   relevant to the regulation page. The separate IPS discovery catalog tracks the
   broader official order set.
-- GOST texts, Bank of Russia acts, BDU/FSTEC methodical documents and some
-  regulator documents are not IPS legal texts in this workflow. They require
-  dedicated official-source importers and must remain cards until those importers
-  preserve the official text and licensing constraints correctly.
+- GOST cards are imported from exact `protect.gost.ru/gost/details/...`
+  official pages as `official_card`. The imported card preserves official
+  metadata such as designation, title, status, registration data, keywords and
+  scope. Full GOST text is not imported into Markdown until there is a separate
+  explicit decision on official-file extraction and licensing constraints.
+- Some BDU/FSTEC methodical documents and some regulator documents are not IPS
+  legal texts in this workflow. They require dedicated official-source
+  importers and must remain cards until those importers preserve the official
+  text and licensing constraints correctly.
 - The BDU FSTEC vulnerability-regulation page (`https://bdu.fstec.ru/regulations`)
   contains the full official HTML text and is imported as `official_html`.
   In the local environment the certificate chain for `bdu.fstec.ru` is not
@@ -241,11 +259,18 @@ official discovery catalog available for review.
   connection time for the checked pages. Record the exact official URL when a
   trusted official card exposes it, but do not synthesize document text from
   secondary databases.
-- Bank of Russia search currently resolves several relevant acts to official
-  `cbr.ru` PDF file endpoints. Keep those pages as official-source cards unless
-  there is explicit permission and a repeatable extractor for official CBR
-  files; do not silently convert PDFs into Markdown during the regulation import
-  workflow.
+- The remaining `external_official` documents after the CBR/GOST pass are:
+  FSB Order No. 378, FSTEC methodical documents dated 25.11.2025 and
+  12.05.2026, and historical Roskomnadzor Order No. 996. Exact official URLs
+  are recorded in their generated cards where available, but the current
+  environment times out against the relevant official domains (`fsb.ru`,
+  `fstec.ru`, `rkn.gov.ru`, `digital.gov.ru`). Keep them as non-full cards until
+  an official source can be fetched repeatably.
+- Bank of Russia search currently resolves the tracked relevant acts to official
+  `cbr.ru` PDF file endpoints. Import those endpoints as `official_file` so the
+  exact official file is hashed and monitored daily. Do not silently convert
+  these PDFs into Markdown during the regulation import workflow; add a
+  repeatable official-file extractor first if full text import is required.
 - The regulation landing page previously had grouped rows that linked
   `Постановления № 79, № 313, № 608` and `ГОСТ Р 59710, 59711, 59712` to
   category index pages instead of direct document pages. This is not acceptable
