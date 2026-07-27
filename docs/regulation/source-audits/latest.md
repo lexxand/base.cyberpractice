@@ -139,7 +139,7 @@
 
 | Ссылка | Результат | Детали |
 |---|---|---|
-| [ФСТЭК России: страница методического документа](https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-noyabrya-2025-g) | network-error | ConnectTimeout: HTTPSConnectionPool(host='fstec.ru', port=443): Max retries exceeded with url: /dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-noyabrya-2025-g (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x…>, 'Connection to fstec.ru timed out. (connect timeout=12)')) |
+| [ФСТЭК России: страница методического документа](https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-noyabrya-2025-g) | network-error | ConnectTimeout: HTTPSConnectionPool(host='fstec.ru', port=443): Max retries exceeded with url: /dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-noyabrya-2025-g (Caused by ConnectTimeoutError(<HTTPSConnection(host='fstec.ru', port=443) at 0x…>, 'Connection to fstec.ru timed out. (connect timeout=12)')) |
 
 ### IPS-проверка
 
@@ -162,7 +162,7 @@
 
 | Ссылка | Результат | Детали |
 |---|---|---|
-| [ФСТЭК России: страница методического документа](https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-maya-2026-g) | network-error | ConnectTimeout: HTTPSConnectionPool(host='fstec.ru', port=443): Max retries exceeded with url: /dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-maya-2026-g (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x…>, 'Connection to fstec.ru timed out. (connect timeout=12)')) |
+| [ФСТЭК России: страница методического документа](https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-maya-2026-g) | network-error | ConnectTimeout: HTTPSConnectionPool(host='fstec.ru', port=443): Max retries exceeded with url: /dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-maya-2026-g (Caused by ConnectTimeoutError(<HTTPSConnection(host='fstec.ru', port=443) at 0x…>, 'Connection to fstec.ru timed out. (connect timeout=12)')) |
 
 ### IPS-проверка
 
@@ -185,9 +185,9 @@
 
 | Ссылка | Результат | Детали |
 |---|---|---|
-| [Роскомнадзор: региональная официальная страница приказа № 996](https://72.rkn.gov.ru/p21978/p25026/p25052/) | network-error | ConnectTimeout: HTTPSConnectionPool(host='72.rkn.gov.ru', port=443): Max retries exceeded with url: /p21978/p25026/p25052/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x…>, 'Connection to 72.rkn.gov.ru timed out. (connect timeout=12)')) |
-| [Роскомнадзор: региональный официальный перечень НПА с приказом № 996](https://24.rkn.gov.ru/docs/24/sm38732/Fajl_1.htm) | network-error | ConnectTimeout: HTTPSConnectionPool(host='24.rkn.gov.ru', port=443): Max retries exceeded with url: /docs/24/sm38732/Fajl_1.htm (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x…>, 'Connection to 24.rkn.gov.ru timed out. (connect timeout=12)')) |
-| [Минцифры России: карточка приказа № 996](https://digital.gov.ru/documents/prikaz-federalnoj-sluzhby-po-nadzoru-v-sfere-svyazi-informaczionnyh-tehnologij-i-massovyh-kommunikaczij-%E2%84%96-996) | network-error | ConnectTimeout: HTTPSConnectionPool(host='digital.gov.ru', port=443): Max retries exceeded with url: /documents/prikaz-federalnoj-sluzhby-po-nadzoru-v-sfere-svyazi-informaczionnyh-tehnologij-i-massovyh-kommunikaczij-%E2%84%96-996 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x…>, 'Connection to digital.gov.ru timed out. (connect timeout=12)')) |
+| [Роскомнадзор: региональная официальная страница приказа № 996](https://72.rkn.gov.ru/p21978/p25026/p25052/) | network-error | ConnectTimeout: HTTPSConnectionPool(host='72.rkn.gov.ru', port=443): Max retries exceeded with url: /p21978/p25026/p25052/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='72.rkn.gov.ru', port=443) at 0x…>, 'Connection to 72.rkn.gov.ru timed out. (connect timeout=12)')) |
+| [Роскомнадзор: региональный официальный перечень НПА с приказом № 996](https://24.rkn.gov.ru/docs/24/sm38732/Fajl_1.htm) | network-error | ConnectTimeout: HTTPSConnectionPool(host='24.rkn.gov.ru', port=443): Max retries exceeded with url: /docs/24/sm38732/Fajl_1.htm (Caused by ConnectTimeoutError(<HTTPSConnection(host='24.rkn.gov.ru', port=443) at 0x…>, 'Connection to 24.rkn.gov.ru timed out. (connect timeout=12)')) |
+| [Минцифры России: карточка приказа № 996](https://digital.gov.ru/documents/prikaz-federalnoj-sluzhby-po-nadzoru-v-sfere-svyazi-informaczionnyh-tehnologij-i-massovyh-kommunikaczij-%E2%84%96-996) | network-error | ConnectTimeout: HTTPSConnectionPool(host='digital.gov.ru', port=443): Max retries exceeded with url: /documents/prikaz-federalnoj-sluzhby-po-nadzoru-v-sfere-svyazi-informaczionnyh-tehnologij-i-massovyh-kommunikaczij-%E2%84%96-996 (Caused by ConnectTimeoutError(<HTTPSConnection(host='digital.gov.ru', port=443) at 0x…>, 'Connection to digital.gov.ru timed out. (connect timeout=12)')) |
 | [Актуальный заменяющий приказ Роскомнадзора № 140 в базе знаний](../russia/roskomnadzor/order-140-2025.md) | local-link | Локальная ссылка внутри базы знаний; внешний HTTP-запрос не выполнялся. |
 
 ### IPS-проверка

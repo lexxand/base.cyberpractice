@@ -16,7 +16,7 @@ source_content_disposition: "inline; filename=683_P_21052019.pdf; filename*=utf-
 source_size_bytes: 1581960
 source_retrieved: 2026-07-27
 source_sha256: "1f719f7da5b64a8d4848b08b5d3212e9a472658d8d437484bf80d4ccecdb987e"
-source_tls_verify: true
+source_tls_verify: "true"
 updated: 2026-07-27
 review_status: official-file
 ---

@@ -16,7 +16,7 @@ source_content_disposition: "inline; filename=20250122_2-mr.pdf; filename*=utf-8
 source_size_bytes: 357791
 source_retrieved: 2026-07-27
 source_sha256: "ba8dfe621ce781ac447d2aa3f2aae6dd25ca117901c6191a11365983d8e23e02"
-source_tls_verify: true
+source_tls_verify: "true"
 updated: 2026-07-27
 review_status: official-file
 ---

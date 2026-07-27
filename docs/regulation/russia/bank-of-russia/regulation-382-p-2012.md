@@ -16,7 +16,7 @@ source_content_disposition: "inline; filename=ves120622032.pdf; filename*=utf-8'
 source_size_bytes: 281014
 source_retrieved: 2026-07-27
 source_sha256: "5f301e0d732549321d10eba4e9cf50208002731f8d2afba280b7587621b3a7b9"
-source_tls_verify: true
+source_tls_verify: "true"
 updated: 2026-07-27
 review_status: official-file
 ---

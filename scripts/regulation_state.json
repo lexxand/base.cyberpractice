@@ -489,7 +489,7 @@
       "source_url": "https://bdu.fstec.ru/documents/20",
       "sha256": "f2c23305524846b1c8c054cd6985fbaff0f54a555542a569019ec31441c80859",
       "checked_at": "2026-07-27",
-      "tls_verify": false,
+      "tls_verify": "false",
       "status": "Официальная карточка; полный текст не импортирован"
     },
     "fstec-order-31-2014": {
@@ -500,7 +500,7 @@
       "source_url": "https://bdu.fstec.ru/documents/25",
       "sha256": "bde7a02e6a9b5151785ae05dbd035d5f210283bb8f64c2ccbf1acc86d1763c97",
       "checked_at": "2026-07-27",
-      "tls_verify": false,
+      "tls_verify": "false",
       "status": "Официальная карточка; полный текст не импортирован"
     },
     "fsb-order-378-2014": {
@@ -522,7 +522,7 @@
       "source_url": "https://bdu.fstec.ru/documents/18",
       "sha256": "612878f7868ab38429458fafb7932e9a74ccde5c9c2b0273f675f99b56e6cdd4",
       "checked_at": "2026-07-27",
-      "tls_verify": false,
+      "tls_verify": "false",
       "status": "Официальная карточка; полный текст не импортирован"
     },
     "fstec-security-analysis-methodology-2025": {
@@ -561,7 +561,7 @@
       "size_bytes": 357791,
       "sha256": "ba8dfe621ce781ac447d2aa3f2aae6dd25ca117901c6191a11365983d8e23e02",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальный файл; полный текст не импортирован"
     },
     "bank-of-russia-regulation-683-p-2019": {
@@ -576,7 +576,7 @@
       "size_bytes": 1581960,
       "sha256": "1f719f7da5b64a8d4848b08b5d3212e9a472658d8d437484bf80d4ccecdb987e",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальный файл; полный текст не импортирован"
     },
     "bank-of-russia-regulation-851-p-2025": {
@@ -591,7 +591,7 @@
       "size_bytes": 1988654,
       "sha256": "e1f634070c57c71dd85f550466d35fed608f48886c5710b8566811c4425b0cbd",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальный файл; полный текст не импортирован"
     },
     "gost-r-56939-2024": {
@@ -602,7 +602,7 @@
       "source_url": "https://protect.gost.ru/gost/details/f3818925-a96f-4f55-96e9-46b44720ee64",
       "sha256": "840872e804c1e9ad1e963dff5cb05b7210a419bb9f4177edfc6fb975b5b9ee02",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-59547-2021": {
@@ -613,7 +613,7 @@
       "source_url": "https://protect.gost.ru/gost/details/c584277d-3b7d-4459-96bb-f6441a0ecc98",
       "sha256": "cc2ca816e54097b952e1cc4b86a9f1675af7e1bb64b4eb9817c10fc6468231a1",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-59548-2022": {
@@ -624,7 +624,7 @@
       "source_url": "https://protect.gost.ru/gost/details/d5008460-671b-4563-9388-d1d0f9ecdbbf",
       "sha256": "72fd2926b33965cd673271492e9c1b2318466b8eb76d8cec41939c28fed5e73e",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-59710-2022": {
@@ -635,7 +635,7 @@
       "source_url": "https://protect.gost.ru/gost/details/3dcc47c2-d28d-4a0d-a7cc-6f4ad8609b7c",
       "sha256": "4af1459b3c21c8f6038c87b88c4730ca364359198f27f41fe23a66157b4da5bf",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-59711-2022": {
@@ -646,7 +646,7 @@
       "source_url": "https://protect.gost.ru/gost/details/45281d05-ebb9-4819-ae17-f8efa45b69fa",
       "sha256": "b12d33693a55f971990884d5b4e4d7a0bebbf690e23bfcc7e7f2df4d515ddaee",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-59712-2022": {
@@ -657,7 +657,7 @@
       "source_url": "https://protect.gost.ru/gost/details/5eb2da92-c6e0-46ef-b260-051a7b6daf09",
       "sha256": "39290405e945f0693cedfa4c679093470021663af33da8bbad4d62ebeb21db85",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-71753-2024": {
@@ -668,7 +668,7 @@
       "source_url": "https://protect.gost.ru/gost/details/01dbad89-c066-4afe-887d-19e66b116949",
       "sha256": "bce1ad2cfd506c58f92b92ac9c9b728680e299d899b9f5c8a54813c1a3f9f1e2",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-51583-2014": {
@@ -679,7 +679,7 @@
       "source_url": "https://protect.gost.ru/gost/details/833cf1bb-c3db-4a87-a37e-3b513c006ed6",
       "sha256": "b33c0fae254f23702bf89420ae39869a624648380c847d1ff751aa7188f041f2",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "gost-r-58223-2018": {
@@ -688,7 +688,7 @@
       "output": "docs/regulation/russia/national-standards/gost-r-58223-2018.md",
       "title": "ГОСТ Р 58223-2018 «Интеллектуальная собственность. Антимонопольное регулирование и защита от недобросовестной конкуренции»",
       "source_url": "https://protect.gost.ru/gost/details/ea5c3ff4-2577-47d8-ac52-ae14139e8ec5",
-      "sha256": "465ce278c28979928d32bd7d74e59ecdd46c37048bafbf9d50a0b5e97c69ede8",
+      "sha256": "9acd38227840e325b9013e36999d18492f386917dda56864b7b768fe5060fb78",
       "checked_at": "2026-07-27",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
@@ -701,7 +701,7 @@
       "source_url": "https://protect.gost.ru/gost/details/52ca9e86-3363-496b-a822-992c5e2623d3",
       "sha256": "1425ac0b15818c249d4dcf0aa13cb74bad6efdde76eac42d6757216eee84497b",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
     "fstec-bdu-vulnerability-regulation-2018": {
@@ -726,7 +726,7 @@
       "size_bytes": 281014,
       "sha256": "5f301e0d732549321d10eba4e9cf50208002731f8d2afba280b7587621b3a7b9",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальный файл; полный текст не импортирован"
     },
     "bank-of-russia-regulation-757-p-2021": {
@@ -741,7 +741,7 @@
       "size_bytes": 2980739,
       "sha256": "20a6eb9af75885c1821d30ba147950761c1e92c67107bb09614a6fa9f1269e6c",
       "checked_at": "2026-07-27",
-      "tls_verify": true,
+      "tls_verify": "true",
       "status": "Официальный файл; полный текст не импортирован"
     },
     "rkn-order-253-2021": {

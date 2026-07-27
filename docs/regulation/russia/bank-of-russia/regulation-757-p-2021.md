@@ -16,7 +16,7 @@ source_content_disposition: "inline; filename=757_P_22062021.pdf; filename*=utf-
 source_size_bytes: 2980739
 source_retrieved: 2026-07-27
 source_sha256: "20a6eb9af75885c1821d30ba147950761c1e92c67107bb09614a6fa9f1269e6c"
-source_tls_verify: true
+source_tls_verify: "true"
 updated: 2026-07-27
 review_status: official-file
 ---
