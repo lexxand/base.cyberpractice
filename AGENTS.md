@@ -124,6 +124,8 @@ Current registry coverage:
 - official file imports without text extraction: 5;
 - official external cards requiring a dedicated source parser or manual source
   resolution: 3.
+- full-text/current-HTML imports at this point: 44;
+- non-full tracked official sources at this point: 22.
 
 Current category coverage:
 
@@ -279,6 +281,12 @@ them as legal classification. Current generated groups:
   review before import;
 - 161 orders are outside the current ИБ/ПДн core.
 
+Refresh on 2026-07-27 produced the same high-level result: 360 IPS query
+results, 200 cataloged Roskomnadzor orders / joint orders after registry
+backfill, 15 orders in the main registry, 0 ИБ/ПДн candidates, 24 adjacent
+149-ФЗ / internet-advertising rows requiring manual scope decision, and 161
+outside the current core.
+
 Important IPS limitation: the broad `a1` agency-name query does not return
 several Roskomnadzor personal-data orders that are already in the main
 registry, including orders No. 128, 178, 179, 180 and 140. Keep the discovery
@@ -324,6 +332,18 @@ official discovery catalog available for review.
   996 were not resolved by simple IPS date/number search during this pass. They
   are represented as official-source cards until a verified official full-text
   source is found.
+- Follow-up IPS title searches on 2026-07-27 confirmed that FSTEC base Orders
+  No. 21 and No. 31 are still not resolved as current consolidated base texts
+  in IPS. Name search for Order No. 21 returns amendment orders only:
+  `nd=102778035` (FSTEC Order No. 68 of 14.05.2020) and `nd=102432386`
+  (FSTEC Order No. 49 of 23.03.2017). Name search for Order No. 31 returns
+  amendment orders only: `nd=602293771` (FSTEC Order No. 46 of 15.03.2021)
+  and `nd=102481396` (FSTEC Order No. 138 of 09.08.2018). Do not attach these
+  amendment `nd` values to the base-order pages.
+- Follow-up IPS title searches on 2026-07-27 for FSB Order No. 378 and the
+  FSTEC threat-assessment methodology dated 05.02.2021 returned no IPS
+  documents. Keep their current official-card status unless an official
+  full-text source is found.
 - Additional Roskomnadzor personal-data orders resolved through IPS and added
   after the coverage audit:
   - Order No. 253 of 24.12.2021, `nd=602911772`, control checklist for federal
