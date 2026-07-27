@@ -232,10 +232,26 @@ values. The working official query is `list_itself` by field `Наименова
 Current discovery output:
 
 - official IPS query results: 360;
-- Roskomnadzor orders / joint orders starting with the agency name: 195;
+- Roskomnadzor orders / joint orders cataloged after registry backfill: 200;
 - generated human page:
   `docs/regulation/russia/roskomnadzor/ips-order-discovery.md`;
 - generated machine-readable state: `scripts/rkn_order_discovery.json`.
+
+The discovery page adds automatic thematic tags and a registry-selection
+status for each row. The tags are only a first-pass triage aid; do not treat
+them as legal classification. Current generated groups:
+
+- 9 orders are already in the main regulation registry by IPS `nd`;
+- 6 orders are candidates for manual ИБ/ПДн review;
+- 24 orders are adjacent 149-ФЗ / internet-advertising topics requiring manual
+  review before import;
+- 161 orders are outside the current ИБ/ПДн core.
+
+Important IPS limitation: the broad `a1` agency-name query does not return
+several Roskomnadzor personal-data orders that are already in the main
+registry, including orders No. 128, 178, 179, 180 and 140. Keep the discovery
+script's registry backfill by known IPS `nd`; otherwise the catalog falsely
+looks less complete than the imported regulation set.
 
 Do not automatically import all discovered Roskomnadzor orders into the main
 regulation registry. The discovered set includes кадровые, закупочные, связные,

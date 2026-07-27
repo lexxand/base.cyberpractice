@@ -2,7 +2,26 @@
   "retrieved": "2026-07-27",
   "query": "Федеральная служба по надзору в сфере связи",
   "ips_total_results": 360,
-  "rkn_orders_found": 195,
+  "rkn_orders_found": 200,
+  "note": "orders includes the main a1-query result plus registry backfill by IPS nd for Roskomnadzor orders that IPS does not return by the agency-name title query",
+  "registry_status_counts": {
+    "вне текущего ИБ/ПДн-ядра": 161,
+    "смежная тема, нужна ручная оценка": 24,
+    "в основном реестре": 9,
+    "кандидат для ИБ/ПДн-реестра": 6
+  },
+  "theme_counts": {
+    "служебное/кадры/закупки": 66,
+    "связь/лицензирование": 7,
+    "прочее": 86,
+    "149-ФЗ / ограничение доступа": 17,
+    "персональные данные": 15,
+    "обезличивание ПДн": 1,
+    "интернет-реклама": 10,
+    "надзор/проверочные листы ПДн": 2,
+    "инциденты ПДн": 1,
+    "СМИ/вещание": 4
+  },
   "orders": [
     {
       "nd": "610012949",
@@ -12,7 +31,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 9.4.2026 г. , ст. 0001202604090039"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=610012949&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=610012949&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "609895224",
@@ -22,7 +48,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 16.3.2026 г. , ст. 0001202603160021"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=609895224&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=609895224&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "610013743",
@@ -32,7 +65,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.4.2026 г. , ст. 0001202604140003"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=610013743&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=610013743&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "связь/лицензирование"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "609562749",
@@ -42,7 +82,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 19.1.2026 г. , ст. 0001202601190007"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=609562749&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=609562749&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "609588487",
@@ -52,7 +99,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 22.12.2025 г. , ст. 0001202512220021"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=609588487&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=609588487&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608665567",
@@ -62,7 +116,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 21.8.2025 г. , ст. 0001202508210024"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608665567&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608665567&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "607599406",
+      "status": "см. карточку IPS",
+      "heading": "Приказ Роскомнадзора от 19.06.2025 № 140",
+      "description": "Об утверждении требований к обезличиванию персональных данных и методов обезличивания персональных данных",
+      "publications": [],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607599406&firstDoc=1",
+      "date_iso": "2025-06-19",
+      "discovery_source": "backfill из основного реестра по IPS nd",
+      "themes": [
+        "персональные данные",
+        "обезличивание ПДн"
+      ],
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-140-2025",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-140-2025.md"
     },
     {
       "nd": "606929173",
@@ -72,7 +150,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 15.7.2025 г. , ст. 0001202507150016"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606929173&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606929173&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605715563",
@@ -82,7 +167,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 23.6.2025 г. , ст. 0001202506230010"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605715563&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605715563&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605707909",
@@ -92,7 +184,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 11.6.2025 г. , ст. 0001202506110011"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605707909&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605707909&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608565974",
@@ -102,17 +201,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.4.2025 г. , ст. 0001202504140032"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608565974&firstDoc=1"
-    },
-    {
-      "nd": "608561067",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 25.03.2025 № 68",
-      "description": "Об утверждении Требований к идентификатору рекламы, идентификатору социальной рекламы, его содержанию, порядка и сроков его присвоения, размещения при распространении рекламы и (или) социальной рекламы в информационно-телекоммуникационной сети \"Интернет\", хранения и предоставления в Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.4.2025 г. , ст. 0001202504140029"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608565974&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "интернет-реклама"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608561067&firstDoc=1"
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608561068",
@@ -122,17 +218,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.4.2025 г. , ст. 0001202504140030"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608561068&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608561068&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "интернет-реклама"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
-      "nd": "608528026",
+      "nd": "608561067",
       "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 10.03.2025 № 59",
-      "description": "О внесении изменений в подпункт \"ж\" пункта 2 порядка функционирования Информационной системы взаимодействия, утвержденного приказом Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 16 марта 2021 г. № 27",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 25.03.2025 № 68",
+      "description": "Об утверждении Требований к идентификатору рекламы, идентификатору социальной рекламы, его содержанию, порядка и сроков его присвоения, размещения при распространении рекламы и (или) социальной рекламы в информационно-телекоммуникационной сети \"Интернет\", хранения и предоставления в Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций",
       "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 10.4.2025 г. , ст. 0001202504100007"
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.4.2025 г. , ст. 0001202504140029"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608528026&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608561067&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "интернет-реклама"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608571718",
@@ -142,7 +252,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 24.4.2025 г. , ст. 0001202504240001"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608571718&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608571718&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "608528026",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 10.03.2025 № 59",
+      "description": "О внесении изменений в подпункт \"ж\" пункта 2 порядка функционирования Информационной системы взаимодействия, утвержденного приказом Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 16 марта 2021 г. № 27",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 10.4.2025 г. , ст. 0001202504100007"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608528026&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608528029",
@@ -152,7 +286,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 11.4.2025 г. , ст. 0001202504110010"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608528029&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608528029&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608454000",
@@ -162,17 +303,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.3.2025 г. , ст. 0001202503140016"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608454000&firstDoc=1"
-    },
-    {
-      "nd": "608556260",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 20.01.2025 № 8",
-      "description": "Об утверждении Порядка направления Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций операторам поисковых систем требования о прекращении выдачи по запросам пользователей сведений об информационном ресурсе иностранного лица",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 17.4.2025 г. , ст. 0001202504170013"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608454000&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608556260&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608556261",
@@ -182,7 +320,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 17.4.2025 г. , ст. 0001202504170014"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608556261&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608556261&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "608556260",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 20.01.2025 № 8",
+      "description": "Об утверждении Порядка направления Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций операторам поисковых систем требования о прекращении выдачи по запросам пользователей сведений об информационном ресурсе иностранного лица",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 17.4.2025 г. , ст. 0001202504170013"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608556260&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608388122",
@@ -192,7 +354,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 26.2.2025 г. , ст. 0001202502260005"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608388122&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608388122&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608187854",
@@ -202,7 +371,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 13.1.2025 г. , ст. 0001202501130008"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608187854&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608187854&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608187867",
@@ -212,7 +388,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 13.1.2025 г. , ст. 0001202501130003"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608187867&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608187867&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "607947300",
@@ -222,7 +405,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 20.11.2024 г. , ст. 0001202411200008"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607947300&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607947300&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "607756859",
@@ -232,7 +422,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 22.10.2024 г. , ст. 0001202410220019"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607756859&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607756859&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "607920588",
@@ -242,7 +439,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 18.11.2024 г. , ст. 0001202411180016"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607920588&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607920588&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "608019580",
@@ -252,7 +456,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 21.11.2024 г. , ст. 0001202411210028"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608019580&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=608019580&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "607439425",
@@ -262,7 +473,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 12.9.2024 г. , ст. 0001202409120003"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607439425&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607439425&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "607460268",
@@ -272,7 +490,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 17.9.2024 г. , ст. 0001202409170002"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607460268&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607460268&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "607460386",
@@ -282,7 +507,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 13.9.2024 г. , ст. 0001202409130021"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607460386&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607460386&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "607120317",
@@ -292,7 +524,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 7.6.2024 г. , ст. 0001202406070005"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607120317&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607120317&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "606865339",
@@ -302,7 +541,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 23.4.2024 г. , ст. 0001202404230003"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606865339&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606865339&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "607222114",
@@ -312,7 +558,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 3.7.2024 г. , ст. 0001202407030002"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607222114&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=607222114&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "606767929",
@@ -322,7 +575,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 9.4.2024 г. , ст. 0001202404090009"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606767929&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606767929&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "606497257",
@@ -332,7 +592,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 20.2.2024 г. , ст. 0001202402200003"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606497257&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606497257&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "606168716",
@@ -342,7 +609,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 1.12.2023 г. , ст. 0001202312010036"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606168716&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606168716&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "606159688",
@@ -352,7 +626,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 1.12.2023 г. , ст. 0001202312010002"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606159688&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606159688&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "606228515",
@@ -362,17 +643,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 19.12.2023 г. , ст. 0001202312190030"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606228515&firstDoc=1"
-    },
-    {
-      "nd": "605849413",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 27.07.2023 № 113",
-      "description": "О внесении изменения в Перечень должностей федеральной государственной гражданской службы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций и ее территориальных органах, при замещении которых федеральные государственные гражданские служащие обязаны представлять сведения о своих доходах, об имуществе и обязательствах имущественного характера, а также сведения о доходах, об имуществе и обязательствах имущественного характера своих супруги (супруга) и несовершеннолетних детей, утвержденный приказом Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 31 октября 2022 г. № 182",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 25.8.2023 г. , ст. 0001202308250029"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606228515&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605849413&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "606023856",
@@ -382,7 +660,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 24.10.2023 г. , ст. 0001202310240004"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606023856&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606023856&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "605849413",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 27.07.2023 № 113",
+      "description": "О внесении изменения в Перечень должностей федеральной государственной гражданской службы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций и ее территориальных органах, при замещении которых федеральные государственные гражданские служащие обязаны представлять сведения о своих доходах, об имуществе и обязательствах имущественного характера, а также сведения о доходах, об имуществе и обязательствах имущественного характера своих супруги (супруга) и несовершеннолетних детей, утвержденный приказом Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 31 октября 2022 г. № 182",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 25.8.2023 г. , ст. 0001202308250029"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605849413&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605974944",
@@ -392,7 +694,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 9.10.2023 г. , ст. 0001202310090035"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605974944&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605974944&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605836566",
@@ -402,7 +711,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 15.8.2023 г. , ст. 0001202308150002"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605836566&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605836566&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605787074",
@@ -412,7 +728,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 10.8.2023 г. , ст. 0001202308100013"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605787074&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605787074&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605730698",
@@ -422,7 +745,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 19.7.2023 г. , ст. 0001202307190004"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605730698&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605730698&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605582115",
@@ -432,7 +762,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 2.6.2023 г. , ст. 0001202306020012"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605582115&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605582115&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605731415",
@@ -442,7 +779,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 12.7.2023 г. , ст. 0001202307120005"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605731415&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605731415&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605640018",
@@ -452,17 +796,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 19.6.2023 г. , ст. 0001202306190019"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605640018&firstDoc=1"
-    },
-    {
-      "nd": "605504336",
-      "status": "Действует c изменениями",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 27.02.2023 № 25",
-      "description": "Об утверждении Критериев оценки материалов и (или) информации, необходимых для принятия Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций решений, являющихся основаниями для включения доменных имен и (или) указателей страниц сайтов в информационно-телекоммуникационной сети \"Интернет\", а также сетевых адресов, позволяющих идентифицировать сайты в информационно-телекоммуникационной сети \"Интернет\", в единую автоматизированную информационную систему \"Единый реестр доменных имен, указателей страниц сайтов в информационно-телекоммуникационной сети \"Интернет\" и сетевых адресов, позволяющих идентифицировать сайты в информационно-телекоммуникационной сети \"Интернет\", содержащие информацию, распространение которой в Российской Федерации запрещено\"",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 17.4.2023 г. , ст. 0001202304170032"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605640018&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605504336&firstDoc=1"
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605504337",
@@ -472,7 +813,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 17.4.2023 г. , ст. 0001202304170036"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605504337&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605504337&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "605504336",
+      "status": "Действует c изменениями",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 27.02.2023 № 25",
+      "description": "Об утверждении Критериев оценки материалов и (или) информации, необходимых для принятия Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций решений, являющихся основаниями для включения доменных имен и (или) указателей страниц сайтов в информационно-телекоммуникационной сети \"Интернет\", а также сетевых адресов, позволяющих идентифицировать сайты в информационно-телекоммуникационной сети \"Интернет\", в единую автоматизированную информационную систему \"Единый реестр доменных имен, указателей страниц сайтов в информационно-телекоммуникационной сети \"Интернет\" и сетевых адресов, позволяющих идентифицировать сайты в информационно-телекоммуникационной сети \"Интернет\", содержащие информацию, распространение которой в Российской Федерации запрещено\"",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 17.4.2023 г. , ст. 0001202304170032"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605504336&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605502052",
@@ -482,7 +847,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 7.4.2023 г. , ст. 0001202304070022"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605502052&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605502052&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605539638",
@@ -492,7 +864,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 29.5.2023 г. , ст. 0001202305290031"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605539638&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605539638&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "604763171",
@@ -502,7 +881,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 27.2.2023 г. , ст. 0001202302270030"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=604763171&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=604763171&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "605502743",
@@ -512,7 +898,15 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 5.4.2023 г. , ст. 0001202304050016"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605502743&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605502743&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "персональные данные",
+        "надзор/проверочные листы ПДн"
+      ],
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-1-2023",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-1-2023.md"
     },
     {
       "nd": "605539645",
@@ -522,7 +916,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 22.5.2023 г. , ст. 0001202305220004"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605539645&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605539645&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-201-2022",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-201-2022.md"
     },
     {
       "nd": "605504764",
@@ -532,7 +933,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 11.5.2023 г. , ст. 0001202305110006"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605504764&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=605504764&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603752544",
@@ -542,17 +950,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 12.1.2023 г. , ст. 0001202301120012"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603752544&firstDoc=1"
-    },
-    {
-      "nd": "603752114",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 01.12.2022 № 193",
-      "description": "О внесении изменений в Требования к программам для электронных вычислительных машин, используемым операторами рекламных данных для учета рекламы в информационно-телекоммуникационной сети \"Интернет\" и предоставления информации в Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций, утвержденные приказом Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 11 апреля 2022 г. № 64\"",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 29.12.2022 г. , ст. 0001202212290012"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603752544&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603752114&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603758056",
@@ -562,7 +967,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 30.12.2022 г. , ст. 0001202212300026"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603758056&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603758056&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "603752114",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 01.12.2022 № 193",
+      "description": "О внесении изменений в Требования к программам для электронных вычислительных машин, используемым операторами рекламных данных для учета рекламы в информационно-телекоммуникационной сети \"Интернет\" и предоставления информации в Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций, утвержденные приказом Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 11 апреля 2022 г. № 64\"",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 29.12.2022 г. , ст. 0001202212290012"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603752114&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "интернет-реклама"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603749835",
@@ -572,7 +1001,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 29.12.2022 г. , ст. 0001202212290011"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603749835&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603749835&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "интернет-реклама"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603749414",
@@ -582,7 +1018,15 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.12.2022 г. , ст. 0001202212280052"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603749414&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603749414&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "персональные данные",
+        "инциденты ПДн"
+      ],
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-187-2022",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-187-2022.md"
     },
     {
       "nd": "603585190",
@@ -592,7 +1036,62 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 5.12.2022 г. , ст. 0001202212050069"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603585190&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603585190&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "603603348",
+      "status": "см. карточку IPS",
+      "heading": "Приказ Роскомнадзора от 28.10.2022 № 180",
+      "description": "Об утверждении форм уведомлений о намерении осуществлять обработку персональных данных",
+      "publications": [],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603603348&firstDoc=1",
+      "date_iso": "2022-10-28",
+      "discovery_source": "backfill из основного реестра по IPS nd",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-180-2022",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-180-2022.md"
+    },
+    {
+      "nd": "603552320",
+      "status": "см. карточку IPS",
+      "heading": "Приказ Роскомнадзора от 28.10.2022 № 179",
+      "description": "Об утверждении Требований к подтверждению уничтожения персональных данных",
+      "publications": [],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603552320&firstDoc=1",
+      "date_iso": "2022-10-28",
+      "discovery_source": "backfill из основного реестра по IPS nd",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-179-2022",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-179-2022.md"
+    },
+    {
+      "nd": "603552315",
+      "status": "см. карточку IPS",
+      "heading": "Приказ Роскомнадзора от 27.10.2022 № 178",
+      "description": "Об утверждении Требований к оценке вреда субъектам персональных данных",
+      "publications": [],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603552315&firstDoc=1",
+      "date_iso": "2022-10-27",
+      "discovery_source": "backfill из основного реестра по IPS nd",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-178-2022",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-178-2022.md"
     },
     {
       "nd": "603546208",
@@ -602,7 +1101,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 23.11.2022 г. , ст. 0001202211230022"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603546208&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603546208&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603424271",
@@ -612,7 +1118,30 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 30.9.2022 г. , ст. 0001202209300016"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603424271&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603424271&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "603389824",
+      "status": "см. карточку IPS",
+      "heading": "Приказ Роскомнадзора от 05.08.2022 № 128",
+      "description": "Об утверждении перечня иностранных государств, обеспечивающих адекватную защиту прав субъектов персональных данных",
+      "publications": [],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603389824&firstDoc=1",
+      "date_iso": "2022-08-05",
+      "discovery_source": "backfill из основного реестра по IPS nd",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-128-2022",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-128-2022.md"
     },
     {
       "nd": "603224091",
@@ -622,7 +1151,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 1.9.2022 г. , ст. 0001202209010015"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603224091&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603224091&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603200385",
@@ -632,17 +1168,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 18.8.2022 г. , ст. 0001202208180020"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603200385&firstDoc=1"
-    },
-    {
-      "nd": "603073220",
-      "status": "Действует c изменениями",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 11.04.2022 № 64",
-      "description": "Об утверждении Требований к программам для электронных вычислительных машин, используемым операторами рекламных данных для учета рекламы в информационно-телекоммуникационной сети \"Интернет\" и предоставления информации в Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 30.5.2022 г. , ст. 0001202205300027"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603200385&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603073220&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603080152",
@@ -652,7 +1185,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 31.5.2022 г. , ст. 0001202205310013"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603080152&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603080152&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "интернет-реклама"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "603073220",
+      "status": "Действует c изменениями",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 11.04.2022 № 64",
+      "description": "Об утверждении Требований к программам для электронных вычислительных машин, используемым операторами рекламных данных для учета рекламы в информационно-телекоммуникационной сети \"Интернет\" и предоставления информации в Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 30.5.2022 г. , ст. 0001202205300027"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603073220&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "интернет-реклама"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603176425",
@@ -662,7 +1219,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.7.2022 г. , ст. 0001202207140134"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603176425&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603176425&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603185051",
@@ -672,17 +1236,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 4.8.2022 г. , ст. 0001202208040033"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603185051&firstDoc=1"
-    },
-    {
-      "nd": "602954271",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 16.02.2022 № 38",
-      "description": "Об утверждении Перечня должностей, замещение которых влечет за собой размещение сведений о доходах, расходах, об имуществе и обязательствах имущественного характера федеральных государственных гражданских служащих Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций, ее территориальных органов, работников организаций, созданных для выполнения задач, поставленных перед Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций, а также сведений о доходах, расходах, об имуществе и обязательствах имущественного характера их супруг (супругов) и несовершеннолетних детей на официальном сайте Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 22.3.2022 г. , ст. 0001202203220008"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603185051&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602954271&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603103899",
@@ -692,7 +1253,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 2.6.2022 г. , ст. 0001202206020016"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603103899&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603103899&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "602954271",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 16.02.2022 № 38",
+      "description": "Об утверждении Перечня должностей, замещение которых влечет за собой размещение сведений о доходах, расходах, об имуществе и обязательствах имущественного характера федеральных государственных гражданских служащих Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций, ее территориальных органов, работников организаций, созданных для выполнения задач, поставленных перед Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций, а также сведений о доходах, расходах, об имуществе и обязательствах имущественного характера их супруг (супругов) и несовершеннолетних детей на официальном сайте Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 22.3.2022 г. , ст. 0001202203220008"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602954271&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602954273",
@@ -702,7 +1287,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 22.3.2022 г. , ст. 0001202203220014"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602954273&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602954273&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602963913",
@@ -712,7 +1304,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.2.2022 г. , ст. 0001202202280016"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602963913&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602963913&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603060266",
@@ -722,17 +1321,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 19.5.2022 г. , ст. 0001202205190005"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603060266&firstDoc=1"
-    },
-    {
-      "nd": "602934846",
-      "status": "Утратил силу",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 07.02.2022 № 31",
-      "description": "Об утверждении перечня должностей федеральной государственной гражданской службы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций и ее территориальных органах, при замещении которых федеральные государственные гражданские служащие обязаны представлять сведения о своих доходах, об имуществе и обязательствах имущественного характера, а также сведения о доходах, об имуществе и обязательствах имущественного характера своих супруги (супруга) и несовершеннолетних детей",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 11.3.2022 г. , ст. 0001202203110040"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603060266&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602934846&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603099171",
@@ -742,7 +1338,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 6.6.2022 г. , ст. 0001202206060022"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603099171&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603099171&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "602934846",
+      "status": "Утратил силу",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 07.02.2022 № 31",
+      "description": "Об утверждении перечня должностей федеральной государственной гражданской службы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций и ее территориальных органах, при замещении которых федеральные государственные гражданские служащие обязаны представлять сведения о своих доходах, об имуществе и обязательствах имущественного характера, а также сведения о доходах, об имуществе и обязательствах имущественного характера своих супруги (супруга) и несовершеннолетних детей",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 11.3.2022 г. , ст. 0001202203110040"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602934846&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602911915",
@@ -752,17 +1372,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.2.2022 г. , ст. 0001202202280013"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602911915&firstDoc=1"
-    },
-    {
-      "nd": "602894755",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 27.01.2022 № 20",
-      "description": "О внесении изменений в приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 10 марта 2015 г. № 18 \"О распространении на отдельные категории граждан ограничений, запретов и обязанностей\"",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.2.2022 г. , ст. 0001202202280020"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602911915&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602894755&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602947964",
@@ -772,7 +1389,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 18.3.2022 г. , ст. 0001202203180018"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602947964&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602947964&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "602894755",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 27.01.2022 № 20",
+      "description": "О внесении изменений в приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 10 марта 2015 г. № 18 \"О распространении на отдельные категории граждан ограничений, запретов и обязанностей\"",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.2.2022 г. , ст. 0001202202280020"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602894755&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602911911",
@@ -782,17 +1423,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 9.3.2022 г. , ст. 0001202203090028"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602911911&firstDoc=1"
-    },
-    {
-      "nd": "602900639",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 24.01.2022 № 15",
-      "description": "Об утверждении порядка представления лицами, замещающими должности федеральной государственной гражданской службы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций, сведений о своих расходах, о расходах своих супруги (супруга) и несовершеннолетних детей",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.2.2022 г. , ст. 0001202202280030"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602911911&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602900639&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602911902",
@@ -802,7 +1440,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 25.2.2022 г. , ст. 0001202202250050"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602911902&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602911902&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "602900639",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 24.01.2022 № 15",
+      "description": "Об утверждении порядка представления лицами, замещающими должности федеральной государственной гражданской службы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций, сведений о своих расходах, о расходах своих супруги (супруга) и несовершеннолетних детей",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.2.2022 г. , ст. 0001202202280030"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602900639&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602911898",
@@ -812,7 +1474,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 25.2.2022 г. , ст. 0001202202250047"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602911898&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602911898&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "СМИ/вещание"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "603001746",
@@ -822,7 +1491,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 20.4.2022 г. , ст. 0001202204200007"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603001746&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=603001746&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602900252",
@@ -832,7 +1508,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 24.2.2022 г. , ст. 0001202202240012"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602900252&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602900252&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602911772",
@@ -842,7 +1525,15 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.2.2022 г. , ст. 0001202202280005"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602911772&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602911772&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "персональные данные",
+        "надзор/проверочные листы ПДн"
+      ],
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-253-2021",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-253-2021.md"
     },
     {
       "nd": "602722188",
@@ -852,7 +1543,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 31.12.2021 г. , ст. 0001202112310007"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602722188&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602722188&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602793415",
@@ -862,7 +1560,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 25.1.2022 г. , ст. 0001202201250021"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602793415&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602793415&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602793414",
@@ -872,7 +1577,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 25.1.2022 г. , ст. 0001202201250002"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602793414&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602793414&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602812731",
@@ -882,7 +1594,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 10.2.2022 г. , ст. 0001202202100035"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602812731&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602812731&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602807337",
@@ -892,7 +1611,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 31.1.2022 г. , ст. 0001202201310032"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602807337&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602807337&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602594393",
@@ -902,7 +1628,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 23.11.2021 г. , ст. 0001202111230003"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602594393&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602594393&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602494309",
@@ -912,7 +1645,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 21.10.2021 г. , ст. 0001202110210033"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602494309&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602494309&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "кандидат для ИБ/ПДн-реестра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602446869",
@@ -922,7 +1662,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 24.9.2021 г. , ст. 0001202109240001"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602446869&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602446869&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602446861",
@@ -932,7 +1679,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 24.9.2021 г. , ст. 0001202109240004"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602446861&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602446861&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602434074",
@@ -942,7 +1696,15 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 8.9.2021 г. , ст. 0001202109080046"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602434074&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602434074&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа",
+        "интернет-реклама"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602434073",
@@ -952,7 +1714,15 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 8.9.2021 г. , ст. 0001202109080047"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602434073&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602434073&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа",
+        "интернет-реклама"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602682320",
@@ -962,7 +1732,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 23.12.2021 г. , ст. 0001202112230004"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602682320&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602682320&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602342224",
@@ -972,7 +1749,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 22.7.2021 г. , ст. 0001202107220024"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602342224&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602342224&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602367821",
@@ -982,7 +1766,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 11.8.2021 г. , ст. 0001202108110028"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602367821&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602367821&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "кандидат для ИБ/ПДн-реестра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602193949",
@@ -992,7 +1783,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 31.5.2021 г. , ст. 0001202105310015"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602193949&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602193949&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602193688",
@@ -1002,7 +1800,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 31.5.2021 г. , ст. 0001202105310013"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602193688&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602193688&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602443398",
@@ -1012,7 +1817,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 15.9.2021 г. , ст. 0001202109150018"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602443398&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602443398&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "связь/лицензирование"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602089471",
@@ -1022,7 +1834,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 15.3.2021 г. , ст. 0001202103150029"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602089471&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602089471&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "602067304",
@@ -1032,7 +1851,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 9.2.2021 г. , ст. 0001202102090029"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602067304&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=602067304&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "связь/лицензирование"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102953881",
@@ -1042,7 +1868,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 21.12.2020 г. , ст. 0001202012210094"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102953881&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102953881&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102979617",
@@ -1052,17 +1885,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.1.2021 г. , ст. 0001202101140014"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102979617&firstDoc=1"
-    },
-    {
-      "nd": "102921342",
-      "status": "Утратил силу",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 22.10.2020 № 137",
-      "description": "О внесении изменения в Положение об обработке и защите персональных данных в центральном аппарате Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций, утвержденное приказом Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 3 декабря 2012 г. № 1255",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 25.11.2020 г. , ст. 0001202011250001"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102979617&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102921342&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102979302",
@@ -1072,7 +1902,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 12.1.2021 г. , ст. 0001202101120006"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102979302&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102979302&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102921342",
+      "status": "Утратил силу",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 22.10.2020 № 137",
+      "description": "О внесении изменения в Положение об обработке и защите персональных данных в центральном аппарате Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций, утвержденное приказом Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 3 декабря 2012 г. № 1255",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 25.11.2020 г. , ст. 0001202011250001"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102921342&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "кандидат для ИБ/ПДн-реестра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102913813",
@@ -1082,7 +1936,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 17.11.2020 г. , ст. 0001202011170036"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102913813&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102913813&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "СМИ/вещание"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102905504",
@@ -1092,47 +1953,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 11.11.2020 г. , ст. 0001202011110038"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102905504&firstDoc=1"
-    },
-    {
-      "nd": "102860808",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28.08.2020 № 113",
-      "description": "О внесении изменения в приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28 ноября 2012 г. № 1242 \"Об утверждении Методики проведения конкурсных процедур на заключение договора на обучение с обязательством последующего прохождения федеральной государственной гражданской службы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций\"",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 29.9.2020 г. , ст. 0001202009290006"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102905504&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102860808&firstDoc=1"
-    },
-    {
-      "nd": "102858700",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28.08.2020 № 112",
-      "description": "О внесении изменения в приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 18 марта 2019 г. № 51 \"Об утверждении Методики проведения конкурса на замещение вакантной должности федеральной государственной гражданской службы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций\"",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.9.2020 г. , ст. 0001202009280078"
-      ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102858700&firstDoc=1"
-    },
-    {
-      "nd": "102862434",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28.08.2020 № 111",
-      "description": "О внесении изменения в Порядок аккредитации экспертов и экспертных организаций на право проведения экспертизы информационной продукции, утвержденный приказом Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 24 августа 2012 г. № 824",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 1.10.2020 г. , ст. 0001202010010025"
-      ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102862434&firstDoc=1"
-    },
-    {
-      "nd": "102860804",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28.08.2020 № 110",
-      "description": "О внесении изменения в приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 2 февраля 2010 г. № 80 \"Об утверждении Порядка работы комиссии по проведению конкурса на замещение должности руководителя федерального государственного унитарного предприятия, подведомственного Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций\"",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 29.9.2020 г. , ст. 0001202009290022"
-      ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102860804&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102865732",
@@ -1142,7 +1970,82 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 30.9.2020 г. , ст. 0001202009300069"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102865732&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102865732&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "кандидат для ИБ/ПДн-реестра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102862434",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28.08.2020 № 111",
+      "description": "О внесении изменения в Порядок аккредитации экспертов и экспертных организаций на право проведения экспертизы информационной продукции, утвержденный приказом Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 24 августа 2012 г. № 824",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 1.10.2020 г. , ст. 0001202010010025"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102862434&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102860808",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28.08.2020 № 113",
+      "description": "О внесении изменения в приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28 ноября 2012 г. № 1242 \"Об утверждении Методики проведения конкурсных процедур на заключение договора на обучение с обязательством последующего прохождения федеральной государственной гражданской службы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций\"",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 29.9.2020 г. , ст. 0001202009290006"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102860808&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102860804",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28.08.2020 № 110",
+      "description": "О внесении изменения в приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 2 февраля 2010 г. № 80 \"Об утверждении Порядка работы комиссии по проведению конкурса на замещение должности руководителя федерального государственного унитарного предприятия, подведомственного Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций\"",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 29.9.2020 г. , ст. 0001202009290022"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102860804&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102858700",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28.08.2020 № 112",
+      "description": "О внесении изменения в приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 18 марта 2019 г. № 51 \"Об утверждении Методики проведения конкурса на замещение вакантной должности федеральной государственной гражданской службы в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций\"",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.9.2020 г. , ст. 0001202009280078"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102858700&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102858696",
@@ -1152,7 +2055,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.9.2020 г. , ст. 0001202009280077"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102858696&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102858696&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102858690",
@@ -1162,7 +2072,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.9.2020 г. , ст. 0001202009280076"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102858690&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102858690&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102953841",
@@ -1172,7 +2089,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 16.12.2020 г. , ст. 0001202012160039"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102953841&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102953841&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102955164",
@@ -1182,7 +2106,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 22.12.2020 г. , ст. 0001202012220134"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102955164&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102955164&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102850555",
@@ -1192,7 +2123,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.9.2020 г. , ст. 0001202009140043"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102850555&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102850555&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "связь/лицензирование"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102855018",
@@ -1202,7 +2140,15 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 23.9.2020 г. , ст. 0001202009230001"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102855018&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102855018&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "СМИ/вещание",
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102721939",
@@ -1212,7 +2158,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 21.4.2020 г. , ст. 0001202004210029"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102721939&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102721939&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102721938",
@@ -1222,7 +2175,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 21.4.2020 г. , ст. 0001202004210031"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102721938&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102721938&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102740619",
@@ -1232,7 +2192,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 27.5.2020 г. , ст. 0001202005270024"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102740619&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102740619&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102676533",
@@ -1242,7 +2209,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 5.2.2020 г. , ст. 0001202002050020"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102676533&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102676533&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102622461",
@@ -1252,7 +2226,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 8.11.2019 г. , ст. 0001201911080041"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102622461&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102622461&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102616264",
@@ -1262,7 +2243,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 15.10.2019 г. , ст. 0001201910150043"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102616264&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102616264&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102620277",
@@ -1272,7 +2260,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 7.11.2019 г. , ст. 0001201911070026"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102620277&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102620277&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102590790",
@@ -1282,7 +2277,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 9.8.2019 г. , ст. 0001201908090002"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102590790&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102590790&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102622675",
@@ -1292,7 +2294,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 31.10.2019 г. , ст. 0001201910310013"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102622675&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102622675&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102587744",
@@ -1302,7 +2311,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 5.8.2019 г. , ст. 0001201908050018"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102587744&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102587744&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102571359",
@@ -1312,7 +2328,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 4.7.2019 г. , ст. 0001201907040004"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102571359&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102571359&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102574827",
@@ -1322,7 +2345,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 4.7.2019 г. , ст. 0001201907040021"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102574827&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102574827&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102562447",
@@ -1332,7 +2362,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 30.5.2019 г. , ст. 0001201905300058"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102562447&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102562447&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102592361",
@@ -1342,7 +2379,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.8.2019 г. , ст. 0001201908140014"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102592361&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102592361&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "связь/лицензирование"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102562456",
@@ -1352,7 +2396,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 30.5.2019 г. , ст. 0001201905300055"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102562456&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102562456&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102601495",
@@ -1362,7 +2413,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.8.2019 г. , ст. 0001201908140006"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102601495&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102601495&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102600830",
@@ -1372,7 +2430,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.8.2019 г. , ст. 0001201908140011"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102600830&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102600830&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "связь/лицензирование"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102592351",
@@ -1382,7 +2447,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.8.2019 г. , ст. 0001201908140013"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102592351&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102592351&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102586365",
@@ -1392,7 +2464,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 16.7.2019 г. , ст. 0001201907160007"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102586365&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102586365&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102543425",
@@ -1402,7 +2481,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 5.2.2019 г. , ст. 0001201902050038"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102543425&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102543425&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "кандидат для ИБ/ПДн-реестра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102536910",
@@ -1412,17 +2498,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 24.1.2019 г. , ст. 0001201901240021"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102536910&firstDoc=1"
-    },
-    {
-      "nd": "102546682",
-      "status": "Утратил силу",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 19.12.2018 № 204",
-      "description": "Об утверждении Положения об осуществлении внутреннего финансового контроля в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций и ее территориальных органах",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 21.2.2019 г. , ст. 0001201902210042"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102536910&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102546682&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102566247",
@@ -1432,47 +2515,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 29.5.2019 г. , ст. 0001201905290007"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102566247&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102566247&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
-      "nd": "102553217",
-      "status": "Действует c изменениями",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 18.12.2018 № 201",
-      "description": "Об утверждении Административного регламента предоставления Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций государственной услуги по выдаче разрешений на судовые радиостанции, используемые на морских судах, судах внутреннего плавания и судах смешанного (река-море) плавания",
+      "nd": "102546682",
+      "status": "Утратил силу",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 19.12.2018 № 204",
+      "description": "Об утверждении Положения об осуществлении внутреннего финансового контроля в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций и ее территориальных органах",
       "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 2.4.2019 г. , ст. 0001201904020040"
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 21.2.2019 г. , ст. 0001201902210042"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102553217&firstDoc=1"
-    },
-    {
-      "nd": "102553199",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 18.12.2018 № 200",
-      "description": "Об утверждении Административного регламента осуществления Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций государственного контроля (надзора) в сфере связи за соответствием использования операторами связи и владельцами сетей связи специального назначения выделенного им ресурса нумерации установленному порядку использования ресурса нумерации единой сети электросвязи Российской Федерации",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 2.4.2019 г. , ст. 0001201904020029"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102546682&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102553199&firstDoc=1"
-    },
-    {
-      "nd": "102553179",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 18.12.2018 № 199",
-      "description": "Об утверждении Административного регламента осуществления Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций государственного контроля (надзора) за соблюдением операторами связи и владельцами сетей связи специального назначения требований к пропуску трафика и его маршрутизации",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 3.4.2019 г. , ст. 0001201904030038"
-      ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102553179&firstDoc=1"
-    },
-    {
-      "nd": "102562557",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 18.12.2018 № 198",
-      "description": "Об утверждении Административного регламента осуществления Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций лицензионного контроля в сфере телевизионного вещания и радиовещания",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 4.4.2019 г. , ст. 0001201904040004"
-      ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102562557&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102562571",
@@ -1482,7 +2549,82 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 5.4.2019 г. , ст. 0001201904050023"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102562571&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102562571&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102562557",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 18.12.2018 № 198",
+      "description": "Об утверждении Административного регламента осуществления Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций лицензионного контроля в сфере телевизионного вещания и радиовещания",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 4.4.2019 г. , ст. 0001201904040004"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102562557&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102553217",
+      "status": "Действует c изменениями",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 18.12.2018 № 201",
+      "description": "Об утверждении Административного регламента предоставления Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций государственной услуги по выдаче разрешений на судовые радиостанции, используемые на морских судах, судах внутреннего плавания и судах смешанного (река-море) плавания",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 2.4.2019 г. , ст. 0001201904020040"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102553217&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102553199",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 18.12.2018 № 200",
+      "description": "Об утверждении Административного регламента осуществления Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций государственного контроля (надзора) в сфере связи за соответствием использования операторами связи и владельцами сетей связи специального назначения выделенного им ресурса нумерации установленному порядку использования ресурса нумерации единой сети электросвязи Российской Федерации",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 2.4.2019 г. , ст. 0001201904020029"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102553199&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102553179",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 18.12.2018 № 199",
+      "description": "Об утверждении Административного регламента осуществления Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций государственного контроля (надзора) за соблюдением операторами связи и владельцами сетей связи специального назначения требований к пропуску трафика и его маршрутизации",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 3.4.2019 г. , ст. 0001201904030038"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102553179&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102553128",
@@ -1492,7 +2634,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 2.4.2019 г. , ст. 0001201904020033"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102553128&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102553128&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102553118",
@@ -1502,7 +2651,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 2.4.2019 г. , ст. 0001201904020024"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102553118&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102553118&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102489121",
@@ -1512,7 +2668,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.11.2018 г. , ст. 0001201811280014"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102489121&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102489121&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102483189",
@@ -1522,7 +2685,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 27.9.2018 г. , ст. 0001201809270029"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102483189&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102483189&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102481747",
@@ -1532,7 +2702,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 10.9.2018 г. (№ 0001201809100012)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102481747&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102481747&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102475721",
@@ -1542,7 +2719,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 5.7.2018 г. , ст. 0001201807050018"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102475721&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102475721&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102465787",
@@ -1552,7 +2736,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 13.3.2018 г. (№ 0001201803130028)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102465787&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102465787&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102461187",
@@ -1562,7 +2753,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 24.1.2018 г. (№ 0001201801240018)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102461187&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102461187&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102460832",
@@ -1572,7 +2770,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 19.1.2018 г. (№ 0001201801190032)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102460832&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102460832&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102457553",
@@ -1582,7 +2787,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 15.12.2017 г. (№ 0001201712150029)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102457553&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102457553&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102464999",
@@ -1592,7 +2804,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 1.3.2018 г. , ст. 0001201803010032"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102464999&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102464999&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102452451",
@@ -1602,7 +2821,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 31.10.2017 г. (№ 0001201710310001)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102452451&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102452451&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102453403",
@@ -1612,7 +2838,15 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 27.11.2017 г. (№ 0001201711270037)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102453403&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102453403&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа",
+        "интернет-реклама"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102449640",
@@ -1622,7 +2856,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 20.10.2017 г. (№ 0001201710200034)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102449640&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102449640&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102443258",
@@ -1632,7 +2873,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 11.8.2017 г. , ст. 0001201708110004"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102443258&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102443258&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102442044",
@@ -1642,7 +2890,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 2.8.2017 г. , ст. 0001201708020002"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102442044&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102442044&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102442788",
@@ -1652,7 +2907,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 9.8.2017 г. , ст. 0001201708090012"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102442788&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102442788&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "персональные данные"
+      ],
+      "registry_status": "кандидат для ИБ/ПДн-реестра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102438132",
@@ -1662,7 +2924,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.6.2017 г. (№ 0001201706280030)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102438132&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102438132&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102436572",
@@ -1672,7 +2941,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 23.6.2017 г. , ст. 0001201706230022"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102436572&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102436572&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102437295",
@@ -1682,7 +2958,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 29.6.2017 г. , ст. 0001201706290015"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102437295&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102437295&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "149-ФЗ / ограничение доступа"
+      ],
+      "registry_status": "смежная тема, нужна ручная оценка",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102433675",
@@ -1692,7 +2975,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 18.5.2017 г. , ст. 0001201705180007"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102433675&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102433675&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102431286",
@@ -1702,7 +2992,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 11.4.2017 г. , ст. 0001201704110001"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102431286&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102431286&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102429018",
@@ -1712,7 +3009,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.3.2017 г. (№ 0001201703280003)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102429018&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102429018&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102422500",
@@ -1722,7 +3026,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.12.2016 г. , ст. 0001201612280045"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102422500&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102422500&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102424430",
@@ -1732,17 +3043,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 26.1.2017 г. (№ 0001201701260041)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102424430&firstDoc=1"
-    },
-    {
-      "nd": "102419060",
-      "status": "Действует c изменениями",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28.11.2016 № 298",
-      "description": "Об утверждении служебного распорядка Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций",
-      "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 19.12.2016 г. , ст. 0001201612190052"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102424430&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102419060&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102425102",
@@ -1752,17 +3060,31 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 30.1.2017 г. , ст. 0001201701300033"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102425102&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102425102&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
-      "nd": "102414870",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 14.10.2016 № 269",
-      "description": "О внесении изменений в Порядок доведения до Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций информации о невнесении пользователями радиочастотным спектром разовой платы и (или) ежегодной платы...",
+      "nd": "102419060",
+      "status": "Действует c изменениями",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 28.11.2016 № 298",
+      "description": "Об утверждении служебного распорядка Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций",
       "publications": [
-        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 7.11.2016 г. (№ 0001201611070031)"
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 19.12.2016 г. , ст. 0001201612190052"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102414870&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102419060&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102421795",
@@ -1772,7 +3094,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 13.1.2017 г. (№ 0001201701130007)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102421795&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102421795&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102417318",
@@ -1783,7 +3112,31 @@
         "Бюллетень нормативных актов федеральных органов исполнительной власти от 2016 г. , N 51",
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 5.12.2016 г. (№ 0001201612050035)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102417318&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102417318&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102414870",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 14.10.2016 № 269",
+      "description": "О внесении изменений в Порядок доведения до Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций информации о невнесении пользователями радиочастотным спектром разовой платы и (или) ежегодной платы...",
+      "publications": [
+        "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 7.11.2016 г. (№ 0001201611070031)"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102414870&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "связь/лицензирование"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102414411",
@@ -1794,7 +3147,14 @@
         "Бюллетень нормативных актов федеральных органов исполнительной власти от 2016 г. , N 47",
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 28.10.2016 г. (№ 0001201610280045)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102414411&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102414411&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102413149",
@@ -1804,7 +3164,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 14.10.2016 г. (№ 0001201610140013)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102413149&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102413149&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102411551",
@@ -1814,7 +3181,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 20.9.2016 г. , ст. 0001201609200016"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102411551&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102411551&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102408794",
@@ -1824,7 +3198,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 17.8.2016 г. , ст. 0001201608170039"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102408794&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102408794&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102408476",
@@ -1834,7 +3215,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 25.8.2016 г. (№ 0001201608250031)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102408476&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102408476&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102408475",
@@ -1844,7 +3232,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 25.8.2016 г. (№ 0001201608250032)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102408475&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102408475&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102408709",
@@ -1854,7 +3249,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 2.8.2016 г. , ст. 0001201608020017"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102408709&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102408709&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102411574",
@@ -1865,7 +3267,14 @@
         "Бюллетень нормативных актов федеральных органов исполнительной власти от 2016 г. , N 42",
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 27.9.2016 г. (№ 0001201609270010)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102411574&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102411574&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102400415",
@@ -1875,7 +3284,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 26.5.2016 г. (№ 0001201605260026)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102400415&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102400415&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102392292",
@@ -1885,7 +3301,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 10.3.2016 г. , ст. 0001201603100024"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102392292&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102392292&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102391100",
@@ -1895,7 +3318,14 @@
       "publications": [
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 19.2.2016 г. (№ 0001201602190020)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102391100&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102391100&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102389998",
@@ -1906,7 +3336,15 @@
         "Бюллетень нормативных актов федеральных органов исполнительной власти от 2016 г. , N 13",
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 8.2.2016 г. (№ 0001201602080026)"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102389998&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102389998&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "СМИ/вещание",
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102378989",
@@ -1917,7 +3355,14 @@
         "Официальный интернет-портал правовой информации (www.pravo.gov.ru) от 15.4.2015 г. , ст. 0001201504150006",
         "Бюллетень нормативных актов федеральных органов исполнительной власти от 2015 г. , N 37"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102378989&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102378989&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102167319",
@@ -1927,17 +3372,14 @@
       "publications": [
         "Бюллетень нормативных актов федеральных органов исполнительной власти от 2013 г. , N 32"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102167319&firstDoc=1"
-    },
-    {
-      "nd": "102158394",
-      "status": "Действует без изменений",
-      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 29.03.2012 № 260",
-      "description": "Об утверждении Порядка формирования и деятельности Комиссии территориального органа Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций по соблюдению требований к служебному поведению федеральных государственных гражданских служащих и урегулированию конфликта интересов",
-      "publications": [
-        "Бюллетень нормативных актов федеральных органов исполнительной власти от 2012 г. , N 29"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102167319&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "прочее"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102158394&firstDoc=1"
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102159953",
@@ -1947,7 +3389,31 @@
       "publications": [
         "Бюллетень нормативных актов федеральных органов исполнительной власти от 2012 г. , N 41"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102159953&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102159953&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
+    },
+    {
+      "nd": "102158394",
+      "status": "Действует без изменений",
+      "heading": "Приказ Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций от 29.03.2012 № 260",
+      "description": "Об утверждении Порядка формирования и деятельности Комиссии территориального органа Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций по соблюдению требований к служебному поведению федеральных государственных гражданских служащих и урегулированию конфликта интересов",
+      "publications": [
+        "Бюллетень нормативных актов федеральных органов исполнительной власти от 2012 г. , N 29"
+      ],
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102158394&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     },
     {
       "nd": "102157441",
@@ -1957,7 +3423,14 @@
       "publications": [
         "Бюллетень нормативных актов федеральных органов исполнительной власти от 2012 г. , N 24"
       ],
-      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102157441&firstDoc=1"
+      "ips_card": "http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102157441&firstDoc=1",
+      "discovery_source": "IPS a1-запрос по наименованию ведомства",
+      "themes": [
+        "служебное/кадры/закупки"
+      ],
+      "registry_status": "вне текущего ИБ/ПДн-ядра",
+      "registry_id": "",
+      "registry_output": ""
     }
   ]
 }

@@ -22,6 +22,94 @@ BASE = "http://pravo.gov.ru/proxy/ips/"
 QUERY = "Федеральная служба по надзору в сфере связи"
 OUTPUT_MD = Path("docs/regulation/russia/roskomnadzor/ips-order-discovery.md")
 OUTPUT_JSON = Path("scripts/rkn_order_discovery.json")
+REGISTRY = Path("scripts/regulation_registry.json")
+
+THEME_RULES = [
+    (
+        "персональные данные",
+        [
+            r"персональн\w+\s+данн",
+            r"152-фз",
+            r"обработк\w+\s+персональн",
+        ],
+    ),
+    ("инциденты ПДн", [r"инцидент\w+.*персональн\w+\s+данн"]),
+    ("обезличивание ПДн", [r"обезличив"]),
+    ("трансграничная передача ПДн", [r"трансграничн"]),
+    (
+        "надзор/проверочные листы ПДн",
+        [
+            r"контрол\w+\s*\(надзор\w*\).*персональн\w+\s+данн",
+            r"проверочн\w+\s+лист.*персональн\w+\s+данн",
+        ],
+    ),
+    (
+        "149-ФЗ / ограничение доступа",
+        [
+            r"149-фз",
+            r"доступ.*ограничен",
+            r"единый реестр.*сайт",
+            r"доменных имен",
+            r"сетевых адрес",
+            r"поисков\w+\s+систем",
+        ],
+    ),
+    (
+        "интернет-реклама",
+        [
+            r"реклам",
+            r"оператор\w+\s+рекламн\w+\s+данн",
+        ],
+    ),
+    (
+        "связь/лицензирование",
+        [
+            r"лицензировани\w+.*связ",
+            r"услуг\w+\s+связ",
+            r"сеть связи",
+            r"радиочастот",
+        ],
+    ),
+    (
+        "СМИ/вещание",
+        [
+            r"телерадиовещ",
+            r"средств\w+\s+массовой информации",
+            r"сми",
+        ],
+    ),
+    (
+        "служебное/кадры/закупки",
+        [
+            r"гражданск\w+\s+служб",
+            r"должност",
+            r"доходах",
+            r"имуществ",
+            r"конкурс",
+            r"закуп",
+            r"финансов",
+            r"служебн",
+            r"аттестационн",
+            r"квалификационн",
+            r"денежн\w+\s+содержан",
+            r"пожарн\w+\s+безопасност",
+            r"гражданск\w+\s+оборон",
+        ],
+    ),
+]
+
+CORE_THEMES = {
+    "персональные данные",
+    "инциденты ПДн",
+    "обезличивание ПДн",
+    "трансграничная передача ПДн",
+    "надзор/проверочные листы ПДн",
+}
+
+WATCH_THEMES = {
+    "149-ФЗ / ограничение доступа",
+    "интернет-реклама",
+}
 
 
 def cp1251_quote(value: str) -> str:
@@ -31,6 +119,90 @@ def cp1251_quote(value: str) -> str:
 def clean(value: str) -> str:
     value = re.sub(r"<[^>]+>", " ", value)
     return " ".join(html.unescape(value).replace("\xa0", " ").split())
+
+
+def registry_by_nd() -> dict[str, dict[str, object]]:
+    if not REGISTRY.exists():
+        return {}
+    documents = json.loads(REGISTRY.read_text(encoding="utf-8"))
+    return {str(doc["nd"]): doc for doc in documents if doc.get("nd")}
+
+
+def rkn_registry_documents() -> list[dict[str, object]]:
+    if not REGISTRY.exists():
+        return []
+    documents = json.loads(REGISTRY.read_text(encoding="utf-8"))
+    return [
+        doc
+        for doc in documents
+        if doc.get("category") == "roskomnadzor" and doc.get("document_kind") == "Приказ"
+    ]
+
+
+def classify_order(item: dict[str, object], registered: dict[str, dict[str, object]]) -> None:
+    text = f"{item['heading']} {item.get('description', '')}".lower().replace("ё", "е")
+    themes = []
+    for theme, patterns in THEME_RULES:
+        if any(re.search(pattern, text) for pattern in patterns):
+            themes.append(theme)
+    if not themes:
+        themes.append("прочее")
+    item["themes"] = themes
+
+    nd = str(item["nd"])
+    if nd in registered:
+        doc = registered[nd]
+        item["registry_status"] = "в основном реестре"
+        item["registry_id"] = doc.get("id", "")
+        item["registry_output"] = doc.get("output", "")
+    elif CORE_THEMES.intersection(themes):
+        item["registry_status"] = "кандидат для ИБ/ПДн-реестра"
+        item["registry_id"] = ""
+        item["registry_output"] = ""
+    elif WATCH_THEMES.intersection(themes):
+        item["registry_status"] = "смежная тема, нужна ручная оценка"
+        item["registry_id"] = ""
+        item["registry_output"] = ""
+    else:
+        item["registry_status"] = "вне текущего ИБ/ПДн-ядра"
+        item["registry_id"] = ""
+        item["registry_output"] = ""
+
+
+def order_sort_key(item: dict[str, object]) -> tuple[str, str]:
+    date_iso = str(item.get("date_iso", ""))
+    if not date_iso:
+        match = re.search(r"от\s+(\d{2})\.(\d{2})\.(\d{4})", str(item.get("heading", "")))
+        if match:
+            date_iso = f"{match.group(3)}-{match.group(2)}-{match.group(1)}"
+    return date_iso, str(item.get("nd", ""))
+
+
+def merge_registry_backfill(orders: list[dict[str, object]]) -> list[dict[str, object]]:
+    by_nd = {str(order["nd"]): order for order in orders}
+    for order in by_nd.values():
+        order["discovery_source"] = "IPS a1-запрос по наименованию ведомства"
+    for doc in rkn_registry_documents():
+        nd = str(doc.get("nd", ""))
+        if not nd or nd in by_nd:
+            continue
+        title = str(doc["title"])
+        quoted = re.search(r"«([^»]+)»", title)
+        description = quoted.group(1) if quoted else title
+        heading = (
+            f"Приказ Роскомнадзора от {doc.get('date', '')} № {doc.get('number', '')}"
+        )
+        by_nd[nd] = {
+            "nd": nd,
+            "status": "см. карточку IPS",
+            "heading": heading,
+            "description": description,
+            "publications": [],
+            "ips_card": f"{BASE}?docbody=&link_id=0&nd={nd}&firstDoc=1",
+            "date_iso": doc.get("date_iso", ""),
+            "discovery_source": "backfill из основного реестра по IPS nd",
+        }
+    return sorted(by_nd.values(), key=order_sort_key, reverse=True)
 
 
 def list_url(start: int, size: int) -> str:
@@ -112,8 +284,20 @@ def discover() -> tuple[int, list[dict[str, object]]]:
     return total, list(by_nd.values())
 
 
-def write_outputs(total: int, orders: list[dict[str, object]]) -> None:
+def write_outputs(total: int, orders: list[dict[str, object]]) -> int:
     today = dt.date.today().isoformat()
+    orders = merge_registry_backfill(orders)
+    registered = registry_by_nd()
+    for item in orders:
+        classify_order(item, registered)
+    status_counts: dict[str, int] = {}
+    theme_counts: dict[str, int] = {}
+    for item in orders:
+        status = str(item["registry_status"])
+        status_counts[status] = status_counts.get(status, 0) + 1
+        for theme in item["themes"]:
+            theme_s = str(theme)
+            theme_counts[theme_s] = theme_counts.get(theme_s, 0) + 1
     OUTPUT_JSON.write_text(
         json.dumps(
             {
@@ -121,6 +305,9 @@ def write_outputs(total: int, orders: list[dict[str, object]]) -> None:
                 "query": QUERY,
                 "ips_total_results": total,
                 "rkn_orders_found": len(orders),
+                "note": "orders includes the main a1-query result plus registry backfill by IPS nd for Roskomnadzor orders that IPS does not return by the agency-name title query",
+                "registry_status_counts": status_counts,
+                "theme_counts": theme_counts,
                 "orders": orders,
             },
             ensure_ascii=False,
@@ -147,8 +334,39 @@ def write_outputs(total: int, orders: list[dict[str, object]]) -> None:
         f"`Наименование` со строкой `{QUERY}`.",
         "",
         f"- Всего результатов IPS по запросу: `{total}`.",
-        f"- Приказов Роскомнадзора/совместных приказов, начинающихся с наименования ведомства: `{len(orders)}`.",
+        f"- Приказов Роскомнадзора/совместных приказов в каталоге после backfill из основного реестра: `{len(orders)}`.",
+        "- Ограничение метода: часть РКН-приказов в IPS не возвращается по",
+        "  общему a1-запросу ведомства, поэтому уже импортированные РКН-приказы",
+        "  с известным `nd` добавляются в каталог отдельным backfill-шагом.",
         "",
+        "## Сводка для отбора",
+        "",
+        "| Группа | Количество |",
+        "|---|---:|",
+    ]
+    for status, count in sorted(status_counts.items()):
+        lines.append(f"| {status.replace('|', '\\|')} | {count} |")
+    lines.extend(
+        [
+            "",
+            "## Тематические теги",
+            "",
+            "| Тема | Количество |",
+            "|---|---:|",
+        ]
+    )
+    for theme, count in sorted(theme_counts.items()):
+        lines.append(f"| {theme.replace('|', '\\|')} | {count} |")
+    lines.extend(
+        [
+            "",
+            "## Полный список",
+            "",
+            "Колонка «Отбор» показывает, входит ли приказ в основной реестр базы",
+            "знаний или требует ручной оценки. Автоматические темы используются",
+            "только для первичного отбора; источник истины — карточка IPS и полный",
+            "текст документа.",
+            "",
         "!!! note \"Назначение страницы\"",
         "",
         "    Это discovery-каталог, а не список полностью импортированных НПА ИБ.",
@@ -156,9 +374,10 @@ def write_outputs(total: int, orders: list[dict[str, object]]) -> None:
         "    акты. В основной раздел импортируются полные тексты тех приказов, которые",
         "    относятся к персональным данным, инцидентам и практической ИБ.",
         "",
-        "| Дата и номер | Статус IPS | Наименование | `nd` |",
-        "|---|---|---|---|",
-    ]
+            "| Дата и номер | Статус IPS | Отбор | Темы | Способ нахождения | Наименование | `nd` |",
+            "|---|---|---|---|---|---|---|",
+        ]
+    )
     for item in orders:
         heading = str(item["heading"])
         short = heading.replace(
@@ -166,6 +385,9 @@ def write_outputs(total: int, orders: list[dict[str, object]]) -> None:
             "",
         )
         description = str(item["description"])
+        themes = ", ".join(str(theme) for theme in item["themes"]).replace("|", "\\|")
+        registry_status = str(item["registry_status"]).replace("|", "\\|")
+        discovery_source = str(item.get("discovery_source", "")).replace("|", "\\|")
         if description:
             title = f"{heading}. {description}"
         else:
@@ -173,16 +395,18 @@ def write_outputs(total: int, orders: list[dict[str, object]]) -> None:
         title = title.replace("|", "\\|")
         lines.append(
             f"| {short.replace('|', '\\|')} | {str(item['status']).replace('|', '\\|')} | "
+            f"{registry_status} | {themes} | {discovery_source} | "
             f"[{title}]({item['ips_card']}) | `{item['nd']}` |"
         )
     OUTPUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return len(orders)
 
 
 def main() -> int:
     total, orders = discover()
-    write_outputs(total, orders)
+    final_count = write_outputs(total, orders)
     print(f"IPS total results: {total}")
-    print(f"Roskomnadzor orders found: {len(orders)}")
+    print(f"Roskomnadzor orders cataloged: {final_count}")
     print(OUTPUT_MD)
     print(OUTPUT_JSON)
     return 0
