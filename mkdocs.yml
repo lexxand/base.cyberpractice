@@ -200,9 +200,27 @@ nav:
       - Сравнения: open-source/comparisons/index.md
   - Рынок РФ:
       - Обзор: russian-market/index.md
-      - Вендоры: russian-market/vendors/index.md
-      - Продукты: russian-market/products/index.md
-      - Категории решений: russian-market/categories/index.md
+      - Вендоры:
+          - Обзор: russian-market/vendors/index.md
+          - АМИКОН: russian-market/vendors/amicon.md
+          - ИнфоТеКС: russian-market/vendors/infotecs.md
+          - Код Безопасности: russian-market/vendors/security-code.md
+          - КриптоПро: russian-market/vendors/cryptopro.md
+          - С-Терра СиЭсПи: russian-market/vendors/s-terra.md
+          - Фактор-ТС: russian-market/vendors/factor-ts.md
+          - ЭЛВИС-ПЛЮС: russian-market/vendors/elvis-plus.md
+      - Продукты:
+          - Обзор: russian-market/products/index.md
+          - Dionis-NX: russian-market/products/dionis-nx.md
+          - ViPNet Client 5: russian-market/products/vipnet-client-5.md
+          - ЗАСТАВА: russian-market/products/zastava.md
+          - Континент 4: russian-market/products/continent-4.md
+          - КриптоПро CSP: russian-market/products/cryptopro-csp.md
+          - С-Терра Шлюз 5.0: russian-market/products/s-terra-gateway-5.md
+          - ФПСУ-IP v4: russian-market/products/fpsu-ip-v4.md
+      - Категории решений:
+          - Обзор: russian-market/categories/index.md
+          - СКЗИ, VPN, PKI и электронная подпись: russian-market/categories/skzi-vpn-pki.md
       - Сравнения: russian-market/comparisons/index.md
       - Цены и лицензирование:
           - Обзор: russian-market/pricing/index.md

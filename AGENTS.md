@@ -1,5 +1,23 @@
 # Project Instructions
 
+## Russian Market Product Cards
+
+When adding Russian-market vendor or product pages under `docs/russian-market`,
+prefer official vendor sources. Every product page must include:
+
+- official product URL;
+- date when product information was checked;
+- vendor link;
+- category link;
+- explicit status of unverified fields such as certificates, registry entries,
+  prices and exact editions.
+
+If an official product URL is known but unreachable from the current
+environment, keep the official URL and record the observed HTTP/network status
+instead of replacing it with secondary sources. Do not copy marketing claims as
+verified facts; phrase them as vendor-sourced information unless independently
+checked.
+
 ## Official Russian Regulation Texts
 
 When importing Russian legal or regulatory documents, use the official
