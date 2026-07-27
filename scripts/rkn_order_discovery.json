@@ -7,8 +7,7 @@
   "registry_status_counts": {
     "вне текущего ИБ/ПДн-ядра": 161,
     "смежная тема, нужна ручная оценка": 24,
-    "в основном реестре": 9,
-    "кандидат для ИБ/ПДн-реестра": 6
+    "в основном реестре": 15
   },
   "theme_counts": {
     "служебное/кадры/закупки": 66,
@@ -1650,9 +1649,9 @@
       "themes": [
         "персональные данные"
       ],
-      "registry_status": "кандидат для ИБ/ПДн-реестра",
-      "registry_id": "",
-      "registry_output": ""
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-183-2021",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-183-2021.md"
     },
     {
       "nd": "602446869",
@@ -1771,9 +1770,9 @@
       "themes": [
         "персональные данные"
       ],
-      "registry_status": "кандидат для ИБ/ПДн-реестра",
-      "registry_id": "",
-      "registry_output": ""
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-106-2021",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-106-2021.md"
     },
     {
       "nd": "602193949",
@@ -1924,9 +1923,9 @@
       "themes": [
         "персональные данные"
       ],
-      "registry_status": "кандидат для ИБ/ПДн-реестра",
-      "registry_id": "",
-      "registry_output": ""
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-137-2020",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-137-2020.md"
     },
     {
       "nd": "102913813",
@@ -1975,9 +1974,9 @@
       "themes": [
         "персональные данные"
       ],
-      "registry_status": "кандидат для ИБ/ПДн-реестра",
-      "registry_id": "",
-      "registry_output": ""
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-109-2020",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-109-2020.md"
     },
     {
       "nd": "102862434",
@@ -2486,9 +2485,9 @@
       "themes": [
         "персональные данные"
       ],
-      "registry_status": "кандидат для ИБ/ПДн-реестра",
-      "registry_id": "",
-      "registry_output": ""
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-1-2019",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-1-2019.md"
     },
     {
       "nd": "102536910",
@@ -2912,9 +2911,9 @@
       "themes": [
         "персональные данные"
       ],
-      "registry_status": "кандидат для ИБ/ПДн-реестра",
-      "registry_id": "",
-      "registry_output": ""
+      "registry_status": "в основном реестре",
+      "registry_id": "rkn-order-105-2017",
+      "registry_output": "docs/regulation/russia/roskomnadzor/order-105-2017.md"
     },
     {
       "nd": "102438132",

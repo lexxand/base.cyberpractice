@@ -799,6 +799,94 @@
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=605502743&page=1&rdk=0&link_id=0",
       "pending": [],
       "checked_at": "2026-07-27"
+    },
+    "rkn-order-105-2017": {
+      "id": "rkn-order-105-2017",
+      "kind": "ips",
+      "output": "docs/regulation/russia/roskomnadzor/order-105-2017.md",
+      "title": "Приказ Роскомнадзора от 15.06.2017 № 105 «О внесении изменений в Перечень иностранных государств, не являющихся сторонами Конвенции Совета Европы о защите физических лиц при автоматизированной обработке персональных данных и обеспечивающих адекватную защиту прав субъектов персональных данных»",
+      "nd": "102442788",
+      "rdk": "0",
+      "edition": "Исходная редакция",
+      "status": "",
+      "sha256": "0ebd49ab1b3135782483486103babcc0a056adec895a9ba10152d99956331c7d",
+      "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102442788&page=1&rdk=0&link_id=0",
+      "pending": [],
+      "checked_at": "2026-07-27"
+    },
+    "rkn-order-1-2019": {
+      "id": "rkn-order-1-2019",
+      "kind": "ips",
+      "output": "docs/regulation/russia/roskomnadzor/order-1-2019.md",
+      "title": "Приказ Роскомнадзора от 14.01.2019 № 1 «О внесении изменений в перечень иностранных государств, обеспечивающих адекватную защиту прав субъектов персональных данных»",
+      "nd": "102543425",
+      "rdk": "0",
+      "edition": "Исходная редакция",
+      "status": "",
+      "sha256": "839513a65ccf340112d9d7114efc419b20bdc6f62cf14b3eca43705da6fdb861",
+      "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102543425&page=1&rdk=0&link_id=0",
+      "pending": [],
+      "checked_at": "2026-07-27"
+    },
+    "rkn-order-109-2020": {
+      "id": "rkn-order-109-2020",
+      "kind": "ips",
+      "output": "docs/regulation/russia/roskomnadzor/order-109-2020.md",
+      "title": "Приказ Роскомнадзора от 28.08.2020 № 109 «О внесении изменений в Положение об обработке и защите персональных данных в центральном аппарате Роскомнадзора»",
+      "nd": "102865732",
+      "rdk": "0",
+      "edition": "Исходная редакция",
+      "status": "",
+      "sha256": "7dac6e7fde7c0e0273fb79f09b07748b54320e75654bd9839bf27370b9ef02e1",
+      "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102865732&page=1&rdk=0&link_id=0",
+      "pending": [
+        "1 - от 15.12.2022 № 201 (не действ.)(не готова)"
+      ],
+      "checked_at": "2026-07-27"
+    },
+    "rkn-order-137-2020": {
+      "id": "rkn-order-137-2020",
+      "kind": "ips",
+      "output": "docs/regulation/russia/roskomnadzor/order-137-2020.md",
+      "title": "Приказ Роскомнадзора от 22.10.2020 № 137 «О внесении изменения в Положение об обработке и защите персональных данных в центральном аппарате Роскомнадзора»",
+      "nd": "102921342",
+      "rdk": "0",
+      "edition": "Исходная редакция",
+      "status": "",
+      "sha256": "4089bf1537113584ec411bcab832cd28d9945037ce532d0a3d0edc5244fd770e",
+      "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102921342&page=1&rdk=0&link_id=0",
+      "pending": [
+        "1 - от 15.12.2022 № 201 (не действ.)(не готова)"
+      ],
+      "checked_at": "2026-07-27"
+    },
+    "rkn-order-106-2021": {
+      "id": "rkn-order-106-2021",
+      "kind": "ips",
+      "output": "docs/regulation/russia/roskomnadzor/order-106-2021.md",
+      "title": "Приказ Роскомнадзора от 21.06.2021 № 106 «Об утверждении Правил использования информационной системы Роскомнадзора, в том числе порядка взаимодействия субъекта персональных данных с оператором»",
+      "nd": "602367821",
+      "rdk": "0",
+      "edition": "Исходная редакция",
+      "status": "",
+      "sha256": "3d6ae2ab6356b07c3ad69378b7d00b4534535b298f1b84c2ea26fff3bb4c9699",
+      "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=602367821&page=1&rdk=0&link_id=0",
+      "pending": [],
+      "checked_at": "2026-07-27"
+    },
+    "rkn-order-183-2021": {
+      "id": "rkn-order-183-2021",
+      "kind": "ips",
+      "output": "docs/regulation/russia/roskomnadzor/order-183-2021.md",
+      "title": "Приказ Роскомнадзора от 14.09.2021 № 183 «О внесении изменений в перечень иностранных государств, обеспечивающих адекватную защиту прав субъектов персональных данных»",
+      "nd": "602494309",
+      "rdk": "0",
+      "edition": "Исходная редакция",
+      "status": "",
+      "sha256": "2214c05970d962b2a5cb414ddc5c29b7bbf90001907ae804827b3463279a7138",
+      "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=602494309&page=1&rdk=0&link_id=0",
+      "pending": [],
+      "checked_at": "2026-07-27"
     }
   },
   "updated": "2026-07-27"

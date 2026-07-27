@@ -107,8 +107,8 @@ The importer supports five source classes:
 
 Current registry coverage:
 
-- total documents: 60;
-- full IPS imports: 37;
+- total documents: 66;
+- full IPS imports: 43;
 - full official HTML imports: 1;
 - official metadata-card imports: 14;
 - official file imports without text extraction: 5;
@@ -122,7 +122,7 @@ Current category coverage:
 - government resolutions: 9;
 - FSTEC documents: 10;
 - FSB documents: 6;
-- Roskomnadzor documents: 10;
+- Roskomnadzor documents: 16;
 - Bank of Russia documents: 5;
 - national standards: 10.
 
@@ -263,8 +263,8 @@ The discovery page adds automatic thematic tags and a registry-selection
 status for each row. The tags are only a first-pass triage aid; do not treat
 them as legal classification. Current generated groups:
 
-- 9 orders are already in the main regulation registry by IPS `nd`;
-- 6 orders are candidates for manual ИБ/ПДн review;
+- 15 orders are already in the main regulation registry by IPS `nd`;
+- 0 orders remain candidates for manual ИБ/ПДн review;
 - 24 orders are adjacent 149-ФЗ / internet-advertising topics requiring manual
   review before import;
 - 161 orders are outside the current ИБ/ПДн core.
@@ -274,6 +274,23 @@ several Roskomnadzor personal-data orders that are already in the main
 registry, including orders No. 128, 178, 179, 180 and 140. Keep the discovery
 script's registry backfill by known IPS `nd`; otherwise the catalog falsely
 looks less complete than the imported regulation set.
+
+The previous six "manual ИБ/ПДн review" candidates from discovery were imported
+as full IPS texts on 2026-07-27:
+
+- Roskomnadzor Order No. 105 of 15.06.2017, `nd=102442788`, amendments to the
+  old adequate-protection countries list;
+- Roskomnadzor Order No. 1 of 14.01.2019, `nd=102543425`, amendments to the old
+  adequate-protection countries list;
+- Roskomnadzor Order No. 109 of 28.08.2020, `nd=102865732`, historical
+  amendments to Roskomnadzor internal personal-data processing rules;
+- Roskomnadzor Order No. 137 of 22.10.2020, `nd=102921342`, historical
+  amendment to Roskomnadzor internal personal-data processing rules;
+- Roskomnadzor Order No. 106 of 21.06.2021, `nd=602367821`, rules for using
+  Roskomnadzor's information system and interaction between data subjects and
+  operators;
+- Roskomnadzor Order No. 183 of 14.09.2021, `nd=602494309`, amendments to the
+  old adequate-protection countries list.
 
 Do not automatically import all discovered Roskomnadzor orders into the main
 regulation registry. The discovered set includes кадровые, закупочные, связные,
