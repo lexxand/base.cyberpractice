@@ -86,6 +86,16 @@ Use the registry-driven importer for ongoing work:
 python scripts/import_regulations.py import
 ```
 
+For `ips` entries that already have `nd` in `scripts/regulation_registry.json`,
+the importer still performs the exact `list_itself` lookup by date and number
+to retrieve official search-result metadata: legal status and publication
+number. The lookup result must be selected by the registry `nd` when the result
+page contains several acts with the same date and number. Do not take the first
+`list_itself` result blindly: for example, `10.01.2023 № 1` returns both a
+Government Resolution and a Roskomnadzor Order. If the expected `nd` is absent,
+keep using the registry `nd` for the text import and do not attach metadata
+from a different document.
+
 The importer supports five source classes:
 
 - `ips`: full official text imported from `pravo.gov.ru/proxy/ips` with `nd`,

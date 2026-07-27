@@ -7,14 +7,14 @@ authority: "Правительство Российской Федерации"
 document_kind: "Постановление"
 document_number: "676"
 document_date: 2015-07-06
-legal_status: ""
+legal_status: "Действует c изменениями"
 source: "pravo.gov.ru/proxy/ips"
 source_nd: "102375086"
 source_rdk: "12"
 source_edition: "12 - от 18.03.2025 № 332 (изм.)"
-source_retrieved: 2026-07-26
+source_retrieved: 2026-07-27
 source_sha256: "d06e6b8690df8c82cf21baaf8179a98237f4030518b2bb9261eeb27c5de7c3db"
-updated: 2026-07-26
+updated: 2026-07-27
 review_status: imported
 ---
 
@@ -22,9 +22,9 @@ review_status: imported
 
 !!! info "Источник и редакция"
 
-    Текст импортирован 2026-07-26 из официальной базы `pravo.gov.ru/proxy/ips`.
+    Текст импортирован 2026-07-27 из официальной базы `pravo.gov.ru/proxy/ips`.
     Использована редакция: `12 - от 18.03.2025 № 332 (изм.)` (`nd=102375086`, `rdk=12`).
-    Статус по официальной базе: ``.
+    Статус по официальной базе: `Действует c изменениями`.
 
 ## Карточка документа
 
@@ -34,17 +34,18 @@ review_status: imported
 | Вид документа | Постановление |
 | Номер | 676 |
 | Дата принятия | 06.07.2015 |
-| Статус в официальной базе |  |
+| Статус в официальной базе | Действует c изменениями |
 | Редакция | 12 - от 18.03.2025 № 332 (изм.) |
 | `nd` | `102375086` |
 | `rdk` | `12` |
-| Номер опубликования | `не определен` |
+| Номер опубликования | `0001201507080013` |
 | SHA-256 HTML-источника | `d06e6b8690df8c82cf21baaf8179a98237f4030518b2bb9261eeb27c5de7c3db` |
 
 ## Официальные ссылки
 
 - [Консолидированный текст в pravo.gov.ru/proxy/ips](http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102375086&page=1&rdk=12&link_id=0)
 - [Карточка документа в pravo.gov.ru/proxy/ips](http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102375086&firstDoc=1)
+- [Официальное опубликование](http://publication.pravo.gov.ru/document/0001201507080013)
 
 ## Полный текст документа
 

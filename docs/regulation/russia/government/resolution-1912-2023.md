@@ -7,14 +7,14 @@ authority: "Правительство Российской Федерации"
 document_kind: "Постановление"
 document_number: "1912"
 document_date: 2023-11-14
-legal_status: ""
+legal_status: "Действует c изменениями"
 source: "pravo.gov.ru/proxy/ips"
 source_nd: "606101867"
 source_rdk: "1"
 source_edition: "1 - от 26.12.2024 № 1915 (изм.)"
-source_retrieved: 2026-07-26
+source_retrieved: 2026-07-27
 source_sha256: "34cad5f38aa2f28a9c796f38b325a537d0e10b954990d99f250439fc0f717f24"
-updated: 2026-07-26
+updated: 2026-07-27
 review_status: imported
 ---
 
@@ -22,9 +22,9 @@ review_status: imported
 
 !!! info "Источник и редакция"
 
-    Текст импортирован 2026-07-26 из официальной базы `pravo.gov.ru/proxy/ips`.
+    Текст импортирован 2026-07-27 из официальной базы `pravo.gov.ru/proxy/ips`.
     Использована редакция: `1 - от 26.12.2024 № 1915 (изм.)` (`nd=606101867`, `rdk=1`).
-    Статус по официальной базе: ``.
+    Статус по официальной базе: `Действует c изменениями`.
 
 ## Карточка документа
 
@@ -34,17 +34,18 @@ review_status: imported
 | Вид документа | Постановление |
 | Номер | 1912 |
 | Дата принятия | 14.11.2023 |
-| Статус в официальной базе |  |
+| Статус в официальной базе | Действует c изменениями |
 | Редакция | 1 - от 26.12.2024 № 1915 (изм.) |
 | `nd` | `606101867` |
 | `rdk` | `1` |
-| Номер опубликования | `не определен` |
+| Номер опубликования | `0001202311160056` |
 | SHA-256 HTML-источника | `34cad5f38aa2f28a9c796f38b325a537d0e10b954990d99f250439fc0f717f24` |
 
 ## Официальные ссылки
 
 - [Консолидированный текст в pravo.gov.ru/proxy/ips](http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=606101867&page=1&rdk=1&link_id=0)
 - [Карточка документа в pravo.gov.ru/proxy/ips](http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=606101867&firstDoc=1)
+- [Официальное опубликование](http://publication.pravo.gov.ru/document/0001202311160056)
 
 ## Полный текст документа
 

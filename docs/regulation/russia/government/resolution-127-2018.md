@@ -7,14 +7,14 @@ authority: "Правительство Российской Федерации"
 document_kind: "Постановление"
 document_number: "127"
 document_date: 2018-02-08
-legal_status: ""
+legal_status: "Действует c изменениями"
 source: "pravo.gov.ru/proxy/ips"
 source_nd: "102460750"
 source_rdk: "7"
 source_edition: "7 - от 07.11.2025 № 1762 (изм.)"
-source_retrieved: 2026-07-26
+source_retrieved: 2026-07-27
 source_sha256: "4f7ae0a05e2a6c6911cf8c052160aa4964b4fd29d82e5d998ab688d07cd2ce43"
-updated: 2026-07-26
+updated: 2026-07-27
 review_status: imported
 ---
 
@@ -22,9 +22,9 @@ review_status: imported
 
 !!! info "Источник и редакция"
 
-    Текст импортирован 2026-07-26 из официальной базы `pravo.gov.ru/proxy/ips`.
+    Текст импортирован 2026-07-27 из официальной базы `pravo.gov.ru/proxy/ips`.
     Использована редакция: `7 - от 07.11.2025 № 1762 (изм.)` (`nd=102460750`, `rdk=7`).
-    Статус по официальной базе: ``.
+    Статус по официальной базе: `Действует c изменениями`.
 
 ## Карточка документа
 
@@ -34,17 +34,18 @@ review_status: imported
 | Вид документа | Постановление |
 | Номер | 127 |
 | Дата принятия | 08.02.2018 |
-| Статус в официальной базе |  |
+| Статус в официальной базе | Действует c изменениями |
 | Редакция | 7 - от 07.11.2025 № 1762 (изм.) |
 | `nd` | `102460750` |
 | `rdk` | `7` |
-| Номер опубликования | `не определен` |
+| Номер опубликования | `0001201802130006` |
 | SHA-256 HTML-источника | `4f7ae0a05e2a6c6911cf8c052160aa4964b4fd29d82e5d998ab688d07cd2ce43` |
 
 ## Официальные ссылки
 
 - [Консолидированный текст в pravo.gov.ru/proxy/ips](http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102460750&page=1&rdk=7&link_id=0)
 - [Карточка документа в pravo.gov.ru/proxy/ips](http://pravo.gov.ru/proxy/ips/?docbody=&link_id=0&nd=102460750&firstDoc=1)
+- [Официальное опубликование](http://publication.pravo.gov.ru/document/0001201802130006)
 
 ## Полный текст документа
 

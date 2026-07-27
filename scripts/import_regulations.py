@@ -79,7 +79,7 @@ def yaml(value: Any) -> str:
     return '"' + str(value).replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
-def search_nd(date: str, number: str) -> tuple[str, str, str, str]:
+def search_nd(date: str, number: str, expected_nd: str | None = None) -> tuple[str, str, str, str]:
     params = {
         "list_itself": "",
         "x": "0",
@@ -92,26 +92,102 @@ def search_nd(date: str, number: str) -> tuple[str, str, str, str]:
         "sort": "7",
         "page": "firstlast",
     }
-    text = decode_cp1251(get(BASE + "?" + urlencode(params), timeout=20))
-    nds = sorted(set(re.findall(r"nd=(\d+)", text)))
+    text = decode_cp1251(get(BASE + "?" + urlencode(params, encoding="windows-1251"), timeout=20))
+    parsed_results = parse_ips_results(text)
+    parsed = None
+    if expected_nd:
+        parsed = next(
+            (item for item in parsed_results if str(item["nd"]) == str(expected_nd)),
+            None,
+        )
+    if not parsed and parsed_results:
+        parsed = parsed_results[0]
+    if parsed:
+        return (
+            parsed["nd"],
+            parsed["title"],
+            parsed["status"],
+            parsed["publication_number"],
+        )
+
+    nds = sorted(set(re.findall(r"(?:nd=|check_)(\d+)", text)))
     if not nds:
         raise RuntimeError(f"Cannot find nd for {date} No. {number}")
     plain = plain_text(text)
+    doc_type = (
+        r"Федеральный закон|Указ Президента|Постановление Правительства|"
+        r"Приказ|Доктрина|Методический документ"
+    )
     title_match = re.search(
-        r"1\s+(?:Действует|Не действует).*?((?:Федеральный закон|Указ Президента|Постановление Правительства|Приказ|Доктрина).+?)(?:Официальный интернет-портал|Собрание законодательства|\"Российская газета\"|$)",
+        rf"\b(?:Действует|Утратил силу|Не действует).*?((?:{doc_type}).+?)"
+        r"(?:Официальный интернет-портал|Собрание законодательства|\"Российская газета\"|$)",
         plain,
+        flags=re.I | re.S,
     )
-    status_match = re.search(r"\b(Действует[^ФУПДО]+|Не действует[^ФУПДО]+)", plain)
-    publication_match = re.search(
-        r"Официальный интернет-портал правовой информации .*? от\s*([^,]+?)\s*,\s*ст\.\s*([0-9]+)",
+    status_match = re.search(
+        rf"\b((?:Действует|Утратил силу|Не действует)(?:(?!{doc_type}).)*?)(?=\s+(?:{doc_type})|\s*$)",
         plain,
+        flags=re.I | re.S,
     )
+    publication_match = re.search(r"\bст\.\s*([0-9]{10,})\b", plain)
     return (
         nds[0],
         cleanup(title_match.group(1)) if title_match else "",
         cleanup(status_match.group(1)) if status_match else "",
-        publication_match.group(2) if publication_match else "",
+        publication_match.group(1) if publication_match else "",
     )
+
+
+def parse_ips_results(text: str) -> list[dict[str, str]]:
+    results: list[dict[str, str]] = []
+    chunks = re.split(r"<!--\s*BEGIN элемент списка\s*-->", text, flags=re.I)
+    for chunk in chunks[1:]:
+        chunk = chunk.split("<!-- END элемент списка -->", 1)[0]
+        nd_match = re.search(r'name=["\']check_(\d+)["\']', chunk, flags=re.I) or re.search(
+            r"nd=(\d+)", chunk
+        )
+        if not nd_match:
+            continue
+        status_match = re.search(
+            r'<span\b[^>]*class=["\']tiny_italic_bold["\'][^>]*>(.*?)</span>',
+            chunk,
+            flags=re.I | re.S,
+        )
+        heading_match = re.search(
+            r'<a\b[^>]*(?:class=["\']bold["\'][^>]*)?id=["\']link_\d+["\'][^>]*>(.*?)</a>',
+            chunk,
+            flags=re.I | re.S,
+        ) or re.search(
+            r'<a\b[^>]*id=["\']link_\d+["\'][^>]*(?:class=["\']bold["\'][^>]*)?>(.*?)</a>',
+            chunk,
+            flags=re.I | re.S,
+        ) or re.search(
+            r'<a\b[^>]*class=["\']bold["\'][^>]*>(.*?)</a>',
+            chunk,
+            flags=re.I | re.S,
+        )
+        description_matches = re.findall(
+            r'<span\b[^>]*class=["\']bold["\'][^>]*>(.*?)</span>',
+            chunk,
+            flags=re.I | re.S,
+        )
+        publication_match = re.search(
+            r"<li\b[^>]*class=['\"]tiny['\"][^>]*>.*?\bст\.&nbsp;([0-9]{10,})",
+            chunk,
+            flags=re.I | re.S,
+        ) or re.search(r"\bст\.\s*(?:&nbsp;)?([0-9]{10,})\b", chunk, flags=re.I | re.S)
+        heading = cleanup(heading_match.group(1)) if heading_match else ""
+        description = " ".join(cleanup(value) for value in description_matches)
+        title = f"{heading}. {description}" if heading and description else heading or description
+        results.append(
+            {
+                "nd": nd_match.group(1),
+                "title": title,
+                "status": cleanup(status_match.group(1)) if status_match else "",
+                "publication_number": publication_match.group(1) if publication_match else "",
+            }
+        )
+    return results
 
 
 def resolve_edition(nd: str) -> tuple[Edition, str, str]:
@@ -282,10 +358,19 @@ def import_ips(doc: dict[str, Any]) -> dict[str, Any]:
     searched_title = ""
     searched_status = ""
     searched_publication = ""
-    if not nd:
-        nd, searched_title, searched_status, searched_publication = search_nd(
-            doc["date"], doc["number"]
+    try:
+        found_nd, searched_title, searched_status, searched_publication = search_nd(
+            doc["date"], doc["number"], str(nd) if nd else None
         )
+        if not nd:
+            nd = found_nd
+        elif str(found_nd) != str(nd):
+            searched_title = ""
+            searched_status = ""
+            searched_publication = ""
+    except RuntimeError:
+        if not nd:
+            raise
     edition, card_title, card_status = resolve_edition(nd)
     page, raw, source_url = fetch_document(nd, edition.rdk)
     doc_html = extract_document_html(page)
