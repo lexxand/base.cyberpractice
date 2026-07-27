@@ -52,11 +52,12 @@
 - Вид: Приказ
 - Номер: 996
 - Дата: 05.09.2013
-- Примечание: IPS по дате/номеру не возвращает приказ № 996. Документ исторический: требования обезличивания заменены приказом Роскомнадзора № 140 от 19.06.2025. Из текущей среды rkn.gov.ru и digital.gov.ru не отвечают до TCP/HTTPS timeout; вторичные источники не используются.
+- Примечание: IPS по дате/номеру не возвращает приказ № 996. Документ исторический: требования обезличивания заменены приказом Роскомнадзора № 140 от 19.06.2025. Официальный поисковый индекс показывает региональную страницу Роскомнадзора с записью о приказе № 996 и регистрацией Минюста № 29935, но из текущей среды rkn.gov.ru/digital.gov.ru не отвечают до TCP/HTTPS timeout; вторичные источники не используются.
 
 | Ссылка | Результат | Детали |
 |---|---|---|
 | [Роскомнадзор: региональная официальная страница приказа № 996](https://72.rkn.gov.ru/p21978/p25026/p25052/) | network-error | ConnectTimeout: HTTPSConnectionPool(host='72.rkn.gov.ru', port=443): Max retries exceeded with url: /p21978/p25026/p25052/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x…>, 'Connection to 72.rkn.gov.ru timed out. (connect timeout=12)')) |
+| [Роскомнадзор: региональный официальный перечень НПА с приказом № 996](https://24.rkn.gov.ru/docs/24/sm38732/Fajl_1.htm) | network-error | ConnectTimeout: HTTPSConnectionPool(host='24.rkn.gov.ru', port=443): Max retries exceeded with url: /docs/24/sm38732/Fajl_1.htm (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x…>, 'Connection to 24.rkn.gov.ru timed out. (connect timeout=12)')) |
 | [Минцифры России: карточка приказа № 996](https://digital.gov.ru/documents/prikaz-federalnoj-sluzhby-po-nadzoru-v-sfere-svyazi-informaczionnyh-tehnologij-i-massovyh-kommunikaczij-%E2%84%96-996) | network-error | ConnectTimeout: HTTPSConnectionPool(host='digital.gov.ru', port=443): Max retries exceeded with url: /documents/prikaz-federalnoj-sluzhby-po-nadzoru-v-sfere-svyazi-informaczionnyh-tehnologij-i-massovyh-kommunikaczij-%E2%84%96-996 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x…>, 'Connection to digital.gov.ru timed out. (connect timeout=12)')) |
 | [Актуальный заменяющий приказ Роскомнадзора № 140 в базе знаний](../russia/roskomnadzor/order-140-2025.md) | local-link | Локальная ссылка внутри базы знаний; внешний HTTP-запрос не выполнялся. |
 

@@ -381,6 +381,12 @@ official discovery catalog available for review.
   date/number, title, 2013 date range, and registration number did not resolve
   the original order. The IPS title search resolves the replacement 2025
   Roskomnadzor Order No. 140 and Government Resolution No. 1154 instead.
+- A search-index check found an additional official regional Roskomnadzor URL
+  for Order No. 996 at `https://24.rkn.gov.ru/docs/24/sm38732/Fajl_1.htm`.
+  The snippet identifies the order dated 05.09.2013, registration No. 29935 and
+  applicability of points 1-15, but the official page itself times out from the
+  current environment. Keep it as an official link candidate only; do not treat
+  it as imported text until the page is actually fetched and hashed.
 - Bank of Russia search currently resolves the tracked relevant acts to official
   `cbr.ru` PDF file endpoints. Import those endpoints as `official_file` so the
   exact official file is hashed and monitored daily. Do not silently convert
