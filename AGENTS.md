@@ -148,6 +148,28 @@ official source changed, it writes a short Markdown report with:
 - short human-readable summary;
 - examples of added and removed text fragments.
 
+The summary generator must prefer meaningful legal/document changes over raw
+HTML noise. It filters service lines such as document headers, search controls,
+signature checks and trivial layout fragments, then classifies changed text by
+visible content signals:
+
+- edition/status note changed;
+- points, subpoints or paragraphs changed;
+- appendices, forms, lists or tables changed;
+- security measures, requirements or procedures changed;
+- references to laws/orders/resolutions changed;
+- dates or deadlines changed.
+
+Keep the generated examples in real diff order so paired "removed/added"
+changes are readable. The historical sample
+`docs/regulation/change-reports/sample-fstec-239-history.md` is the regression
+fixture for this behavior.
+
+If the added and removed meaningful lines are the same multiset, report it as
+an ordering/HTML-layout change, not as a substantive legal text change. This
+happens on some official cards, for example when `protect.gost.ru` reorders
+rows in the "changes" tab without changing the visible set of entries.
+
 The scheduled workflow is `.github/workflows/check-regulation-updates.yml`. It
 runs daily and, when a change is detected, re-imports the registry and commits
 the changed documents, updated state and report.
@@ -313,6 +335,12 @@ official discovery catalog available for review.
   use the HTTP official page when importing FSB official cards. Record the exact
   official URL when a trusted official card exposes it, but do not synthesize
   document text from secondary databases.
+- Additional network check on 2026-07-27 resolved `fstec.ru` to
+  `95.173.157.32`; both HTTPS and HTTP connections to the official document
+  pages and tested `/files/...pdf` paths timed out before TLS/HTTP response.
+  Do not promote search-index hints for FSTEC PDF paths into imported source
+  metadata until the official file is actually fetched and its SHA-256 is
+  recorded.
 - FSB Order No. 378 is imported as `official_card` from the HTTP official FSB
   article dated 21.06.2016. The article lists the order among the currently
   active personal-data security normative-methodical documents, but does not

@@ -10,6 +10,7 @@ subscripts, alignment and table structure.
 from __future__ import annotations
 
 import argparse
+import collections
 import datetime as dt
 import difflib
 import hashlib
@@ -756,6 +757,120 @@ def document_lines(document_html: str) -> list[str]:
     return [line for line in lines if line]
 
 
+def is_diff_noise(line: str) -> bool:
+    if len(line) < 8:
+        return True
+    lower = line.lower()
+    exact_noise = {
+        "приказ",
+        "москва",
+        "российская федерация",
+        "текст документа:",
+        "следующий документ →",
+    }
+    if lower in exact_noise:
+        return True
+    noise_patterns = [
+        r"^федеральная служба по ",
+        r"^выберите .* оформление",
+        r"^найти:",
+        r"^вниз по тексту",
+        r"^вверх по тексту",
+        r"^слово целиком",
+        r"^учитывать регистр",
+        r"^сравнение редакций",
+        r"^проверка эцп:",
+        r"^зарегистрирован[оа]?",
+        r"^регистрационный №",
+    ]
+    return any(re.search(pattern, lower) for pattern in noise_patterns)
+
+
+def classify_change_lines(lines: list[str]) -> list[str]:
+    text = " ".join(lines).lower().replace("ё", "е")
+    notes: list[str] = []
+    checks = [
+        (
+            "обновлена отметка о редакции документа",
+            [r"в редакции", r"\(изм\.\)", r"утратил[аио]? силу"],
+        ),
+        (
+            "изменены пункты, подпункты или абзацы требований",
+            [r"\bпункт", r"\bподпункт", r"\bабзац", r"изложить", r"дополнить", r"исключить"],
+        ),
+        (
+            "затронуты приложения или табличные перечни",
+            [r"приложени", r"таблиц", r"перечень", r"форма"],
+        ),
+        (
+            "затронуты меры, требования или порядок выполнения работ",
+            [r"требован", r"\bмер[аыу]\b", r"порядок", r"обеспечени", r"защит"],
+        ),
+        (
+            "изменены ссылки на законы, приказы или иные НПА",
+            [r"федеральн[а-я]+\s+закон", r"постановлени", r"приказ", r"№"],
+        ),
+        (
+            "изменены даты или сроки",
+            [r"\b\d{2}\.\d{2}\.\d{4}\b", r"\b\d{1,2}\s+(?:дн|рабоч)", r"срок"],
+        ),
+    ]
+    for note, patterns in checks:
+        if any(re.search(pattern, text) for pattern in patterns):
+            notes.append(note)
+    return notes[:4]
+
+
+def summarize_line_changes(
+    old_lines: list[str],
+    new_lines: list[str],
+    source_label: str = "текст документа",
+) -> tuple[str, list[str]]:
+    diff = list(difflib.unified_diff(old_lines, new_lines, n=0))
+    added_raw = [line[1:] for line in diff if line.startswith("+") and not line.startswith("+++")]
+    removed_raw = [line[1:] for line in diff if line.startswith("-") and not line.startswith("---")]
+    added = [line for line in added_raw if not is_diff_noise(line)]
+    removed = [line for line in removed_raw if not is_diff_noise(line)]
+    example_candidates = [
+        ("Добавлено" if line.startswith("+") else "Удалено", line[1:])
+        for line in diff
+        if (line.startswith("+") and not line.startswith("+++"))
+        or (line.startswith("-") and not line.startswith("---"))
+    ]
+    changed = removed + added
+    if not added and not removed:
+        return (
+            f"{source_label.capitalize()} без существенных текстовых изменений; "
+            "вероятно изменилось служебное HTML-оформление или разбивка строк.",
+            [],
+        )
+    if collections.Counter(added) == collections.Counter(removed):
+        return (
+            f"{source_label.capitalize()}: содержательный набор строк не изменился; "
+            "изменился порядок строк, HTML-разметка или порядок отображения карточки.",
+            [],
+        )
+
+    parts = [
+        f"добавлено содержательных строк: {len(added)}",
+        f"удалено: {len(removed)}",
+    ]
+    notes = classify_change_lines(changed)
+    if notes:
+        summary = f"{source_label.capitalize()} изменился: " + ", ".join(parts) + ". По содержанию: " + "; ".join(notes) + "."
+    else:
+        summary = f"{source_label.capitalize()} изменился: " + ", ".join(parts) + "."
+
+    examples: list[str] = []
+    for label, line in example_candidates:
+        if is_diff_noise(line):
+            continue
+        examples.append(f"{label}: {line[:220]}")
+        if len(examples) >= 6:
+            break
+    return summary, examples
+
+
 def extracted_generated_html(markdown: str, wrapper_class: str) -> str:
     marker = f'<div class="{wrapper_class}'
     start = markdown.find(marker)
@@ -798,17 +913,7 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
                 except FileNotFoundError:
                     pass
                 new_lines = document_lines(extract_document_html(page))
-                diff = list(difflib.unified_diff(old_lines, new_lines, n=0))
-                added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
-                removed = sum(1 for line in diff if line.startswith("-") and not line.startswith("---"))
-                examples = []
-                for line in diff:
-                    if line.startswith("+") and not line.startswith("+++"):
-                        examples.append("добавлено: " + line[1:220])
-                    if line.startswith("-") and not line.startswith("---"):
-                        examples.append("удалено: " + line[1:220])
-                    if len(examples) >= 4:
-                        break
+                summary, examples = summarize_line_changes(old_lines, new_lines, "официальный HTML-текст редакции")
                 changes.append(
                     {
                         "id": doc["id"],
@@ -817,7 +922,7 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
                         "new_rdk": edition.rdk,
                         "old_sha256": old.get("sha256"),
                         "new_sha256": sha256,
-                        "summary": f"Изменилась официальная HTML-редакция: добавлено абзацев/строк: {added}, удалено: {removed}.",
+                        "summary": summary,
                         "examples": examples,
                         "source_url": source_url,
                         "status": status,
@@ -841,17 +946,7 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
                     )
                 )
                 new_lines = document_lines(doc_html)
-                diff = list(difflib.unified_diff(old_lines, new_lines, n=0))
-                added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
-                removed = sum(1 for line in diff if line.startswith("-") and not line.startswith("---"))
-                examples = []
-                for line in diff:
-                    if line.startswith("+") and not line.startswith("+++"):
-                        examples.append("добавлено: " + line[1:220])
-                    if line.startswith("-") and not line.startswith("---"):
-                        examples.append("удалено: " + line[1:220])
-                    if len(examples) >= 4:
-                        break
+                summary, examples = summarize_line_changes(old_lines, new_lines, "официальный HTML-текст источника")
                 changes.append(
                     {
                         "id": doc["id"],
@@ -860,7 +955,7 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
                         "new_rdk": "official_html",
                         "old_sha256": old.get("sha256"),
                         "new_sha256": sha256,
-                        "summary": f"Изменился официальный HTML-источник: добавлено строк: {added}, удалено: {removed}.",
+                        "summary": summary,
                         "examples": examples,
                         "source_url": doc["source_url"],
                         "status": doc.get("legal_status", "Официальный HTML-источник"),
@@ -884,17 +979,7 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
                     )
                 )
                 new_lines = document_lines(card_html)
-                diff = list(difflib.unified_diff(old_lines, new_lines, n=0))
-                added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
-                removed = sum(1 for line in diff if line.startswith("-") and not line.startswith("---"))
-                examples = []
-                for line in diff:
-                    if line.startswith("+") and not line.startswith("+++"):
-                        examples.append("добавлено: " + line[1:220])
-                    if line.startswith("-") and not line.startswith("---"):
-                        examples.append("удалено: " + line[1:220])
-                    if len(examples) >= 4:
-                        break
+                summary, examples = summarize_line_changes(old_lines, new_lines, "официальный HTML-фрагмент карточки")
                 changes.append(
                     {
                         "id": doc["id"],
@@ -903,7 +988,7 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
                         "new_rdk": "official_card",
                         "old_sha256": old.get("sha256"),
                         "new_sha256": sha256,
-                        "summary": f"Изменилась официальная карточка: добавлено строк: {added}, удалено: {removed}.",
+                        "summary": summary,
                         "examples": examples,
                         "source_url": doc["source_url"],
                         "status": doc.get("legal_status", "Официальная карточка"),
@@ -940,25 +1025,7 @@ def check_updates(ids: set[str] | None = None) -> list[dict[str, Any]]:
 
 
 def summarize_diff(old_html: str, new_html: str) -> tuple[str, list[str]]:
-    diff = list(difflib.unified_diff(document_lines(old_html), document_lines(new_html), n=0))
-    added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
-    removed = sum(1 for line in diff if line.startswith("-") and not line.startswith("---"))
-    examples = []
-    for line in diff:
-        if line.startswith("+") and not line.startswith("+++"):
-            examples.append("Добавлено: " + line[1:220])
-        if line.startswith("-") and not line.startswith("---"):
-            examples.append("Удалено: " + line[1:220])
-        if len(examples) >= 4:
-            break
-    if added == 0 and removed == 0:
-        return "Текстовая часть без изменений; вероятно изменилось служебное HTML-оформление.", []
-    parts = []
-    if added:
-        parts.append(f"добавлено строк: {added}")
-    if removed:
-        parts.append(f"удалено строк: {removed}")
-    return "Изменился текст документа: " + ", ".join(parts) + ".", examples
+    return summarize_line_changes(document_lines(old_html), document_lines(new_html), "текст документа")
 
 
 def history_report(doc_id: str, limit: int, output: Path) -> None:
