@@ -17,13 +17,17 @@ from typing import Any
 from urllib.parse import urlencode, urlparse
 
 import requests
+import urllib3
 
 
 REGISTRY = Path("scripts/regulation_registry.json")
+STATE = Path("scripts/regulation_state.json")
 REPORT = Path("docs/regulation/source-audits/latest.md")
 TIMEOUT = 12
 IPS_TIMEOUT = 25
 IPS_BASE = "http://pravo.gov.ru/proxy/ips/"
+FULL_IMPORT_KINDS = {"ips", "official_html"}
+NON_FULL_KINDS = {"official_card", "official_file", "external_official"}
 
 
 def cleanup(value: str) -> str:
@@ -41,13 +45,15 @@ def md_escape(value: Any) -> str:
     return str(value).replace("|", "\\|").replace("\n", " ")
 
 
-def check_url(url: str) -> dict[str, Any]:
+def check_url(url: str, verify: bool = True) -> dict[str, Any]:
     if not urlparse(url).scheme:
         return {
             "url": url,
             "status": "local-link",
             "detail": "Локальная ссылка внутри базы знаний; внешний HTTP-запрос не выполнялся.",
         }
+    if not verify:
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
     try:
         response = requests.get(
             url,
@@ -55,6 +61,7 @@ def check_url(url: str) -> dict[str, Any]:
             headers={"User-Agent": "Mozilla/5.0"},
             allow_redirects=True,
             stream=True,
+            verify=verify,
         )
         # Do not download large bodies here; connection and headers are enough.
         response.close()
@@ -273,58 +280,192 @@ def report_link(doc: dict[str, Any], url: str) -> str:
     return relpath(source.as_posix(), REPORT.parent.as_posix())
 
 
+def load_state() -> dict[str, Any]:
+    if not STATE.exists():
+        return {"documents": {}}
+    return json.loads(STATE.read_text(encoding="utf-8"))
+
+
+def non_full_reason(doc: dict[str, Any]) -> str:
+    kind = doc.get("kind", "")
+    if kind == "official_card":
+        return (
+            "импортирована официальная карточка/страница метаданных; полный "
+            "текст документа в этом источнике не опубликован или требует "
+            "отдельного официального источника"
+        )
+    if kind == "official_file":
+        return (
+            "зафиксирован официальный файл и его SHA-256; полный текст файла "
+            "не извлекается в Markdown до добавления отдельного repeatable "
+            "extractor"
+        )
+    if kind == "external_official":
+        return (
+            "есть официальные ссылки-кандидаты, но полный официальный источник "
+            "пока не получен и не захэширован"
+        )
+    return "тип источника требует ручной проверки"
+
+
+def source_links(doc: dict[str, Any]) -> list[dict[str, str]]:
+    links: list[dict[str, str]] = []
+    source_url = doc.get("source_url")
+    if source_url:
+        links.append({"label": "Основной источник записи", "url": source_url})
+    seen = {item["url"] for item in links}
+    for link in doc.get("official_links", []):
+        if link["url"] in seen:
+            continue
+        links.append({"label": link["label"], "url": link["url"]})
+        seen.add(link["url"])
+    return links
+
+
+def should_run_ips_checks(doc: dict[str, Any]) -> bool:
+    if doc.get("kind") == "external_official":
+        return True
+    authority = str(doc.get("authority", "")).lower()
+    category = str(doc.get("category", "")).lower()
+    if category in {"fstec", "fsb", "roskomnadzor"}:
+        return True
+    return any(value in authority for value in ["фстэк", "фсб", "роскомнадзор"])
+
+
+def state_summary(doc: dict[str, Any], state: dict[str, Any]) -> list[str]:
+    item = state.get("documents", {}).get(doc["id"], {})
+    if not item:
+        return ["- Состояние: нет записи в `scripts/regulation_state.json`"]
+    lines = [f"- Последняя проверка state: {item.get('checked_at', 'не указана')}"]
+    if item.get("sha256"):
+        lines.append(f"- SHA-256 источника в state: `{item['sha256']}`")
+    if item.get("source_url"):
+        lines.append(f"- Source URL в state: {item['source_url']}")
+    if item.get("content_type"):
+        lines.append(f"- Content-Type файла в state: `{item.get('content_type', '')}`")
+    if item.get("size_bytes") is not None:
+        lines.append(f"- Размер файла в state: `{item.get('size_bytes')}` байт")
+    if item.get("status"):
+        lines.append(f"- Статус в state: {item['status']}")
+    return lines
+
+
+def state_item(doc: dict[str, Any], state: dict[str, Any]) -> dict[str, Any]:
+    return state.get("documents", {}).get(doc["id"], {})
+
+
+def kind_label(kind: str) -> str:
+    return {
+        "official_card": "official_card — официальная карточка без полного текста",
+        "official_file": "official_file — официальный файл без извлечения текста",
+        "external_official": "external_official — внешний официальный источник требует разрешения",
+    }.get(kind, kind)
+
+
 def main() -> int:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
-    unresolved = [doc for doc in registry if doc.get("kind") == "external_official"]
+    state = load_state()
+    unresolved = [doc for doc in registry if doc.get("kind") in NON_FULL_KINDS]
+    kind_counts: dict[str, int] = {}
+    for doc in unresolved:
+        kind = doc.get("kind", "")
+        kind_counts[kind] = kind_counts.get(kind, 0) + 1
     lines = [
-        "# Аудит внешних официальных источников",
+        "# Аудит неполных официальных источников",
         "",
-        "Этот отчёт показывает документы, которые пока не импортированы как полный",
-        "текст или проверяемый официальный HTML/файл. Ошибки сети здесь не являются",
-        "доказательством отсутствия документа: они фиксируют, что источник не был",
-        "доступен из текущей среды проверки.",
+        "Этот отчёт показывает документы, которые пока не импортированы как",
+        "полный текущий HTML-текст. Сюда входят официальные карточки,",
+        "официальные файлы без извлечения текста и внешние официальные ссылки,",
+        "для которых полный источник ещё не получен. Ошибки сети здесь не",
+        "являются доказательством отсутствия документа: они фиксируют, что",
+        "источник не был доступен из текущей среды проверки.",
         "",
-        f"Осталось external-документов: **{len(unresolved)}**.",
+        f"Осталось non-full документов: **{len(unresolved)}**.",
         "",
+        "| Класс источника | Количество |",
+        "|---|---:|",
     ]
+    for kind in sorted(kind_counts):
+        lines.append(f"| {kind_label(kind)} | {kind_counts[kind]} |")
+    lines.append("")
     for doc in unresolved:
         lines.extend(
             [
                 f"## {doc['title']}",
                 "",
                 f"- Документ: `{doc['id']}`",
+                f"- Класс источника: `{doc.get('kind', '')}`",
                 f"- Орган: {doc.get('authority', '')}",
                 f"- Вид: {doc.get('document_kind', '')}",
                 f"- Номер: {doc.get('number', '') or 'не указан'}",
                 f"- Дата: {doc.get('date', '')}",
+                f"- Почему не full-text: {non_full_reason(doc)}",
                 f"- Примечание: {doc.get('note', '')}",
+                *state_summary(doc, state),
                 "",
                 "| Ссылка | Результат | Детали |",
                 "|---|---|---|",
             ]
         )
-        for link in doc.get("official_links", []):
-            result = check_url(link["url"])
-            details = result.get("detail") or (
-                f"HTTP {result.get('status_code')} / {result.get('content_type')} / {result.get('final_url')}"
+        if doc.get("kind") == "external_official":
+            verify = bool(doc.get("tls_verify", True))
+            for link in source_links(doc):
+                result = check_url(link["url"], verify=verify)
+                details = result.get("detail") or (
+                    f"HTTP {result.get('status_code')} / {result.get('content_type')} / {result.get('final_url')}"
+                )
+                lines.append(f"| [{md_escape(link['label'])}]({report_link(doc, link['url'])}) | {result['status']} | {md_escape(details)} |")
+        else:
+            current_state = state_item(doc, state)
+            for link in source_links(doc):
+                if link["url"] == current_state.get("source_url"):
+                    result = "tracked-by-importer"
+                    detail = (
+                        "Источник уже проверяется ежедневным "
+                        "`scripts/import_regulations.py check` по сохранённому "
+                        "SHA-256/метаданным state; live HTTP-проверка здесь "
+                        "не выполняется, чтобы не создавать шумные daily-коммиты."
+                    )
+                else:
+                    result = "reference-link"
+                    detail = (
+                        "Справочная официальная ссылка из реестра; основной "
+                        "контроль ведётся по source/state записи выше."
+                    )
+                lines.append(
+                    f"| [{md_escape(link['label'])}]({report_link(doc, link['url'])}) | {result} | {md_escape(detail)} |"
+                )
+        if should_run_ips_checks(doc):
+            lines.extend(
+                [
+                    "",
+                    "### IPS-проверка",
+                    "",
+                    "| Проверка | IPS-запрос | Результат |",
+                    "|---|---|---|",
+                ]
             )
-            lines.append(f"| [{md_escape(link['label'])}]({report_link(doc, link['url'])}) | {result['status']} | {md_escape(details)} |")
-        lines.extend(
-            [
-                "",
-                "### IPS-проверка",
-                "",
-                "| Проверка | IPS-запрос | Результат |",
-                "|---|---|---|",
-            ]
-        )
-        for label, result in ips_checks(doc):
-            lines.append(
-                f"| {md_escape(label)} | [запрос]({result['url']}) | {ips_result_summary(result)} |"
+            for label, result in ips_checks(doc):
+                lines.append(
+                    f"| {md_escape(label)} | [запрос]({result['url']}) | {ips_result_summary(result)} |"
+                )
+        else:
+            lines.extend(
+                [
+                    "",
+                    "### IPS-проверка",
+                    "",
+                    "Не выполнялась: для этого класса источника основной официальный",
+                    "контроль ведётся по карточке/файлу профильного регулятора, а не",
+                    "по `pravo.gov.ru/proxy/ips`.",
+                    "",
+                ]
             )
         lines.append("")
     REPORT.parent.mkdir(parents=True, exist_ok=True)
-    REPORT.write_text("\n".join(lines), encoding="utf-8")
+    while lines and not lines[-1]:
+        lines.pop()
+    REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(REPORT)
     return 0
 

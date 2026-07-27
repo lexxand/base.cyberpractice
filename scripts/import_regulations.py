@@ -18,6 +18,7 @@ import html
 import json
 import re
 import sys
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -40,22 +41,44 @@ class Edition:
 
 
 def get(url: str, timeout: int = 40) -> bytes:
-    response = requests.get(url, timeout=timeout, headers={"User-Agent": "Mozilla/5.0"})
-    response.raise_for_status()
-    return response.content
+    last_error: requests.RequestException | None = None
+    for attempt in range(3):
+        try:
+            response = requests.get(
+                url,
+                timeout=timeout,
+                headers={"User-Agent": "Mozilla/5.0"},
+            )
+            response.raise_for_status()
+            return response.content
+        except requests.RequestException as exc:
+            last_error = exc
+            if attempt < 2:
+                time.sleep(attempt + 1)
+    assert last_error is not None
+    raise last_error
 
 
 def get_official_html(url: str, timeout: int = 40, verify: bool = True) -> bytes:
     if not verify:
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-    response = requests.get(
-        url,
-        timeout=timeout,
-        headers={"User-Agent": "Mozilla/5.0"},
-        verify=verify,
-    )
-    response.raise_for_status()
-    return response.content
+    last_error: requests.RequestException | None = None
+    for attempt in range(3):
+        try:
+            response = requests.get(
+                url,
+                timeout=timeout,
+                headers={"User-Agent": "Mozilla/5.0"},
+                verify=verify,
+            )
+            response.raise_for_status()
+            return response.content
+        except requests.RequestException as exc:
+            last_error = exc
+            if attempt < 2:
+                time.sleep(attempt + 1)
+    assert last_error is not None
+    raise last_error
 
 
 def decode_cp1251(content: bytes) -> str:

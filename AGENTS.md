@@ -182,6 +182,12 @@ an ordering/HTML-layout change, not as a substantive legal text change. This
 happens on some official cards, for example when `protect.gost.ru` reorders
 rows in the "changes" tab without changing the visible set of entries.
 
+HTTP fetching in `scripts/import_regulations.py` uses short retries for
+official GET requests. Keep this behavior: official sites occasionally reset a
+connection once, and the daily checker should not fail on a single transient
+`ConnectionResetError`. If all retry attempts fail, keep treating the run as a
+technical failure (`exit 2`), not as a regulatory update.
+
 The scheduled workflow is `.github/workflows/check-regulation-updates.yml`. It
 runs daily and, when a change is detected, re-imports the registry and commits
 the changed documents, updated state and report.
@@ -201,6 +207,12 @@ python scripts/import_regulations.py history --id fstec-order-239-2017 --limit 3
 - `2`: technical failure while checking official sources. Treat this as a
   failed workflow, not as a regulatory update.
 
+Observed daily-check example on 2026-07-27: `gost-r-58223-2018` changed SHA on
+`protect.gost.ru`, but the summary correctly classified it as ordering /
+HTML-layout change with no substantive text-line change. The card and
+`scripts/regulation_state.json` were re-imported to the new SHA, after which
+`python scripts/import_regulations.py check` returned `[]`.
+
 Before publishing regulation changes, run the coverage audit:
 
 ```text
@@ -213,16 +225,28 @@ exists, has a direct link from `docs/regulation/index.md`, and is present in
 concrete document, not to a category index page.
 
 
-## External Official Source Audit
+## Non-Full Official Source Audit
 
-For documents that remain `external_official`, generate a reproducible audit
-report of their official links:
+For documents that are not imported as full current HTML text, generate a
+reproducible audit report of their official links and state metadata:
 
 ```text
 python scripts/audit_regulation_external_sources.py
 ```
 
-The report is written to `docs/regulation/source-audits/latest.md`. Network
+The report is written to `docs/regulation/source-audits/latest.md`. It covers
+all non-full classes: `official_card`, `official_file` and
+`external_official`.
+
+For `official_card` and `official_file`, the report must be deterministic and
+derive status from `scripts/regulation_state.json`: source URL, SHA-256,
+content type and file size where available. Do not live-HTTP-check these
+already tracked sources inside the external-source audit, because transient
+network statuses would create noisy daily commits. Their actual source-change
+monitoring belongs to `scripts/import_regulations.py check`.
+
+For `external_official`, live official-link checks are allowed because the
+source is not yet resolved into a tracked card/file/full-text import. Network
 errors in this report mean that the official domain was unreachable from the
 current environment; they are not evidence that the document does not exist.
 Do not replace unreachable official sources with Consultant Plus, Garant or
@@ -234,8 +258,9 @@ deterministic: it does not include the current date and normalizes transient
 Python object addresses in network exceptions. This prevents daily noise commits
 when the same official domains remain unreachable.
 
-The external-source audit also records reproducible `pravo.gov.ru/proxy/ips`
-search evidence for unresolved documents. Keep the exact IPS query links in
+The non-full-source audit also records reproducible `pravo.gov.ru/proxy/ips`
+search evidence for unresolved legal/regulatory documents where IPS is relevant
+(primarily FSTEC, FSB and Roskomnadzor acts). Keep the exact IPS query links in
 `docs/regulation/source-audits/latest.md`:
 
 - for numbered acts, check `list_itself` by exact date and number;
