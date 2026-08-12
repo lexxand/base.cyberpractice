@@ -12,9 +12,9 @@ source: "pravo.gov.ru/proxy/ips"
 source_nd: "102160483"
 source_rdk: "0"
 source_edition: "Исходная редакция"
-source_retrieved: 2026-08-11
+source_retrieved: 2026-08-12
 source_sha256: "3e4c0b239add2658a4af831f1905b293aff078cc7489dc1b6a6765938ed7dfd3"
-updated: 2026-08-11
+updated: 2026-08-12
 review_status: imported
 ---
 
@@ -22,7 +22,7 @@ review_status: imported
 
 !!! info "Источник и редакция"
 
-    Текст импортирован 2026-08-11 из официальной базы `pravo.gov.ru/proxy/ips`.
+    Текст импортирован 2026-08-12 из официальной базы `pravo.gov.ru/proxy/ips`.
     Использована редакция: `Исходная редакция` (`nd=102160483`, `rdk=0`).
     Статус по официальной базе: `Действует без изменений`.
 
