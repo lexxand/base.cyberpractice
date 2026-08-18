@@ -10,10 +10,10 @@ document_date: 2021-02-05
 legal_status: "Официальная карточка; полный текст не импортирован"
 source: "official_card"
 source_url: "https://bdu.fstec.ru/documents/18"
-source_retrieved: 2026-08-16
+source_retrieved: 2026-08-18
 source_sha256: "612878f7868ab38429458fafb7932e9a74ccde5c9c2b0273f675f99b56e6cdd4"
 source_tls_verify: "false"
-updated: 2026-08-16
+updated: 2026-08-18
 review_status: official-card
 ---
 

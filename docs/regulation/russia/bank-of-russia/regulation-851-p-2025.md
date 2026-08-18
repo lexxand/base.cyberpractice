@@ -14,10 +14,10 @@ source_final_url: "https://www.cbr.ru/Queries/UniDbQuery/File/90134/6262"
 source_content_type: "application/pdf"
 source_content_disposition: "inline; filename=851__.PDF; filename*=utf-8''851_%D0%9F.PDF"
 source_size_bytes: 1988654
-source_retrieved: 2026-08-16
+source_retrieved: 2026-08-18
 source_sha256: "e1f634070c57c71dd85f550466d35fed608f48886c5710b8566811c4425b0cbd"
 source_tls_verify: "true"
-updated: 2026-08-16
+updated: 2026-08-18
 review_status: official-file
 ---
 
