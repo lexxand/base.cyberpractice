@@ -12,9 +12,9 @@ source: "pravo.gov.ru/proxy/ips"
 source_nd: "102154754"
 source_rdk: "3"
 source_edition: "3 - от 15.04.2019 № 454 (изм.)"
-source_retrieved: 2026-08-20
+source_retrieved: 2026-08-21
 source_sha256: "73e53675dc99a2b3eab20a48cd0c9d4e9bdc4d7100935f82b3c9a36448ca33c2"
-updated: 2026-08-20
+updated: 2026-08-21
 review_status: imported
 ---
 
@@ -22,7 +22,7 @@ review_status: imported
 
 !!! info "Источник и редакция"
 
-    Текст импортирован 2026-08-20 из официальной базы `pravo.gov.ru/proxy/ips`.
+    Текст импортирован 2026-08-21 из официальной базы `pravo.gov.ru/proxy/ips`.
     Использована редакция: `3 - от 15.04.2019 № 454 (изм.)` (`nd=102154754`, `rdk=3`).
     Статус по официальной базе: `Действует c изменениями`.
 

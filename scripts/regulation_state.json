@@ -22,7 +22,7 @@
         "32 - от 29.06.2018 № 173-ФЗ (изм.)(не готова)",
         "33 - от 19.07.2018 № 211-ФЗ (изм.)(не готова)"
       ],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "law-152-fz-2006": {
       "id": "law-152-fz-2006",
@@ -39,7 +39,7 @@
         "18 - от 01.07.2017 № 148-ФЗ (изм.)(не готова)",
         "19 - от 29.07.2017 № 223-ФЗ (изм.)(не готова)"
       ],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "law-187-fz-2017": {
       "id": "law-187-fz-2017",
@@ -53,7 +53,7 @@
       "sha256": "e8838f149cd8885295631d861366697e02e65d5a14961988199fc9cedd6aa885",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102439340&page=1&rdk=1&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "law-98-fz-2004": {
       "id": "law-98-fz-2004",
@@ -67,7 +67,7 @@
       "sha256": "291d099ada6212b70c7e1f3f785e1415e210aa4c3db170fc017641a887cfa1e8",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102088094&page=1&rdk=9&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "law-63-fz-2011": {
       "id": "law-63-fz-2011",
@@ -81,7 +81,7 @@
       "sha256": "74bd4289d0a95b69f4f3c039f4345c947b5a0e533174892950b16b26c458c47f",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102146610&page=1&rdk=27&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "law-436-fz-2010": {
       "id": "law-436-fz-2010",
@@ -95,7 +95,7 @@
       "sha256": "313d84d412acb44249e9c0d0db1a0fb5e1a2c55ec941eae3b266d39dd8aa497f",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102144583&page=1&rdk=24&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "law-99-fz-2011": {
       "id": "law-99-fz-2011",
@@ -109,7 +109,7 @@
       "sha256": "b594cab5b5588683856a0d6d76708375a323d7b36f78a1bcf641026cf7d6e43a",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102147413&page=1&rdk=71&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "presidential-decree-250-2022": {
       "id": "presidential-decree-250-2022",
@@ -123,7 +123,7 @@
       "sha256": "50424159a976e9724d2d6c58097b6b1f30ef51fdcebc0cae42bb06b8a71e9b41",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=603015160&page=1&rdk=1&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "presidential-decree-166-2022": {
       "id": "presidential-decree-166-2022",
@@ -137,7 +137,7 @@
       "sha256": "e94d495c2342ee163bef5a263c0943c04f595f55f1434f8dc5cf709ff948c742",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=602954165&page=1&rdk=2&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "presidential-decree-646-2016": {
       "id": "presidential-decree-646-2016",
@@ -151,7 +151,7 @@
       "sha256": "56bb99807d362b13ec1918ba05a77d745e349d0f6f0e6bfceebc91835372509a",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102417017&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "government-resolution-1119-2012": {
       "id": "government-resolution-1119-2012",
@@ -165,7 +165,7 @@
       "sha256": "3e4c0b239add2658a4af831f1905b293aff078cc7489dc1b6a6765938ed7dfd3",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102160483&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "government-resolution-127-2018": {
       "id": "government-resolution-127-2018",
@@ -179,7 +179,7 @@
       "sha256": "4f7ae0a05e2a6c6911cf8c052160aa4964b4fd29d82e5d998ab688d07cd2ce43",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102460750&page=1&rdk=7&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "government-resolution-676-2015": {
       "id": "government-resolution-676-2015",
@@ -193,7 +193,7 @@
       "sha256": "d06e6b8690df8c82cf21baaf8179a98237f4030518b2bb9261eeb27c5de7c3db",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102375086&page=1&rdk=12&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "government-resolution-1912-2023": {
       "id": "government-resolution-1912-2023",
@@ -207,7 +207,7 @@
       "sha256": "34cad5f38aa2f28a9c796f38b325a537d0e10b954990d99f250439fc0f717f24",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=606101867&page=1&rdk=1&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "government-resolution-211-2012": {
       "id": "government-resolution-211-2012",
@@ -221,7 +221,7 @@
       "sha256": "73e53675dc99a2b3eab20a48cd0c9d4e9bdc4d7100935f82b3c9a36448ca33c2",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102154754&page=1&rdk=3&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "government-resolution-687-2008": {
       "id": "government-resolution-687-2008",
@@ -235,7 +235,7 @@
       "sha256": "436965c3e6e021e7bcff5476767a63bbd796cf6dcdf426b77d65784b2d679856",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102124251&page=1&rdk=1&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "government-resolution-79-2012": {
       "id": "government-resolution-79-2012",
@@ -249,7 +249,7 @@
       "sha256": "6abbc8b1985096c4b594a0c8d95788d187c4e9b2d69f8d55e688fbfd19d87226",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102153815&page=1&rdk=5&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "government-resolution-313-2012": {
       "id": "government-resolution-313-2012",
@@ -263,7 +263,7 @@
       "sha256": "6e501785f00f9de7caa9cc6dbd9d518373e901203d5a111ae710b70fb1b18f7f",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102155729&page=1&rdk=7&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "government-resolution-608-1995": {
       "id": "government-resolution-608-1995",
@@ -277,7 +277,7 @@
       "sha256": "a551a609eccde2261f839e5a29dfc429dd8633eb2035232766d7144dc2889ed3",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102036208&page=1&rdk=4&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "fstec-order-117-2025": {
       "id": "fstec-order-117-2025",
@@ -291,7 +291,7 @@
       "sha256": "df072429864fc14e705ab40c101523528ac7c57e453ef8ecde0611fa16841f9d",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=605977860&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "fstec-order-239-2017": {
       "id": "fstec-order-239-2017",
@@ -307,7 +307,7 @@
       "pending": [
         "5 - от 28.08.2024 № 159 (изм.)(не готова)"
       ],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "fstec-order-235-2017": {
       "id": "fstec-order-235-2017",
@@ -325,7 +325,7 @@
         "2 - от 27.03.2019 № 64 (изм.)(не готова)",
         "3 - от 20.04.2023 № 69 (изм.)(не готова)"
       ],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "fstec-order-77-2021": {
       "id": "fstec-order-77-2021",
@@ -339,7 +339,7 @@
       "sha256": "f0b9165509eb31c53332f5615df5a0b46449e853c2eff7c329d23f3b7f3481c5",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=602370609&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "fsb-order-546-2025": {
       "id": "fsb-order-546-2025",
@@ -353,7 +353,7 @@
       "sha256": "c7c74c44913df494f34cefce006a0d392a0703e3d7ce669829140a4bb09497c3",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=609507795&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "fsb-order-547-2025": {
       "id": "fsb-order-547-2025",
@@ -367,7 +367,7 @@
       "sha256": "754e685381269bb928dc753cb0836d83e45b06fd24ca1f0a4336435b38cda4c3",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=609507794&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "fsb-order-548-2025": {
       "id": "fsb-order-548-2025",
@@ -381,7 +381,7 @@
       "sha256": "c504bf1fbf5d1c2af458002df8c8df095e2deb7ade31ce27cf9e5b5698688808",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=609507793&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "fsb-order-554-2025": {
       "id": "fsb-order-554-2025",
@@ -395,7 +395,7 @@
       "sha256": "24f9f75c3b10008de84485f9ddc839e16b6efae767135809f9608a4ef52d093a",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=609507656&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "fsb-order-539-2025": {
       "id": "fsb-order-539-2025",
@@ -409,7 +409,7 @@
       "sha256": "6148e09b415960a122cc79703ff616983b45eb199a2b2519ce1465e53394bd95",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=609383318&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-178-2022": {
       "id": "rkn-order-178-2022",
@@ -423,7 +423,7 @@
       "sha256": "890e3a548cd2a1bf50c2f6862ee1eb052aaf7088d802edb6da9759bf58620ee0",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=603552315&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-179-2022": {
       "id": "rkn-order-179-2022",
@@ -437,7 +437,7 @@
       "sha256": "7e18332e55f4766d03847489fda42ece7a02cfa6044c741564c7f84eb17e0400",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=603552320&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-180-2022": {
       "id": "rkn-order-180-2022",
@@ -451,7 +451,7 @@
       "sha256": "ed00096486d186db07097268c53fe2e70dba076756b9c25b2ce461f172f7cea8",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=603603348&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-187-2022": {
       "id": "rkn-order-187-2022",
@@ -465,7 +465,7 @@
       "sha256": "35df61a92dea8a0ea4c340c8fbfcb868b71f8b015932f9f50ff22484d26e0f0f",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=603749414&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-140-2025": {
       "id": "rkn-order-140-2025",
@@ -479,7 +479,7 @@
       "sha256": "4edaf02f4e8f422bd6a512e8b4dc9d052dcea4db5c667ebb758125791da457f5",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=607599406&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "fstec-order-21-2013": {
       "id": "fstec-order-21-2013",
@@ -488,7 +488,7 @@
       "title": "Приказ ФСТЭК России от 18.02.2013 № 21 «Об утверждении состава и содержания организационных и технических мер по обеспечению безопасности персональных данных»",
       "source_url": "https://bdu.fstec.ru/documents/20",
       "sha256": "f2c23305524846b1c8c054cd6985fbaff0f54a555542a569019ec31441c80859",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "false",
       "status": "Официальная карточка; полный текст не импортирован"
     },
@@ -499,7 +499,7 @@
       "title": "Приказ ФСТЭК России от 14.03.2014 № 31 «Об утверждении Требований к обеспечению защиты информации в АСУ ТП»",
       "source_url": "https://bdu.fstec.ru/documents/25",
       "sha256": "bde7a02e6a9b5151785ae05dbd035d5f210283bb8f64c2ccbf1acc86d1763c97",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "false",
       "status": "Официальная карточка; полный текст не импортирован"
     },
@@ -510,7 +510,7 @@
       "title": "Приказ ФСБ России от 10.07.2014 № 378",
       "source_url": "http://www.fsb.ru/fsb/science/single.htm!id%3D10437725%40fsbResearchart.html",
       "sha256": "7068967ea45bd56edf3eb3327f0187da727bb2c35feceb9241a00d945f8358b3",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "not_applicable_http",
       "status": "Официальная карточка/статья ФСБ; полный текст приказа не импортирован"
     },
@@ -521,7 +521,7 @@
       "title": "Методика оценки угроз безопасности информации",
       "source_url": "https://bdu.fstec.ru/documents/18",
       "sha256": "612878f7868ab38429458fafb7932e9a74ccde5c9c2b0273f675f99b56e6cdd4",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "false",
       "status": "Официальная карточка; полный текст не импортирован"
     },
@@ -530,7 +530,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/fstec/security-analysis-methodology-2025.md",
       "title": "Методика анализа защищенности информационных систем",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "status": "Требует проверки"
     },
     "fstec-software-vulnerability-methodology-2026": {
@@ -538,7 +538,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/fstec/software-vulnerability-methodology-2026.md",
       "title": "Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "status": "Требует проверки"
     },
     "rkn-order-996-2013": {
@@ -546,7 +546,7 @@
       "kind": "external_official",
       "output": "docs/regulation/russia/roskomnadzor/order-996-2013.md",
       "title": "Приказ Роскомнадзора от 05.09.2013 № 996 «Об утверждении требований и методов по обезличиванию персональных данных»",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "status": "Исторический документ; требуется проверка замещения приказом № 140"
     },
     "bank-of-russia-recommendations-2-mr-2025": {
@@ -560,7 +560,7 @@
       "content_disposition": "inline; filename=20250122_2-mr.pdf; filename*=utf-8''20250122_2-mr.pdf",
       "size_bytes": 357791,
       "sha256": "ba8dfe621ce781ac447d2aa3f2aae6dd25ca117901c6191a11365983d8e23e02",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальный файл; полный текст не импортирован"
     },
@@ -575,7 +575,7 @@
       "content_disposition": "inline; filename=683_P_21052019.pdf; filename*=utf-8''683_P_21052019.pdf",
       "size_bytes": 1581960,
       "sha256": "1f719f7da5b64a8d4848b08b5d3212e9a472658d8d437484bf80d4ccecdb987e",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальный файл; полный текст не импортирован"
     },
@@ -590,7 +590,7 @@
       "content_disposition": "inline; filename=851__.PDF; filename*=utf-8''851_%D0%9F.PDF",
       "size_bytes": 1988654,
       "sha256": "e1f634070c57c71dd85f550466d35fed608f48886c5710b8566811c4425b0cbd",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальный файл; полный текст не импортирован"
     },
@@ -601,7 +601,7 @@
       "title": "ГОСТ Р 56939-2024 «Защита информации. Разработка безопасного программного обеспечения. Общие требования»",
       "source_url": "https://protect.gost.ru/gost/details/f3818925-a96f-4f55-96e9-46b44720ee64",
       "sha256": "840872e804c1e9ad1e963dff5cb05b7210a419bb9f4177edfc6fb975b5b9ee02",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
@@ -612,7 +612,7 @@
       "title": "ГОСТ Р 59547-2021 «Защита информации. Мониторинг информационной безопасности»",
       "source_url": "https://protect.gost.ru/gost/details/c584277d-3b7d-4459-96bb-f6441a0ecc98",
       "sha256": "cc2ca816e54097b952e1cc4b86a9f1675af7e1bb64b4eb9817c10fc6468231a1",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
@@ -623,7 +623,7 @@
       "title": "ГОСТ Р 59548-2022 «Защита информации. Регистрация событий безопасности»",
       "source_url": "https://protect.gost.ru/gost/details/d5008460-671b-4563-9388-d1d0f9ecdbbf",
       "sha256": "72fd2926b33965cd673271492e9c1b2318466b8eb76d8cec41939c28fed5e73e",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
@@ -634,7 +634,7 @@
       "title": "ГОСТ Р 59710-2022 «Защита информации. Управление компьютерными инцидентами»",
       "source_url": "https://protect.gost.ru/gost/details/3dcc47c2-d28d-4a0d-a7cc-6f4ad8609b7c",
       "sha256": "4af1459b3c21c8f6038c87b88c4730ca364359198f27f41fe23a66157b4da5bf",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
@@ -645,7 +645,7 @@
       "title": "ГОСТ Р 59711-2022 «Защита информации. Управление компьютерными инцидентами»",
       "source_url": "https://protect.gost.ru/gost/details/45281d05-ebb9-4819-ae17-f8efa45b69fa",
       "sha256": "b12d33693a55f971990884d5b4e4d7a0bebbf690e23bfcc7e7f2df4d515ddaee",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
@@ -656,7 +656,7 @@
       "title": "ГОСТ Р 59712-2022 «Защита информации. Управление компьютерными инцидентами»",
       "source_url": "https://protect.gost.ru/gost/details/5eb2da92-c6e0-46ef-b260-051a7b6daf09",
       "sha256": "39290405e945f0693cedfa4c679093470021663af33da8bbad4d62ebeb21db85",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
@@ -667,7 +667,7 @@
       "title": "ГОСТ Р 71753-2024 «Защита информации. Система автоматизированного управления учетными записями и правами доступа»",
       "source_url": "https://protect.gost.ru/gost/details/01dbad89-c066-4afe-887d-19e66b116949",
       "sha256": "bce1ad2cfd506c58f92b92ac9c9b728680e299d899b9f5c8a54813c1a3f9f1e2",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
@@ -678,7 +678,7 @@
       "title": "ГОСТ Р 51583-2014 «Защита информации. Порядок создания автоматизированных систем в защищенном исполнении»",
       "source_url": "https://protect.gost.ru/gost/details/833cf1bb-c3db-4a87-a37e-3b513c006ed6",
       "sha256": "b33c0fae254f23702bf89420ae39869a624648380c847d1ff751aa7188f041f2",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
@@ -688,8 +688,8 @@
       "output": "docs/regulation/russia/national-standards/gost-r-58223-2018.md",
       "title": "ГОСТ Р 58223-2018 «Интеллектуальная собственность. Антимонопольное регулирование и защита от недобросовестной конкуренции»",
       "source_url": "https://protect.gost.ru/gost/details/ea5c3ff4-2577-47d8-ac52-ae14139e8ec5",
-      "sha256": "f69abe73a7fb218cff354e78d95f9dbb9361fa865d2ddb02c72b9d390c3c491b",
-      "checked_at": "2026-08-20",
+      "sha256": "465ce278c28979928d32bd7d74e59ecdd46c37048bafbf9d50a0b5e97c69ede8",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
@@ -700,7 +700,7 @@
       "title": "ГОСТ Р 58143-2018 «Защита информации. Тестирование на проникновение»",
       "source_url": "https://protect.gost.ru/gost/details/52ca9e86-3363-496b-a822-992c5e2623d3",
       "sha256": "1425ac0b15818c249d4dcf0aa13cb74bad6efdde76eac42d6757216eee84497b",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальная карточка стандарта; полный текст не импортирован"
     },
@@ -711,7 +711,7 @@
       "title": "Регламент включения информации об уязвимостях программного обеспечения и программно-аппаратных средств в БДУ ФСТЭК России",
       "source_url": "https://bdu.fstec.ru/regulations",
       "sha256": "def71756505e8a674ebf823e22941c6514cb3d857868cad608b935ad903355d1",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": false
     },
     "bank-of-russia-regulation-382-p-2012": {
@@ -725,7 +725,7 @@
       "content_disposition": "inline; filename=ves120622032.pdf; filename*=utf-8''ves120622032.pdf",
       "size_bytes": 281014,
       "sha256": "5f301e0d732549321d10eba4e9cf50208002731f8d2afba280b7587621b3a7b9",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальный файл; полный текст не импортирован"
     },
@@ -740,7 +740,7 @@
       "content_disposition": "inline; filename=757_P_22062021.pdf; filename*=utf-8''757_P_22062021.pdf",
       "size_bytes": 2980739,
       "sha256": "20a6eb9af75885c1821d30ba147950761c1e92c67107bb09614a6fa9f1269e6c",
-      "checked_at": "2026-08-20",
+      "checked_at": "2026-08-21",
       "tls_verify": "true",
       "status": "Официальный файл; полный текст не импортирован"
     },
@@ -756,7 +756,7 @@
       "sha256": "384a2e0860c526269279ed782cc8f25e2427fa6066eaca6ae98c5c72e9129bad",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=602911772&page=1&rdk=1&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-128-2022": {
       "id": "rkn-order-128-2022",
@@ -770,7 +770,7 @@
       "sha256": "5052e3aec21cf8f7761120180e7581b951c3f0f7c96c2b715ed03b9ab652bd6e",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=603389824&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-201-2022": {
       "id": "rkn-order-201-2022",
@@ -784,7 +784,7 @@
       "sha256": "10830e9c85dd1e0048b60a2d005d27a62e983044b0781f2df26b1a015174e013",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=605539645&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-1-2023": {
       "id": "rkn-order-1-2023",
@@ -798,7 +798,7 @@
       "sha256": "312c704afd9ccf9c3f4101ebbf9cbc9cc76f4c5c1228903f67a2591d6e0835fd",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=605502743&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-105-2017": {
       "id": "rkn-order-105-2017",
@@ -812,7 +812,7 @@
       "sha256": "0ebd49ab1b3135782483486103babcc0a056adec895a9ba10152d99956331c7d",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102442788&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-1-2019": {
       "id": "rkn-order-1-2019",
@@ -826,7 +826,7 @@
       "sha256": "839513a65ccf340112d9d7114efc419b20bdc6f62cf14b3eca43705da6fdb861",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=102543425&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-109-2020": {
       "id": "rkn-order-109-2020",
@@ -842,7 +842,7 @@
       "pending": [
         "1 - от 15.12.2022 № 201 (не действ.)(не готова)"
       ],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-137-2020": {
       "id": "rkn-order-137-2020",
@@ -858,7 +858,7 @@
       "pending": [
         "1 - от 15.12.2022 № 201 (не действ.)(не готова)"
       ],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-106-2021": {
       "id": "rkn-order-106-2021",
@@ -872,7 +872,7 @@
       "sha256": "3d6ae2ab6356b07c3ad69378b7d00b4534535b298f1b84c2ea26fff3bb4c9699",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=602367821&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     },
     "rkn-order-183-2021": {
       "id": "rkn-order-183-2021",
@@ -886,8 +886,8 @@
       "sha256": "2214c05970d962b2a5cb414ddc5c29b7bbf90001907ae804827b3463279a7138",
       "source_url": "http://pravo.gov.ru/proxy/ips/?doc_itself=&nd=602494309&page=1&rdk=0&link_id=0",
       "pending": [],
-      "checked_at": "2026-08-20"
+      "checked_at": "2026-08-21"
     }
   },
-  "updated": "2026-08-20"
+  "updated": "2026-08-21"
 }
