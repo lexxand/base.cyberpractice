@@ -9,8 +9,8 @@ document_number: ""
 document_date: 2025-11-25
 legal_status: "Требует проверки"
 source: "external_official"
-source_retrieved: 2026-08-30
-updated: 2026-08-30
+source_retrieved: 2026-08-31
+updated: 2026-08-31
 review_status: external-official-card
 ---
 
