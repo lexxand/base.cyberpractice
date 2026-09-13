@@ -139,7 +139,7 @@
 
 | Ссылка | Результат | Детали |
 |---|---|---|
-| [ФСТЭК России: страница методического документа](https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-noyabrya-2025-g) | network-error | ConnectTimeout: HTTPSConnectionPool(host='fstec.ru', port=443): Max retries exceeded with url: /dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-noyabrya-2025-g (Caused by ConnectTimeoutError(<HTTPSConnection(host='fstec.ru', port=443) at 0x…>, 'Connection to fstec.ru timed out. (connect timeout=12)')) |
+| [ФСТЭК России: страница методического документа](https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-noyabrya-2025-g) | network-error | SSLError: HTTPSConnectionPool(host='fstec.ru', port=443): Max retries exceeded with url: /dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-noyabrya-2025-g (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)'))) |
 
 ### IPS-проверка
 
@@ -162,7 +162,7 @@
 
 | Ссылка | Результат | Детали |
 |---|---|---|
-| [ФСТЭК России: страница методического документа](https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-maya-2026-g) | network-error | ConnectTimeout: HTTPSConnectionPool(host='fstec.ru', port=443): Max retries exceeded with url: /dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-maya-2026-g (Caused by ConnectTimeoutError(<HTTPSConnection(host='fstec.ru', port=443) at 0x…>, 'Connection to fstec.ru timed out. (connect timeout=12)')) |
+| [ФСТЭК России: страница методического документа](https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-maya-2026-g) | network-error | SSLError: HTTPSConnectionPool(host='fstec.ru', port=443): Max retries exceeded with url: /dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-maya-2026-g (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)'))) |
 
 ### IPS-проверка
 
